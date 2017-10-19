@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="工作记录," />
 
 
 
@@ -95,13 +95,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta name="description" content="点赞部分  数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：  12alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &amp;apos;报价三点赞&amp;apos;alter table `erp_supplier_quote` ad">
+<meta name="keywords" content="工作记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="erp采购模块需求修改">
+<meta property="og:url" content="http://yoursite.com/2017/10/19/erpChange/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="点赞部分  数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：  12alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &amp;apos;报价三点赞&amp;apos;alter table `erp_supplier_quote` ad">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-19T02:26:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="erp采购模块需求修改">
+<meta name="twitter:description" content="点赞部分  数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：  12alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &amp;apos;报价三点赞&amp;apos;alter table `erp_supplier_quote` ad">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2016/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/19/erpChange/"/>
 
 
 
 
 
-  <title>归档 | Hexo</title>
+  <title>erp采购模块需求修改 | Hexo</title>
   
 
 
@@ -156,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -250,74 +255,170 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2016">2016</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/19/erpChange/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张建">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tx.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/09/11/php提升路线/" itemprop="url">
-              
-                <span itemprop="name">php提升路线</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">erp采购模块需求修改</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-11T09:37:36+08:00"
-              content="2016-09-11" >
-          09-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-19T09:29:31+08:00">
+                2017-10-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h5 id="点赞部分"><a href="#点赞部分" class="headerlink" title="点赞部分"></a>点赞部分</h5><blockquote>
+<ol>
+<li><p>数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &apos;报价三点赞&apos;</div><div class="line">alter table `erp_supplier_quote` add `second_like` varchar(128) DEFAULT NULL COMMENT &apos;报价二点赞&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改文件：控制器ProjectController–&gt;actionSupplierQuoteAdd方法 actionShow方法、视图stateInfo</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="分类筛选部分"><a href="#分类筛选部分" class="headerlink" title="分类筛选部分"></a>分类筛选部分</h5><blockquote>
+<ol>
+<li>待完善</li>
+</ol>
+</blockquote>
+<h5 id="添加评定人部分"><a href="#添加评定人部分" class="headerlink" title="添加评定人部分"></a>添加评定人部分</h5><blockquote>
+<ol>
+<li>待完善</li>
+</ol>
+</blockquote>
+<h5 id="评论分区部分"><a href="#评论分区部分" class="headerlink" title="评论分区部分"></a>评论分区部分</h5><blockquote>
+<ol>
+<li>待完善</li>
+</ol>
+</blockquote>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工作记录/" rel="tag"># 工作记录</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/17/mysqlError1449/" rel="next" title="mysql异常1449">
+                <i class="fa fa-chevron-left"></i> mysql异常1449
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -325,6 +426,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
         </div>
         
@@ -345,8 +452,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -402,6 +518,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#点赞部分"><span class="nav-number">1.</span> <span class="nav-text">点赞部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分类筛选部分"><span class="nav-number">2.</span> <span class="nav-text">分类筛选部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加评定人部分"><span class="nav-number">3.</span> <span class="nav-text">添加评定人部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#评论分区部分"><span class="nav-number">4.</span> <span class="nav-text">评论分区部分</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -529,6 +661,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
@@ -554,6 +690,10 @@
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144568"></script>
+      <!-- UY END -->
     
   
 
