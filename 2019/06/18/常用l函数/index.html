@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mysql," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -95,18 +95,17 @@
 
 
 
-<meta name="description" content="mysql常用数据 统计两个时间的相差的自然周 ：  SELECT ((to_days(now())- WEEKDAY(now()) - to_days(pi.entry_date) + WEEKDAY(pi.entry_date))/ 7+1) 时间相关函数  date_format(time,format) -&amp;gt;DATE_FORMAT(‘2018-06-04’ ,’%Y%w’)  uni">
-<meta name="keywords" content="mysql">
+<meta name="description" content="并列排名 123456789SELECT u.user_id, u.score,  CASE    WHEN @last_score = u.score     THEN @rank    WHEN @last_score := u.score      THEN @rank := @rank + 1      END AS rank    FROM (SELECT * FROM user_sc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用l函数">
+<meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2019/06/18/常用l函数/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="mysql常用数据 统计两个时间的相差的自然周 ：  SELECT ((to_days(now())- WEEKDAY(now()) - to_days(pi.entry_date) + WEEKDAY(pi.entry_date))/ 7+1) 时间相关函数  date_format(time,format) -&amp;gt;DATE_FORMAT(‘2018-06-04’ ,’%Y%w’)  uni">
+<meta property="og:description" content="并列排名 123456789SELECT u.user_id, u.score,  CASE    WHEN @last_score = u.score     THEN @rank    WHEN @last_score := u.score      THEN @rank := @rank + 1      END AS rank    FROM (SELECT * FROM user_sc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-18T05:33:14.000Z">
+<meta property="og:updated_time" content="2019-06-21T10:51:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用l函数">
-<meta name="twitter:description" content="mysql常用数据 统计两个时间的相差的自然周 ：  SELECT ((to_days(now())- WEEKDAY(now()) - to_days(pi.entry_date) + WEEKDAY(pi.entry_date))/ 7+1) 时间相关函数  date_format(time,format) -&amp;gt;DATE_FORMAT(‘2018-06-04’ ,’%Y%w’)  uni">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="并列排名 123456789SELECT u.user_id, u.score,  CASE    WHEN @last_score = u.score     THEN @rank    WHEN @last_score := u.score      THEN @rank := @rank + 1      END AS rank    FROM (SELECT * FROM user_sc">
 
 
 
@@ -142,7 +141,7 @@
 
 
 
-  <title>常用l函数 | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -286,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">常用l函数</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -336,15 +335,16 @@
       
 
       
-        <h5 id="mysql常用数据"><a href="#mysql常用数据" class="headerlink" title="mysql常用数据"></a>mysql常用数据</h5><ul>
-<li>统计两个时间的相差的自然周 ：<br>  SELECT ((to_days(now())- WEEKDAY(now()) - to_days(pi.entry_date) + WEEKDAY(pi.entry_date))/ 7+1)</li>
-<li><p>时间相关函数<br>  date_format(time,format) -&gt;DATE_FORMAT(‘2018-06-04’ ,’%Y%w’)<br>  unix_timestamp() —-&gt;unix_timestamp(‘2018-04-03’)<br>  from_unixtime(unixtime,formant) -&gt;FROM_UNIXTIME(1237628392,’%Y-%m-%d’)<br>  now()当前日期<br>  to_days当前日期天数<br>  WEEKDAY星期几WEEKDAY(‘2015-07-01’)（0-6）<br>  week(）WEEK (‘2015-07-01’)几年第几周</p>
+        <ul>
+<li><p>并列排名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT u.user_id, u.score, </div><div class="line"> CASE </div><div class="line">   WHEN @last_score = u.score</div><div class="line">     THEN @rank </div><div class="line">   WHEN @last_score := u.score </div><div class="line">     THEN @rank := @rank + 1    </div><div class="line">  END AS rank    </div><div class="line">FROM </div><div class="line">(SELECT * FROM user_score ORDER BY score DESC) u, (SELECT @rank := 0, @last_score := NULL) r;</div></pre></td></tr></table></figure>
 </li>
-<li><p>某个时间的周一：<br>  subdate(‘2019-01-14’,if(date_format(‘2019-01-14’,”%w”)=0,7,date_format(‘2019-01-14’,”%w”))-1)<br>  subdate(from_unixtime(create_time,’%Y-%m-%d’),if(date_format(from_unixtime(create_time,’%Y-%m-%d’),”%w”)=0,7,date_format(from_unixtime(create_time,’%Y-%m-%d’),”%w”))-1);<br>  date_sub(‘2019-06-16’,INTERVAL WEEKDAY(‘2019-06-16’) + 7 DAY);</p>
-</li>
-<li><p>mysql日期加减：<br>  NOW() 的格式 ‘2018-10-01 12:23:12’<br>  date_add(NOW(), interval 1 MONTH)<br>  date_sub(NOW(), interval 1 MONTH)<br>  month 月份<br>  minute 分钟<br>  second 秒</p>
+<li><p>并列占位排行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">SELECT t.user_id, t.score, t.rank </div><div class="line">FROM </div><div class="line">  (SELECT u.user_id, u.score, @rank := @rank + 1, </div><div class="line">    @last_rank := CASE </div><div class="line">      WHEN @last_score = u.score</div><div class="line">        THEN @last_rank </div><div class="line">      WHEN @last_score := u.score </div><div class="line">        THEN @rank </div><div class="line">    END AS rank    </div><div class="line">  FROM </div><div class="line">    (SELECT * FROM user_score ORDER BY score DESC) u, </div><div class="line">    (SELECT @rank := 0, @last_score := NULL, @last_rank := 0) r</div><div class="line">) t;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<hr>
+<p>作者：whyalwaysmea<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/u013435893/article/details/80350269" target="_blank" rel="external">https://blog.csdn.net/u013435893/article/details/80350269</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 
       
     </div>
@@ -359,12 +359,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/mysql/" rel="tag"># mysql</a>
-          
-        </div>
       
 
       
@@ -437,17 +431,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -503,22 +488,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#mysql常用数据"><span class="nav-number">1.</span> <span class="nav-text">mysql常用数据</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
