@@ -1,1815 +1,638 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>Hexo</title>
   
-
-
-
-
-
-
-
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-right 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-常用l函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/18/常用l函数/" class="article-date">
+  <time datetime="2019-06-18T05:26:35.000Z" itemprop="datePublished">2019-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <p class="site-subtitle"></p>
+        <ul>
+<li><p>并列排名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT u.user_id, u.score, </div><div class="line"> CASE </div><div class="line">   WHEN @last_score = u.score</div><div class="line">     THEN @rank </div><div class="line">   WHEN @last_score := u.score </div><div class="line">     THEN @rank := @rank + 1    </div><div class="line">  END AS rank    </div><div class="line">FROM </div><div class="line">(SELECT * FROM user_score ORDER BY score DESC) u, (SELECT @rank := 0, @last_score := NULL) r;</div></pre></td></tr></table></figure>
+</li>
+<li><p>并列占位排行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">SELECT t.user_id, t.score, t.rank </div><div class="line">FROM </div><div class="line">  (SELECT u.user_id, u.score, @rank := @rank + 1, </div><div class="line">    @last_rank := CASE </div><div class="line">      WHEN @last_score = u.score</div><div class="line">        THEN @last_rank </div><div class="line">      WHEN @last_score := u.score </div><div class="line">        THEN @rank </div><div class="line">    END AS rank    </div><div class="line">  FROM </div><div class="line">    (SELECT * FROM user_score ORDER BY score DESC) u, </div><div class="line">    (SELECT @rank := 0, @last_score := NULL, @last_rank := 0) r</div><div class="line">) t;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p>作者：whyalwaysmea<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/u013435893/article/details/80350269" target="_blank" rel="external">https://blog.csdn.net/u013435893/article/details/80350269</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
+
       
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/18/常用l函数/" data-id="cjx5zi3lj000urb5yb9x3zd7l" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-大数据笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/23/大数据笔记/" class="article-date">
+  <time datetime="2019-05-23T03:46:33.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/23/大数据笔记/">bigdata笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>yarn      引入资源管理和任务调度的框架</p>
+<p>Ganglia   监控Hadoop及Hbase集群性能(安装配置)</p>
+<p>Zookeeper 是分布式服务框架，主要是用来解决分布式应用中经常遇到的一些数据管理问题，如：统一命名服务、状态同步服务、集群管理、分布式应用配置项的管理等等。</p>
+<p>Spark 最早是2009年Berkeley大学AMPLab实验室开发的一个分布式、内存式、流式计算引擎</p>
+<p>HBase－－DataBase on Hadoop，基于分布式文件系统上面建立的数据库</p>
+<p>机构<br>小区</p>
+<p>据点<br>工作站</p>
+<p>总房<br>可租房<br>新增可租房<br>导客出房</p>
+<p>可租有图房<br>//当周新建总房<br>//昨日新建总房<br>//当周新建机构数 </p>
+<p>机构激活时间<br>//昨日新建机构数</p>
+<p>租金在500以下可租房数<br>租金在500-799可租房数<br>租金在800-1199可租房数<br>租金在1200-1399可租房数€<br>租金在1400-1999可租房数<br>租金在2000-2999可租房数<br>租金在3000-3999可租房数<br>租金在4000以上可租房数</p>
+<p>可租房总价</p>
+<p>带看客源数<br>当周成交数<br>留存租约数<br>成交上架比</p>
+<p>CREATE TABLE <code>agency_company</code> (<br>  <code>id</code> int(11) NOT NULL AUTO_INCREMENT COMMENT ‘序号’,<br>  <code>crm_id</code> int(11) DEFAULT ‘0’ COMMENT ‘crm中机构的id（杨晓杰）’,<br>  <code>crm_contract_id</code> varchar(32) DEFAULT ‘’ COMMENT ‘crm合同编号’,<br>  <code>deposits_secondexits</code> int(1) NOT NULL DEFAULT ‘0’ COMMENT ‘押金秒退’,<br>  <code>name</code> varchar(100) NOT NULL COMMENT ‘中介公司名称’,<br>  <code>status</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘状态1有效0无效2待生效’,<br>  <code>type</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘公司性质:0中介公司,1大房东公司,2二房东公司,3公寓’,<br>  <code>bossid</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘公司老板的userid,0为未知’,<br>  <code>city_id</code> int(11) NOT NULL DEFAULT ‘1’,<br>  <code>operator_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘对应客服id,0为未知’,<br>  <code>server_opr_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘站长ID - 傅仕仁’,<br>  <code>service_id</code> int(10) DEFAULT ‘0’ COMMENT ‘机构客服id-侯祥飞’,<br>  <code>labels</code> varchar(45) DEFAULT NULL COMMENT ‘公司标签’,<br>  <code>remark</code> varchar(45) DEFAULT NULL COMMENT ‘公司备注’,<br>  <code>commission_ratio</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘对应佣金比例’,<br>  <code>address</code> varchar(100) DEFAULT ‘’ COMMENT ‘机构实际(房东)联系地址-侯祥飞’,<br>  <code>see_type</code> int(11) NOT NULL DEFAULT ‘1’ COMMENT ‘带看类型，1自己带看 2非自己带看’,<br>  <code>auth_status</code> int(1) NOT NULL DEFAULT ‘0’ COMMENT ‘认证状态0未认证1认证中2已认证’,<br>  <code>create_time</code> int(11) DEFAULT ‘0’ COMMENT ‘创建时间’,<br>  <code>modify_time</code> int(11) DEFAULT ‘0’ COMMENT ‘修改时间’,<br>  <code>size</code> int(1) NOT NULL DEFAULT ‘0’ COMMENT ‘机构规模1A2B3C4D’,<br>  <code>auth_level</code> tinyint(1) NOT NULL DEFAULT ‘0’ COMMENT ‘认证级别0无1为导客2为金融10为缴租11月付’,<br>  <code>way_rent</code> char(2) NOT NULL COMMENT ‘缴租方式’,<br>  <code>rate</code> decimal(4,2) DEFAULT ‘0.00’ COMMENT ‘利率’,<br>  <code>is_brand_apartment</code> tinyint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘是否品牌公寓 0不是 1 是’,<br>  <code>shop_name</code> varchar(255) NOT NULL DEFAULT ‘’ COMMENT ‘店铺名称’,<br>  <code>shop_address</code> varchar(255) NOT NULL DEFAULT ‘’ COMMENT ‘店铺地址’,<br>  <code>discount_type</code> int(11) DEFAULT ‘0’ COMMENT ‘机构是否有优惠0为无1为有’,<br>  <code>subway_desc</code> varchar(255) DEFAULT ‘’ COMMENT ‘地铁描述’,<br>  <code>credit_limit</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘额度’,<br>  <code>credit_used</code> decimal(11,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘已用额度’,<br>  <code>prearm_status</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘预警状态 0初始状态 5有预警 10预警被解除 ‘,<br>  <code>checker_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘最新审核人id’,<br>  <code>checker_name</code> varchar(32) NOT NULL DEFAULT ‘’ COMMENT ‘最新审核人名字’,<br>  <code>check_status</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘审核状态0待审核1通过2不通过9审核中’,<br>  <code>check_time</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘审核时间’,<br>  <code>check_auto_note</code> text COMMENT ‘系统自动备注’,<br>  <code>check_note</code> text COMMENT ‘审核备注’,<br>  <code>product_id</code> int(11) DEFAULT ‘0’ COMMENT ‘产品id’,<br>  <code>pay_day</code> int(4) NOT NULL DEFAULT ‘0’ COMMENT ‘机构提前付款天数’,<br>  <code>open_loop</code> int(11) DEFAULT ‘0’ COMMENT ‘开启轮循  0:未开启  1:已开启’,<br>  <code>execute_count</code> int(11) DEFAULT ‘0’ COMMENT ‘执行次数’,<br>  <code>loop_rule</code> varchar(512) DEFAULT NULL COMMENT ‘轮循规则’,<br>  <code>finance_occupancy</code> decimal(5,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘金融占有率’,<br>  <code>day_ahead</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘提前催租日’,<br>  <code>jingdong_qishu</code> varchar(20) DEFAULT ‘’ COMMENT ‘白条使用期数’,<br>  <code>is_jingdong</code> smallint(2) DEFAULT ‘0’ COMMENT ‘0:未使用 1:使用’,<br>  <code>da_finance</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘大金融’,<br>  <code>xiao_finance</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘小金融’,<br>  <code>checkout_rule</code> varchar(255) DEFAULT NULL COMMENT ‘退房规则’,<br>  <code>renter_finance</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘租客金融:0 无金融  1 房东付费  2 租客付费’,<br>  <code>add_month_rent</code> decimal(6,2) DEFAULT ‘0.00’ COMMENT ‘加成收费金额’,<br>  <code>max_contract_num</code> int(11) DEFAULT ‘0’ COMMENT ‘机构峰值租约数’,<br>  <code>daoke_fee_type</code> smallint(2) DEFAULT ‘0’ COMMENT ‘导客费收取类型0不收1按照%3利率2按照固定金额收取’,<br>  <code>meter_card</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否支持电卡：0 不支持 1 支持’,<br>  <code>is_frontmoney_auto_outmoney</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘定金是否自动出款 1-是 0-否’,<br>  <code>is_top</code> int(11) DEFAULT ‘0’ COMMENT ‘1置顶’,<br>  <code>is_top_time</code> datetime DEFAULT NULL COMMENT ‘置顶时间’,<br>  <code>allow_term</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘是否允许使用电子合同：0，不允许 1，允许’,<br>  <code>jingdong_max_qishu</code> smallint(2) DEFAULT ‘6’ COMMENT ‘京东最大贷款期数’,<br>  <code>is_dianrong</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否使用点融贷款 0-未使用 1-使用’,<br>  <code>dianrong_max_qishu</code> smallint(2) DEFAULT ‘3’ COMMENT ‘点融最大贷款期数’,<br>  <code>uniform_credit_code</code> varchar(32) DEFAULT NULL COMMENT ‘统一社会信用代码’,<br>  <code>business_license_num</code> varchar(32) DEFAULT NULL COMMENT ‘营业执照号码’,<br>  <code>organization_code_certificate_num</code> varchar(32) DEFAULT NULL COMMENT ‘组织机构代码证编号’,<br>  <code>tax_registration_certificate_num</code> varchar(32) DEFAULT NULL COMMENT ‘税务登记许可证编号’,<br>  <code>establish_date</code> varchar(16) DEFAULT NULL COMMENT ‘成立时间’,<br>  <code>legal_representative</code> varchar(16) DEFAULT NULL COMMENT ‘企业法人’,<br>  <code>legal_representative_mobile</code> varchar(11) DEFAULT NULL COMMENT ‘企业法人手机号’,<br>  <code>legal_representative_idcard</code> varchar(18) DEFAULT NULL COMMENT ‘企业法人身份证号’,<br>  <code>telephone_pre</code> varchar(16) DEFAULT NULL COMMENT ‘企业电话区号’,<br>  <code>telephone</code> varchar(16) DEFAULT NULL COMMENT ‘企业电话’,<br>  <code>telephone_ext</code> varchar(16) DEFAULT NULL COMMENT ‘企业电话分机号’,<br>  <code>email</code> varchar(64) DEFAULT NULL COMMENT ‘企业邮箱’,<br>  <code>dianrong_available_amount</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘点融剩余可用额度’,<br>  <code>sign_company</code> varchar(64) NOT NULL DEFAULT ‘’ COMMENT ‘签约公司’,<br>  <code>is_monthlypay_autopayland</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘月付秒出开关 0-关 1-开’,<br>  <code>listen_type</code> smallint(4) NOT NULL DEFAULT ‘1’ COMMENT ‘接听规则:1呼叫中心2服务3据点服务4房源联系人接听5接听人接听’,<br>  <code>is_auto_payland</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘是否自动出款’,<br>  <code>way_refund</code> smallint(2) DEFAULT ‘1’ COMMENT ‘退款方式：0 未选择 1 退款 2 抵扣’,<br>  <code>way_refund_memo</code> varchar(255) DEFAULT ‘’ COMMENT ‘退款方式备注’,<br>  <code>pinyin</code> varchar(32) DEFAULT NULL COMMENT ‘拼音简称’,<br>  <code>weiyue_rate</code> decimal(5,2) DEFAULT ‘0.00’ COMMENT ‘违约金利率’,<br>  <code>overdue_grace_day</code> int(11) NOT NULL DEFAULT ‘3’ COMMENT ‘逾期宽限天数’,<br>  <code>is_receive_agreement_original</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否收到协议原件：0 否 1 是’,<br>  <code>is_proxy_served</code> smallint(3) DEFAULT ‘0’ COMMENT ‘是否提供代管服务：0 否 1 是’,<br>  <code>proxy_served_operator_id</code> int(11) DEFAULT ‘0’ COMMENT ‘代管客服ID–杨江霞’,<br>  <code>is_run_crm</code> smallint(1) DEFAULT ‘0’ COMMENT ‘CRM是否同步过状态，0无1有（杨晓杰）’,<br>  <code>is_cuizu</code> smallint(1) DEFAULT ‘0’ COMMENT ‘是否需要催租0需要1不需要’,<br>  <code>cuizu_require</code> varchar(256) DEFAULT ‘’ COMMENT ‘催租个性化需求’,<br>  <code>company_level</code> smallint(1) DEFAULT ‘0’ COMMENT ‘0普通机构1优质机构 默认0’,<br>  <code>money_channel</code> varchar(32) DEFAULT ‘’ COMMENT ‘固定打款渠道别名 —黄小舟’,<br>  <code>payment_lock</code> int(1) DEFAULT ‘0’ COMMENT ‘0加锁 1 解锁 建租时房东收租方式付一付方式加锁解锁(金俊俊)’,<br>  <code>is_overdue_power_outage</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否逾期断电 0不断 1断 -郑阳’,<br>  <code>company_customer_id</code> varchar(255) DEFAULT ‘’ COMMENT ‘企业CA认证客户编号’,<br>  <code>is_tuizu</code> smallint(1) DEFAULT ‘0’ COMMENT ‘是否需要退租处理0需要1不需要 –黄小舟’,<br>  <code>activation_time</code> int(11) DEFAULT ‘0’ COMMENT ‘激活时间–祝枝清’,<br>  <code>good_price</code> smallint(1) DEFAULT ‘0’ COMMENT ‘出价优标签0未标记1标记’,<br>  <code>company_remark</code> varchar(200) DEFAULT ‘’ COMMENT ‘业主房源二房东沟通备注’,<br>  <code>sign_contract</code> varchar(32) DEFAULT ‘’ COMMENT ‘原始签约人(负责人)-侯祥飞’,<br>  <code>stair_pass_man</code> varchar(32) DEFAULT ‘’ COMMENT ‘机构业务准入审批人(一级审批通过人)-侯祥飞’,<br>  <code>total_amount</code> int(10) DEFAULT ‘0’ COMMENT ‘初始总房量-侯祥飞’,<br>  <code>rent_scale</code> varchar(50) DEFAULT ‘’ COMMENT ‘租赁方式比例-侯祥飞’,<br>  <code>sign_money</code> int(10) DEFAULT ‘0’ COMMENT ‘公司注册资金-侯祥飞’,<br>  <code>tuoke_change_house_status</code> smallint(3) DEFAULT ‘1’ COMMENT ‘服务版更新房态功能 0 关闭 1 开启(翟继江)’,<br>  <code>channel_name</code> varchar(50) DEFAULT ‘’ COMMENT ‘渠道名称-侯祥飞’,<br>  <code>is_push_daily</code> smallint(5) DEFAULT ‘0’ COMMENT ‘是否推送租房日报 0否 1是-侯祥飞’,<br>  <code>overdue_day</code> int(4) DEFAULT ‘0’ COMMENT ‘逾期清退天数’,<br>  <code>is_tu_plus</code> smallint(5) DEFAULT ‘0’ COMMENT ‘0无 1兔Plus认证即优选品牌 2连锁品牌 3分散式品牌 (原注释 是否兔Plus认证 0否 1是-侯祥飞）–高爽’,<br>  <code>master_set</code> int(11) DEFAULT ‘0’ COMMENT ‘如果还未设置母版为0，设置了母版为母版ID’,<br>  <code>crm_contract_operator_id</code> int(11) DEFAULT ‘0’ COMMENT ‘协议使用人’,<br>  <code>is_suitable_monthly_pay</code> smallint(4) NOT NULL DEFAULT ‘0’ COMMENT ‘是否适合月付：0无选择，1是，2否’,<br>  <code>meter_operaotr_id</code> int(11) DEFAULT ‘0’ COMMENT ‘电表维护人-郑阳’,<br>  <code>not_suitable_monthly_pay_grade</code> smallint(4) NOT NULL DEFAULT ‘0’ COMMENT ‘不适合月付等级：0无选择，1低，2中，3高’,<br>  <code>overdue_rate</code> decimal(5,2) NOT NULL DEFAULT ‘0.05’ COMMENT ‘滞纳金费率’,<br>  <code>credit_rate</code> char(4) DEFAULT ‘C3’ COMMENT ‘ 信用等级：A B C1 C2 C3 C4 D ‘,<br>  <code>is_need_follow</code> smallint(3) DEFAULT ‘0’ COMMENT ‘是否需要进行退款跟进 0:未选择 1:否 2:是 –吴玎祥’,<br>  <code>special_company_type</code> smallint(2) DEFAULT ‘0’ COMMENT ‘特殊的机构类型 0:正常 1:城中村’,<br>  <code>land_finance</code> smallint(2) DEFAULT ‘0’ COMMENT ‘房东金融：0 无金融 1 单单放0.9%’,<br>  <code>land_finance_discount</code> decimal(4,2) DEFAULT ‘0.00’ COMMENT ‘月付房东金额折扣率’,<br>  <code>credit_value</code> int(11) DEFAULT ‘0’ COMMENT ‘ 巴乐兔信用分 ‘,<br>  <code>dao_ke_monthly</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘导客费月结 0 账扣 1 后收（月结） 2 预收’,<br>  <code>word_type</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘文案类型  AB测试’,<br>  <code>credit_protocol</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘是否签署租约贷协议 0：否  1：是’,<br>  <code>loan_quota</code> decimal(9,2) DEFAULT ‘0.00’ COMMENT ‘租约贷额度’,<br>  <code>loan_product_id</code> int(11) DEFAULT ‘0’ COMMENT ‘租约贷产品id’,<br>  <code>is_upgrade</code> decimal(2,0) NOT NULL DEFAULT ‘0’ COMMENT ‘是否申请提额  0:否  1：是  – 江浩’,<br>  <code>loan_discount</code> decimal(4,2) DEFAULT ‘0.00’ COMMENT ‘租约贷折扣’,<br>  <code>is_agreements</code> smallint(2) DEFAULT ‘0’ COMMENT ‘  是否有约定条款  0  为否  1为是  –黄小舟’,<br>  <code>loan_finance_product</code> varchar(32) NOT NULL DEFAULT ‘0’ COMMENT ‘金融产品 1 收房贷 2 租约贷–杨耿杰’,<br>  <code>credit_follow</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘租约贷跟进状态 0:默认 1:跟进 2:不跟进–江浩’,<br>  <code>credit_cooperation</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘租约贷合作意向 0：默认 1:近期有意向 2:暂时无意向–江浩’,<br>  <code>min_meter_recharge</code> int(11) DEFAULT ‘0’ COMMENT ‘最低电费充值金额(郑阳)’,<br>  <code>fixed_pay_day</code> smallint(2) DEFAULT ‘0’ COMMENT ‘固定交租日 –杨耿杰’,<br>  <code>pay_day_type</code> smallint(2) DEFAULT ‘0’ COMMENT ‘交租日类型：0 非固定 1 固定 –杨耿杰’,<br>  <code>scattered_days_compute_method</code> smallint(2) DEFAULT ‘0’ COMMENT ‘账单计算方法：0 自然月 1 30天 –杨耿杰’,<br>  <code>able_custom_fixed_pay_day</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘能否自定义固定交租日 0.不允许 1.允许 –黄志波’,<br>  <code>bankuai</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘crm提交机构板块id’,<br>  <code>work_station</code> varchar(255) NOT NULL DEFAULT ‘’ COMMENT ‘crm提交机构工作站’,<br>  <code>is_daiguan_cuizu</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘是否代管催租 0:否 1:是 –范杰’,<br>  <code>is_daoke_cuizu</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘是否导客催租 0:否 1:是 –范杰’,<br>  <code>is_run_newcompany</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘crm是否修改成待生效状态 0-无 1-有(刘勇)’,<br>  <code>rule_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘退房规则id (renting_rules) –文雪’,<br>  <code>banking_lock</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘金融产品锁 0：否 1：锁’,<br>  <code>credit_query_time</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘同盾上次查询时间 – 梁莹莹’,<br>  <code>gold_ceiling</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘大金融机构封顶额度–jianghao’,<br>  <code>gold_line</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘大金融机构额度–jianghao’,<br>  <code>nodaoke_monthly</code> tinyint(1) NOT NULL DEFAULT ‘0’ COMMENT ‘1 非导客月付’,<br>  <code>can_credit</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘预收租 可借额度 – by jianghao’,<br>  <code>special_activity_type</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘0 无优惠 1.首月租金减半’,<br>  <code>activity_start_date</code> int(10) unsigned NOT NULL DEFAULT ‘0’ COMMENT ‘活动开始时间’,<br>  <code>activity_end_date</code> int(10) unsigned NOT NULL DEFAULT ‘0’ COMMENT ‘活动结束时间’,<br>  <code>min_term</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘导客租约最小租期-黄志波’,<br>  <code>ca_status</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘企业CA认证状态0未认证1已认证2认证失败—谷冰丽’,<br>  <code>is_ka_agency</code> smallint(2) unsigned NOT NULL DEFAULT ‘0’ COMMENT ‘是否KA机构: 0非KA，1普通KA，2超级KA –ganqixin’,<br>  <code>pay_scattered_days_method</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘零散天数计算方法0 30日计算 1 自然月 2 365天平摊–黄志波2019-01-17’,<br>  <code>ban_least_rent_month</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘禁用交租方式值-单鑫芝20190121’,<br>  <code>avg_eval_score</code> varchar(50) NOT NULL DEFAULT ‘0’ COMMENT ‘机构综合评分 千分制-侯祥飞’,<br>  <code>overdue_node_type</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘逾期节点依据 1约定付款日 2结算终止日-黄志波’,<br>  PRIMARY KEY (<code>id</code>),<br>  KEY <code>idx_bossid</code> (<code>bossid</code>),<br>  KEY <code>idx_name</code> (<code>name</code>,<code>address</code>),<br>  KEY <code>idx_type_status_city</code> (<code>type</code>,<code>status</code>,<code>city_id</code>),<br>  KEY <code>idx_service_id</code> (<code>service_id</code>),<br>  KEY <code>idx_crm_id</code> (<code>crm_id</code>),<br>  KEY <code>idx_is_daiguan_cuizu</code> (<code>is_daiguan_cuizu</code>)<br>) ENGINE=InnoDB AUTO_INCREMENT=31563 DEFAULT CHARSET=utf8 COMMENT=’中介公司表’;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/23/大数据笔记/" data-id="cjx5zi3lh000rrb5y54s2ebj2" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/big-data/">big data</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-大牛计划" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/07/大牛计划/" class="article-date">
+  <time datetime="2019-04-06T16:48:43.000Z" itemprop="datePublished">2019-04-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/07/大牛计划/">进阶计划</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h1><h5 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h5><ul>
+<li>坚持学习</li>
+<li>动手 再简单的例子都要亲手实现一次</li>
+<li>学会思考，为什么要这样而不是那样 举一反三</li>
+<li>不要乱买书</li>
+<li>回顾历史技术发展，才能推测未来</li>
+</ul>
+<hr>
+<h2 id="阶段一-零基础启蒙"><a href="#阶段一-零基础启蒙" class="headerlink" title="阶段一 零基础启蒙"></a>阶段一 零基础启蒙</h2><ul>
+<li>学习下python(自己找资料) javascrip <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">网址一</a> <a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">网址二</a></li>
+<li><a href="https://www.w3cschool.cn/linux/" target="_blank" rel="external">linux学习</a></li>
+<li>前段端基础 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS" target="_blank" rel="external">css</a> <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank" rel="external">html</a> <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" rel="external">js操作dom</a></li>
+<li>后段php <a href="http://www.w3school.com.cn/php/index.asp" target="_blank" rel="external">W3C-php</a> <a href="http://php.net/manual/zh/" target="_blank" rel="external">php 官方</a></li>
+</ul>
+<hr>
+<p>学习要点</p>
+<ul>
+<li>在一台 Linux 机器上配置 LEMP - Ubuntu/Nginx/PHP/MySQL 这个环境</li>
+</ul>
+<p>实践项目</p>
+<ul>
+<li>用户登录和注册（不需密码找回）。</li>
+<li>用户发贴（不需要支持富文本，只需要支持纯文本）。</li>
+<li>用户评论（不需要支持富文本，只需要支持纯文本）。</li>
+<li>用户登录时的密码不应该保存为明文 应该用 MD5+Salt 来保存</li>
+<li>图片验证码</li>
+<li>阻止用户在发文章或评论时输入带 HTML 或 JavaScript 内容</li>
+<li>防范 SQL 注入 <a href="https://technet.microsoft.com/zh-cn/library/ms161953%28v=sql.105%29.aspx?f=255&amp;MSPPError=-2147217396" target="_blank" rel="external">微软官方</a> <a href="http://php.net/manual/zh/security.database.sql-injection.php" target="_blank" rel="external">PHP官方</a></li>
+</ul>
+<h2 id="阶段二-正式入门"><a href="#阶段二-正式入门" class="headerlink" title="阶段二 正式入门"></a>阶段二 正式入门</h2><p>编程技巧</p>
+<ul>
+<li>代码大全 书籍</li>
+<li>java编程思想 书籍 spring实战 springboot实战</li>
+<li>鸟哥私房菜</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" target="_blank" rel="external">网络协议</a> 配合极客时间趣谈协议</li>
+<li>数据库设计 mysql官方文档 高性能mysql 书籍</li>
+<li>前端方面 jq <a href="https://getbootstrap.com/" target="_blank" rel="external">bootstrap</a> javascrip ajax <a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank" rel="external">javascrip的promise模式</a></li>
+<li>字符编码方面 <a href="http://www.imkevinyang.com/2010/06/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%EF%BC%8C%E4%BD%A0%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84.html" target="_blank" rel="external">关于字符编码</a> <a href="https://github.com/jagracey/Awesome-Unicode" target="_blank" rel="external">git两个库</a><a href="https://github.com/Codepoints/awesome-codepoints" target="_blank" rel="external">库二</a></li>
+</ul>
+<p>编程工具</p>
+<ul>
+<li>ide vscode intellijIDEA eclipe</li>
+<li>版本管理git</li>
+<li>调试前端 <a href="http://www.igeekbar.com/igeekbar/post/156.htm" target="_blank" rel="external">谷歌调试</a></li>
+<li>数据库设计工具 <a href="https://dev.mysql.com/doc/refman/5.7/en/" target="_blank" rel="external">官方文档</a></li>
+</ul>
+<p>实践项目 这回我们需要设计一个投票系统的项目<br>业务上的需求如下：</p>
+<ul>
+<li>用户只有在登录后，才可以生成投票表单。</li>
+<li>投票项可以单选，可以多选。</li>
+<li>其它用户投票后显示当前投票结果（但是不能刷票）。</li>
+<li>投票有相应的时间，页面上需要出现倒计时。</li>
+<li>投票结果需要用不同颜色不同长度的横条，并显示百分比和人数。h</li>
+</ul>
+<hr>
+<p>技术上的需求如下</p>
+<ul>
+<li>这回要用 Java Spring Boot 来实现了，然后，后端不返回任何的 HTML，只返回 JSON 数据给前端。</li>
+<li>由前端的 JQuery 来处理并操作相关的 HTML 动态生成在前端展示的页面。</li>
+<li>前端的页面还要是响应式的，也就是可以在手机端和电脑端有不同的呈现。 这个可以用 Bootstrap 来完成。</li>
+<li>如果你有兴趣，还可以挑战以下这些功能在微信中，通过微信授权后记录用户信息，以防止刷票。</li>
+<li>可以不用刷页面，就可以动态地看到投票结果的变化。</li>
+<li>Google 一些画图表的 JavaScript 库，然后把图表画得漂亮一些。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/07/大牛计划/" data-id="cjx5zi3ld000mrb5yljed4yn9" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习计划系列/">学习计划系列</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-soar-sql优化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/25/soar-sql优化/" class="article-date">
+  <time datetime="2018-10-25T10:32:43.000Z" itemprop="datePublished">2018-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/25/soar-sql优化/">soar-sql优化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>网站sql优化</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/25/soar-sql优化/" data-id="cjx5zi3lb000irb5ye1kcmge6" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soar-sql优化/">soar-sql优化</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-phantomsjs问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/25/phantomsjs问题/" class="article-date">
+  <time datetime="2018-10-25T10:23:50.000Z" itemprop="datePublished">2018-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/25/phantomsjs问题/">phantomsjs问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>phantomjs 抓取、截图中文网站乱码的问题的解决</p>
+<p>1、用phantomjs抓取html乱码的解决方案：<br>phantomjs –output-encoding=gbk test.js <a href="http://webscan.360.cn/index/checkwebsite?url=www.coding123.net" target="_blank" rel="external">http://webscan.360.cn/index/checkwebsite?url=www.coding123.net</a><br>这两个参数可以指定编码 …</p>
+<p>–output-encoding=encoding sets the encoding used for terminal output (default is utf8).<br>–script-encoding=encoding sets the encoding used for the starting script (default is utf8).</p>
+<p>设置成 GBK 就可以了 …</p>
+<p>或者</p>
+<p>phantom.outputEncoding=”gbk”;</p>
+<p>2、用phantomjs截图时中文乱码的解决方案：<br>用phantomjs去截取中文页面的网站可能会出现乱码的情况，也就是截图中中文的位置全是方框。解决办法就是安装字体。</p>
+<p>在centos中执行：yum install bitmap-fonts bitmap-fonts-cjk<br>在ubuntu中执行：sudo apt-get install xfonts-wqy</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/25/phantomsjs问题/" data-id="cjx5zi3l7000crb5y2feojv8u" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phantomsjs问题/">phantomsjs问题</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-学习计划" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/29/学习计划/" class="article-date">
+  <time datetime="2018-09-28T17:09:52.000Z" itemprop="datePublished">2018-09-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/29/学习计划/">学习计划</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 后台开发宏观了解<br> <a href="http://systemdesigns.blogspot.com/" target="_blank" rel="external">http://systemdesigns.blogspot.com/</a> </p>
+<p>2 算法与数据结构<br> <a href="https://github.com/jwasham/coding-interview-university" target="_blank" rel="external">https://github.com/jwasham/coding-interview-university</a> 算法数据结构系统教程git<br> <a href="https://leetcode-cn.com/explore/" target="_blank" rel="external">https://leetcode-cn.com/explore/</a> 算法题训练<br> 算法设计技巧与分析 吴伟</p>
+<p>3 java编程思想</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/29/学习计划/" data-id="cjx5zi3li000srb5ygp1m47xd" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人杂谈/">个人杂谈</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/22/mysql/" class="article-date">
+  <time datetime="2018-08-22T09:58:09.000Z" itemprop="datePublished">2018-08-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/22/mysql/">mysql</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mysql -h rm-bp1189620q55roplq.mysql.rds.aliyuncs.com  -u zhangjian -p -P 3306</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/22/mysql/" data-id="cjx5zi3l40009rb5yzxv1gdn7" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-scrapy学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/10/scrapy学习笔记/" class="article-date">
+  <time datetime="2018-08-10T09:07:25.000Z" itemprop="datePublished">2018-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/10/scrapy学习笔记/">scrapy学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>pip install Scrapy</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/10/scrapy学习笔记/" data-id="cjx5zi3l8000erb5ysoexkb3z" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-scrapy/">python scrapy</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-php开发" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/09/php开发/" class="article-date">
+  <time datetime="2018-04-08T16:48:55.000Z" itemprop="datePublished">2018-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/09/php开发/">php开发</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>测试</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/09/php开发/" data-id="cjx5zi3l9000grb5y9gjupmo6" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-系统词汇二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/04/系统词汇二/" class="article-date">
+  <time datetime="2018-01-04T01:47:04.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/04/系统词汇二/">系统词汇二</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>interviewee        n 被面试者，被访问者<br>architecture    n 建筑学 结构 结构体系<br>peer-to-peer    点对点<br>web facing service 面对网络服务<br>specific     adj 详细的 明确的 具体的<br>implement     工具 实施 实践<br>intimidating 令人恐惧的<br>tackle 处理<br>constraints     限制 强迫<br>bottlenecks     瓶颈<br>algorithm     算法<br>somewhat    有点<br>previous     先前的<br>chapter        章节<br>keep in mind     记住<br>go in     进去<br>strategies 策略 战略<br>look into     调查<br>approach 处理 方法<br>candidates 候选人<br>scale     规模<br>throughout     始终<br>chaos         混乱 混沌<br>structured     结构<br>equivalent    （of）相当于<br>equivalent     不成比例的<br>obstacle    障碍<br>significant    重要的 有意义的<br>intuition    直觉<br>clarify        澄清<br>constraints    限制<br>statistics     统计</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/04/系统词汇二/" data-id="cjx5zi3lq0014rb5yp0fpcy04" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/英语词汇/">英语词汇</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-data/">big data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phantomsjs问题/">phantomsjs问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-scrapy/">python scrapy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soar-sql优化/">soar-sql优化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人杂谈/">个人杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习计划系列/">学习计划系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作记录/">工作记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/新概念/">新概念</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统设计/">系统设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语/">英语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语词汇/">英语词汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机基础/">计算机基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a></li></ul>
+    </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/big-data/" style="font-size: 10px;">big data</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/phantomsjs问题/" style="font-size: 10px;">phantomsjs问题</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/python-scrapy/" style="font-size: 10px;">python scrapy</a> <a href="/tags/soar-sql优化/" style="font-size: 10px;">soar-sql优化</a> <a href="/tags/个人杂谈/" style="font-size: 10px;">个人杂谈</a> <a href="/tags/学习计划系列/" style="font-size: 10px;">学习计划系列</a> <a href="/tags/工作记录/" style="font-size: 10px;">工作记录</a> <a href="/tags/新概念/" style="font-size: 10px;">新概念</a> <a href="/tags/生活/" style="font-size: 20px;">生活</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/系统设计/" style="font-size: 10px;">系统设计</a> <a href="/tags/英语/" style="font-size: 10px;">英语</a> <a href="/tags/英语词汇/" style="font-size: 20px;">英语词汇</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a>
+    </div>
   </div>
-</div>
-
-<nav class="site-nav">
-  
 
   
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
+    </div>
+  </div>
 
-      
-    </ul>
+
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/18/常用l函数/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/23/大数据笔记/">bigdata笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/07/大牛计划/">进阶计划</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/soar-sql优化/">soar-sql优化</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/phantomsjs问题/">phantomsjs问题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 张建<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/18/常用l函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/18/常用l函数/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-18T13:26:35+08:00">
-                2019-06-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-并列排名
-123456789SELECT u.user_id, u.score,  CASE    WHEN @last_score = u.score     THEN @rank    WHEN @last_score := u.score      THEN @rank := @rank +
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/06/18/常用l函数/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/大数据笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/23/大数据笔记/" itemprop="url">bigdata笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T11:46:33+08:00">
-                2019-05-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          yarn      引入资源管理和任务调度的框架
-Ganglia   监控Hadoop及Hbase集群性能(安装配置)
-Zookeeper 是分布式服务框架，主要是用来解决分布式应用中经常遇到的一些数据管理问题，如：统一命名服务、状态同步服务、集群管理、分布式应用配置项的管理等等。
-Spark 最早
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/23/大数据笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/07/大牛计划/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/07/大牛计划/" itemprop="url">进阶计划</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-07T00:48:43+08:00">
-                2019-04-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          学习计划前提
-坚持学习
-动手 再简单的例子都要亲手实现一次
-学会思考，为什么要这样而不是那样 举一反三
-不要乱买书
-回顾历史技术发展，才能推测未来
-
-
-阶段一 零基础启蒙
-学习下python(自己找资料) javascrip 网址一 网址二
-linux学习
-前段端基础 css html js操作do
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/07/大牛计划/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/25/soar-sql优化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/25/soar-sql优化/" itemprop="url">soar-sql优化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-25T18:32:43+08:00">
-                2018-10-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          网站sql优化
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/25/soar-sql优化/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/25/phantomsjs问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/25/phantomsjs问题/" itemprop="url">phantomsjs问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-25T18:23:50+08:00">
-                2018-10-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          phantomjs 抓取、截图中文网站乱码的问题的解决
-1、用phantomjs抓取html乱码的解决方案：phantomjs –output-encoding=gbk test.js http://webscan.360.cn/index/checkwebsite?url=www.coding12
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/25/phantomsjs问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/29/学习计划/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/29/学习计划/" itemprop="url">学习计划</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-29T01:09:52+08:00">
-                2018-09-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
     
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          1 后台开发宏观了解 http://systemdesigns.blogspot.com/ 
-2 算法与数据结构 https://github.com/jwasham/coding-interview-university 算法数据结构系统教程git https://leetcode-cn.com/
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/29/学习计划/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/mysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/22/mysql/" itemprop="url">mysql</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T17:58:09+08:00">
-                2018-08-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          mysql -h rm-bp1189620q55roplq.mysql.rds.aliyuncs.com  -u zhangjian -p -P 3306
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/22/mysql/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/10/scrapy学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/10/scrapy学习笔记/" itemprop="url">scrapy学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-10T17:07:25+08:00">
-                2018-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          安装pip install Scrapy
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/10/scrapy学习笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/09/php开发/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/09/php开发/" itemprop="url">php开发</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-09T00:48:55+08:00">
-                2018-04-09
-              </time>
-            
-
-            
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-            
-          </span>
 
-          
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-          
-            
-          
 
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          测试
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/09/php开发/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/系统词汇二/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/04/系统词汇二/" itemprop="url">系统词汇二</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T09:47:04+08:00">
-                2018-01-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          interviewee        n 被面试者，被访问者architecture    n 建筑学 结构 结构体系peer-to-peer    点对点web facing service 面对网络服务specific     adj 详细的 明确的 具体的implement     工具 实施
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/04/系统词汇二/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          
-            <img class="site-author-image" itemprop="image"
-              src="/images/tx.jpg"
-              alt="张建" />
-          
-            <p class="site-author-name" itemprop="name">张建</p>
-            <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">29</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">张建</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.2</div>
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
+<script src="/js/script.js"></script>
 
   </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-    
-
-    
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 </body>
 </html>

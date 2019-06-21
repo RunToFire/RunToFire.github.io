@@ -1,1694 +1,739 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/page/3/"/>
-
-
-
-
-
-  <title>Hexo</title>
   
-
-
-
-
-
-
-
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-right 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
   </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-你在努力工么？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/25/你在努力工么？/" class="article-date">
+  <time datetime="2017-10-25T03:12:38.000Z" itemprop="datePublished">2017-10-25</time>
+</a>
+    
   </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
+  <div class="article-inner">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/你在努力工么？/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/25/你在努力工么？/" itemprop="url">新概念一</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/25/你在努力工么？/">新概念一</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T11:12:38+08:00">
-                2017-10-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
+        <h4 id="one"><a href="#one" class="headerlink" title="one"></a>one</h4><p>excuse me </p>
+<p> yes?</p>
+<p> is this you handbag?</p>
+<p> pardon?</p>
+<p> is this your handbag?</p>
+<p> Yes it is </p>
+<p> thank you very much </p>
+<h3 id="two"><a href="#two" class="headerlink" title="two"></a>two</h3><p>words ： umbrella ticker</p>
+<p>my coat and my umbrella , please<br>here is my ticket?</p>
+<p>thank you very much<br>number five </p>
+<p>here`s your umbrella and your coat</p>
+<p>this is not my umbrella?</p>
+<p>sorry sir?</p>
+<p>is this you umbrella ?<br>no it isn`t</p>
+<p>is this it ?</p>
+<p>yes it is </p>
+<p>thank you very much </p>
+<h4 id="three"><a href="#three" class="headerlink" title="three"></a>three</h4><p>word：japanese german德国 Norwegian bean teacup</p>
+<p>good morning!</p>
+<p>good morning Mr. Blake.</p>
+<p>This is Miss Sophie Dupont </p>
+<p>Sophie is a new student.</p>
+<p>she is frech</p>
+<p>Sophie ,this is hans</p>
+<p>nice to meet to you </p>
+<p>and this is Naoko</p>
+<p>he is japanese</p>
+<h4 id="four"><a href="#four" class="headerlink" title="four"></a>four</h4><p>word: Wednesday describe correct</p>
+<p>I am a new student</p>
+<p>My name is </p>
+<h4 id="7"><a href="#7" class="headerlink" title="7"></a>7</h4><p>word：nationality(国籍 民族)  keyboard  operator </p>
+<p>Are you a teacher?</p>
+<p>No,I`m not </p>
+<p>what`s your job?</p>
+<p>I`m a keyboard operator</p>
+<p>what`s your job?</p>
+<p>I`m an engineer?</p>
+<p>What nationality are you?</p>
+<p>I`am italian</p>
+<h4 id="9"><a href="#9" class="headerlink" title="9"></a>9</h4><p>word:</p>
+<p>hello helen </p>
+<p>Hi, steven</p>
+<p>how are you today ?</p>
+<p>I`m very well, and you?</p>
+<p>I`m fine, thanks.</p>
+<p>How`s Tony?</p>
+<p>He`s fine, thanks.</p>
+<p>How`s Emma?</p>
+<p>She`s ver well too, helen.</p>
+<h4 id="11"><a href="#11" class="headerlink" title="11"></a>11</h4><p>words: Perhaps(也许是) white(白色)</p>
+<p>Whose is shirt is that?</p>
+<p>is this your shirt,Dave?</p>
+<p>No.Sir<br>It<code>s not my shirt
+This is my shirt
+My shirt</code>s blue.</p>
+<p>is this shirt Tim`s?</p>
+<p>Perhaps it is,Sir<br>Tim`s shirt white</p>
 
-      
-        
-          
-          oneexcuse me 
- yes?
- is this you handbag?
- pardon?
- is this your handbag?
- Yes it is 
- thank you very much 
-twowords ： umbrella ticker
-my coat and my 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/25/你在努力工么？/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/25/你在努力工么？/" data-id="cjx5zi3lc000krb5yco009bsr" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-英语学习法则" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/英语学习法则/" class="article-date">
+  <time datetime="2017-10-24T10:18:56.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/24/英语学习法则/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/24/英语学习法则/" itemprop="url">英语学习法则</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/24/英语学习法则/">英语学习法则</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-24T18:18:56+08:00">
-                2017-10-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          
-          一、总则：1. 坚持每天至少背50-100个单词。没有一定的单词量，英语就不可能学好。
+        <h4 id="一、总则："><a href="#一、总则：" class="headerlink" title="一、总则："></a>一、总则：</h4><pre><code>1. 坚持每天至少背50-100个单词。没有一定的单词量，英语就不可能学好。
 2. 每天听写一篇文章，以此文章为中心，展开一天的学习。
 3. 听说读写译五项都要练，以听说为主，听说资料，可以选慢速英语。
-4. 求质不求量，把听写的文章彻底搞懂足矣，不要好大喜功，贪大贪快。扎扎实实，按部就班
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/24/英语学习法则/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+4. 求质不求量，把听写的文章彻底搞懂足矣，不要好大喜功，贪大贪快。扎扎实实，按部就班，是学好英语的必经之路。
+5. 把零碎的时间充分利用起来学英语，不断地重复。
+6. 听写是个学习英语的好方法，要继续加强。
+7. 早睡早起学英语。
+8. 抓住一套教材足矣，不要盲目的更换教材，好教材，我选择新概念英语，每一篇都是经典。
+9. 每天学习英语必须要有详细可行的计划，必须坚决执行，没有任何借口。
+10. 相信自己，一定能够学好英语。
+11. 坚持每一天，充分利用一切可以利用的时间学英语。没有持之以恒的学习和大量的时将做保障，一切都是空谈。
+</code></pre><h4 id="二、分则："><a href="#二、分则：" class="headerlink" title="二、分则："></a>二、分则：</h4><h6 id="（一）词汇："><a href="#（一）词汇：" class="headerlink" title="（一）词汇："></a>（一）词汇：</h6><pre><code>1. 英语的学习还是需要一定单词量积累的，每天可以早晚各半小时用来集中背单词，最少也要保证早晚各15分钟，可以选新概念或四六级的词汇背，这些比较基础并且常用。
+2. 在阅读中或者看电影时遇到不认识的生词，你认为不错的就抄下来，可以制成小卡片或者摘抄在小本子上记忆。  
+</code></pre><h6 id="（二）听力："><a href="#（二）听力：" class="headerlink" title="（二）听力："></a>（二）听力：</h6><pre><code>1. 除周末外，每天晚上10：00——12：00听写一篇五分钟左右的短文。着重听力后的分析过程。
+2. 早晚都随身带MP3，一有空闲时间就反复听这篇短文，直到听烂为止。
+3. 周末看一部外国电影，复习就内容，检查一周来的学习计划执行情况。
+4. 重视精听，听无数遍。  
+</code></pre><h6 id="（三）口语："><a href="#（三）口语：" class="headerlink" title="（三）口语："></a>（三）口语：</h6><pre><code>1. 朗读并努力复述听写的短文
+2. 每天坚持张嘴说，每周参加英语角。
+3. 注意在朗读过程中纠正发音。 
+</code></pre><h6 id="（四）阅读："><a href="#（四）阅读：" class="headerlink" title="（四）阅读："></a>（四）阅读：</h6><pre><code>1. 每周阅读一份英语报纸（网上）。
+2. 每次整理笔记。  
+</code></pre><h6 id="（五）写译："><a href="#（五）写译：" class="headerlink" title="（五）写译："></a>（五）写译：</h6><pre><code>1. 争取把每天听写的短文都翻译，先英汉，再汉英。
+2. 注意整理笔记。
+</code></pre>
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/24/英语学习法则/" data-id="cjx5zi3lt0019rb5yx37x8ywi" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-音乐心情" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/音乐心情/" class="article-date">
+  <time datetime="2017-10-24T09:17:43.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/24/音乐心情/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/24/音乐心情/" itemprop="url">关于郑州的记忆</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/24/音乐心情/">关于郑州的记忆</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-24T17:17:43+08:00">
-                2017-10-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          
-          关于郑州我知道的不多为了爱情曾经去过那里多少次在火车上路过这城市一个人悄悄地想起她她说她喜欢郑州冬天的阳光巷子里飘满煤炉的味道雾气穿过她年轻的脖子直到今天都没有散去关于郑州我想的全是你想来想去都是忏悔和委屈关于郑州我爱的全是你爱来爱去不明白爱的意义关于郑州只是偶尔想起现在她的味道都在回忆里每次和朋友
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/24/音乐心情/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h6 id="关于郑州我知道的不多"><a href="#关于郑州我知道的不多" class="headerlink" title="关于郑州我知道的不多"></a><center>关于郑州我知道的不多</center></h6><h6 id="为了爱情曾经去过那里"><a href="#为了爱情曾经去过那里" class="headerlink" title="为了爱情曾经去过那里"></a><center>为了爱情曾经去过那里</center></h6><h6 id="多少次在火车上路过这城市"><a href="#多少次在火车上路过这城市" class="headerlink" title="多少次在火车上路过这城市"></a><center>多少次在火车上路过这城市</center></h6><h6 id="一个人悄悄地想起她"><a href="#一个人悄悄地想起她" class="headerlink" title="一个人悄悄地想起她"></a><center>一个人悄悄地想起她</center></h6><h6 id="她说她喜欢郑州冬天的阳光"><a href="#她说她喜欢郑州冬天的阳光" class="headerlink" title="她说她喜欢郑州冬天的阳光"></a><center>她说她喜欢郑州冬天的阳光</center></h6><h6 id="巷子里飘满煤炉的味道"><a href="#巷子里飘满煤炉的味道" class="headerlink" title="巷子里飘满煤炉的味道"></a><center>巷子里飘满煤炉的味道</center></h6><h6 id="雾气穿过她年轻的脖子"><a href="#雾气穿过她年轻的脖子" class="headerlink" title="雾气穿过她年轻的脖子"></a><center>雾气穿过她年轻的脖子</center></h6><h6 id="直到今天都没有散去"><a href="#直到今天都没有散去" class="headerlink" title="直到今天都没有散去"></a><center>直到今天都没有散去</center></h6><h6 id="关于郑州我想的全是你"><a href="#关于郑州我想的全是你" class="headerlink" title="关于郑州我想的全是你"></a><center>关于郑州我想的全是你</center></h6><h6 id="想来想去都是忏悔和委屈"><a href="#想来想去都是忏悔和委屈" class="headerlink" title="想来想去都是忏悔和委屈"></a><center>想来想去都是忏悔和委屈</center></h6><h6 id="关于郑州我爱的全是你"><a href="#关于郑州我爱的全是你" class="headerlink" title="关于郑州我爱的全是你"></a><center>关于郑州我爱的全是你</center></h6><h6 id="爱来爱去不明白爱的意义"><a href="#爱来爱去不明白爱的意义" class="headerlink" title="爱来爱去不明白爱的意义"></a><center>爱来爱去不明白爱的意义</center></h6><h6 id="关于郑州只是偶尔想起"><a href="#关于郑州只是偶尔想起" class="headerlink" title="关于郑州只是偶尔想起"></a><center>关于郑州只是偶尔想起</center></h6><h6 id="现在她的味道都在回忆里"><a href="#现在她的味道都在回忆里" class="headerlink" title="现在她的味道都在回忆里"></a><center>现在她的味道都在回忆里</center></h6><h6 id="每次和朋友聊起过去的旅行"><a href="#每次和朋友聊起过去的旅行" class="headerlink" title="每次和朋友聊起过去的旅行"></a><center>每次和朋友聊起过去的旅行</center></h6><h6 id="我不敢说我曾去过那里"><a href="#我不敢说我曾去过那里" class="headerlink" title="我不敢说我曾去过那里"></a><center>我不敢说我曾去过那里</center></h6><h6 id="关于郑州我想的全是你-1"><a href="#关于郑州我想的全是你-1" class="headerlink" title="关于郑州我想的全是你"></a><center>关于郑州我想的全是你</center></h6><h6 id="想来生活无非是痛苦和美丽"><a href="#想来生活无非是痛苦和美丽" class="headerlink" title="想来生活无非是痛苦和美丽"></a><center>想来生活无非是痛苦和美丽</center></h6><h6 id="关于郑州我爱的全是你-1"><a href="#关于郑州我爱的全是你-1" class="headerlink" title="关于郑州我爱的全是你"></a><center>关于郑州我爱的全是你</center></h6><h6 id="爱到最后我们都无路可去"><a href="#爱到最后我们都无路可去" class="headerlink" title="爱到最后我们都无路可去"></a><center>爱到最后我们都无路可去</center></h6><h6 id="似是而非或是世事可畏"><a href="#似是而非或是世事可畏" class="headerlink" title="似是而非或是世事可畏"></a><center>似是而非或是世事可畏</center></h6><h6 id="有情有义又是有米无炊"><a href="#有情有义又是有米无炊" class="headerlink" title="有情有义又是有米无炊"></a><center>有情有义又是有米无炊</center></h6><h6 id="时间改变了很多也什么都没有"><a href="#时间改变了很多也什么都没有" class="headerlink" title="时间改变了很多也什么都没有"></a><center>时间改变了很多也什么都没有</center></h6><h6 id="让我再次拥抱你-郑州"><a href="#让我再次拥抱你-郑州" class="headerlink" title="让我再次拥抱你 郑州"></a><center>让我再次拥抱你 郑州</center></h6>
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/24/音乐心情/" data-id="cjx5zi3m0001irb5yubfu7fm0" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-erpChange" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/19/erpChange/" class="article-date">
+  <time datetime="2017-10-19T01:29:31.000Z" itemprop="datePublished">2017-10-19</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/19/erpChange/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/19/erpChange/" itemprop="url">erp采购模块需求修改</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/19/erpChange/">erp采购模块需求修改</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-19T09:29:31+08:00">
-                2017-10-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
+        <h5 id="点赞部分"><a href="#点赞部分" class="headerlink" title="点赞部分"></a>点赞部分</h5><blockquote>
+<ol>
+<li><p>数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &apos;报价三点赞&apos;</div><div class="line">alter table `erp_supplier_quote` add `second_like` varchar(128) DEFAULT NULL COMMENT &apos;报价二点赞&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改文件：控制器ProjectController、视图stateInfo</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="分类筛选部分"><a href="#分类筛选部分" class="headerlink" title="分类筛选部分"></a>分类筛选部分</h5><blockquote>
+<ol>
+<li>修改文件：控制器ProjectController actionAddSupplierSigning方法、视图stateInfo</li>
+</ol>
+</blockquote>
+<h5 id="添加评定人部分"><a href="#添加评定人部分" class="headerlink" title="添加评定人部分"></a>添加评定人部分</h5><blockquote>
+<ol>
+<li><p>数据库部分修改：表supplier_quote新增字段checker命令如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alter table `erp_supplier_quote` add `checker` varchar(128) DEFAULT NULL COMMENT &apos;评价人&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改文件：控制器ProjectController、视图stateInfo</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="评论分区部分"><a href="#评论分区部分" class="headerlink" title="评论分区部分"></a>评论分区部分</h5><blockquote>
+<ol>
+<li><p>数据库部分修改：新增评论记录表erp_supplier_evaluation命令如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE `erp_supplier_evaluation` (</div><div class="line">`e_id` int(11) unsigned NOT NULL AUTO_INCREMENT,</div><div class="line">`b_id` int(11) NOT NULL COMMENT &apos;项目ID&apos;,</div><div class="line">`sup_id` int(11) NOT NULL COMMENT &apos;供应商ID&apos;,</div><div class="line">`sup_name` varchar(225) DEFAULT NULL COMMENT &apos;供应商名称&apos;</div><div class="line">`sup_type` varchar(11) DEFAULT NULL COMMENT &apos;供应商类型&apos;,</div><div class="line">`content` varchar(1024) DEFAULT NULL COMMENT &apos;评论内容&apos;,</div><div class="line">`adduser` int(11) DEFAULT NULL COMMENT &apos;评价人id&apos;,</div><div class="line">`addusername` varchar(225) DEFAULT NULL COMMENT &apos;评价人姓名&apos;,</div><div class="line">`addtime` datetime DEFAULT NULL COMMENT &apos;评价时间&apos;,</div><div class="line">PRIMARY KEY (`e_id`)</div><div class="line">) ENGINE=MyISAM DEFAULT CHARSET=utf8;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改文件：控制器ProjectController、视图stateInfo.php supplierquoteadd.php</p>
+</li>
+</ol>
+</blockquote>
 
-      
-        
-          
-          点赞部分
-
-数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：
- 12alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &a
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/19/erpChange/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/19/erpChange/" data-id="cjx5zi3l00004rb5yaoi9pfbj" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作记录/">工作记录</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-mysqlError1449" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/17/mysqlError1449/" class="article-date">
+  <time datetime="2017-10-17T09:37:29.000Z" itemprop="datePublished">2017-10-17</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/17/mysqlError1449/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/17/mysqlError1449/" itemprop="url">mysql异常1449</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/17/mysqlError1449/">mysql异常1449</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T17:37:29+08:00">
-                2017-10-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
+        <h4 id="mysql异常1449"><a href="#mysql异常1449" class="headerlink" title="mysql异常1449"></a>mysql异常1449</h4><blockquote>
+<p>问题：CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1449 The user specified as a definer (‘root’@’%’) does not exist. The SQL statement executed was: select getChildUserByID(256)<br><img src="/images/mysql1449.png" alt="avatar"><br>解决办法：mysql执行命令grant all privileges on <em>.</em> to root@”%” identified by “.”;对不同主机IP授权命令<br>若无立即生效参考：注意授权后必须FLUSH PRIVILEGES;否则无法立即生效。</p>
+</blockquote>
 
-      
-        
-          
-          mysql异常1449
-问题：CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1449 The user specified as a definer (‘root’@’%’) does not exist. The SQL state
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/17/mysqlError1449/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/17/mysqlError1449/" data-id="cjx5zi3l5000arb5ycqu9clxa" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-erpzhangting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/13/erpzhangting/" class="article-date">
+  <time datetime="2017-10-13T02:16:42.000Z" itemprop="datePublished">2017-10-13</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/13/erpzhangting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/13/erpzhangting/" itemprop="url">Linux软件安装</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/13/erpzhangting/">Linux软件安装</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-13T10:16:42+08:00">
-                2017-10-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
+        <h4 id="软件分类"><a href="#软件分类" class="headerlink" title="软件分类"></a>软件分类</h4><h5 id="源码包-脚本安装包（直接看到源代码）"><a href="#源码包-脚本安装包（直接看到源代码）" class="headerlink" title="源码包 脚本安装包（直接看到源代码）"></a>源码包 脚本安装包（直接看到源代码）</h5><blockquote>
+<ol>
+<li>源码包的优点是：<ul>
+<li>开源</li>
+<li>可以自由选择功能</li>
+<li>软件编译安装，所以更加适合自己的系统，更加稳定</li>
+<li>卸载方便，不会残留 </li>
+</ul>
+</li>
+<li>源码包的缺点：<ul>
+<li>安装过程步骤多，尤其是较大集合软件（如LAMP环境搭建），容易出现拼写错误</li>
+<li>编译过程时间较长，安装比二进制安装时间长</li>
+<li>因为是编译安装，安装过程一旦报错新手很难解决</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h5 id="二进制包（RPM包、系统默认包"><a href="#二进制包（RPM包、系统默认包" class="headerlink" title="二进制包（RPM包、系统默认包)"></a>二进制包（RPM包、系统默认包)</h5><blockquote>
+<ol>
+<li>二进制包优点<ul>
+<li>包管理系统简单，只通过几个命令就可以实现包的安装、升级、 查询和卸载</li>
+<li>安装速度比源码包安装快的多</li>
+</ul>
+</li>
+<li>二进制包的缺点：<ul>
+<li>经过编译，不可在看到源代码</li>
+<li>功能选择不如源码包灵活</li>
+<li>依赖性<h5 id="rpm命令管理"><a href="#rpm命令管理" class="headerlink" title="rpm命令管理"></a>rpm命令管理</h5></li>
+</ul>
+</li>
+<li>rpm在系统光盘中</li>
+<li>rpm包命名规则 名称-版本-发布次数.适合的平台.适合的硬件平台.rpm包扩展名。</li>
+<li>rpm包依赖性 树形依赖 环形依赖 模块依赖<h5 id="rpm安装命令"><a href="#rpm安装命令" class="headerlink" title="rpm安装命令"></a>rpm安装命令</h5></li>
+<li>包全名（操作从未安装的包安装使用全名） 包名（操作安装过的包）</li>
+<li>RPM安装命令： rpm -ivh 包全名<ul>
+<li>-i（install）安装</li>
+<li>-v（verbose）显示详细信息</li>
+<li>-h（hash）显示进度</li>
+<li>–nodeps不检测依赖性</li>
+</ul>
+</li>
+</ol>
+</blockquote>
 
-      
-        
-          
-          软件分类源码包 脚本安装包（直接看到源代码）
-
-源码包的优点是：
-开源
-可以自由选择功能
-软件编译安装，所以更加适合自己的系统，更加稳定
-卸载方便，不会残留 
-
-
-源码包的缺点：
-安装过程步骤多，尤其是较大集合软件（如LAMP环境搭建），容易出现拼写错误
-编译过程时间较长，安装比二进制安装时间长
-因
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/13/erpzhangting/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/13/erpzhangting/" data-id="cjx5zi3l20006rb5yyv9z70nd" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-2016plan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/02/2016plan/" class="article-date">
+  <time datetime="2017-10-02T02:28:13.000Z" itemprop="datePublished">2017-10-02</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/02/2016plan/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/02/2016plan/" itemprop="url">2016plan</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/02/2016plan/">2016plan</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-02T10:28:13+08:00">
-                2017-10-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          
-          One 腹肌计划Two 学习计划
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/02/2016plan/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h4 id="One-腹肌计划"><a href="#One-腹肌计划" class="headerlink" title="One 腹肌计划"></a>One 腹肌计划</h4><h4 id="Two-学习计划"><a href="#Two-学习计划" class="headerlink" title="Two 学习计划"></a>Two 学习计划</h4>
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/02/2016plan/" data-id="cjx5zi3kr0000rb5yygny0cj2" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="post-manacher算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/13/manacher算法/" class="article-date">
+  <time datetime="2017-09-13T09:09:31.000Z" itemprop="datePublished">2017-09-13</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/manacher算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/13/manacher算法/" itemprop="url">manacher算法</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/13/manacher算法/">manacher算法</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T17:09:31+08:00">
-                2017-09-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
+        <h3 id="LeetCode-Longest-Palindromic-Substring-最长回文子串"><a href="#LeetCode-Longest-Palindromic-Substring-最长回文子串" class="headerlink" title="LeetCode:Longest Palindromic Substring 最长回文子串"></a><a href="https://leetcode.com/problems/longest-palindromic-substring/description/" target="_blank" rel="external">LeetCode:Longest Palindromic Substring</a> 最长回文子串</h3><p>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.</p>
+<h5 id="求字符串的最长回文子串"><a href="#求字符串的最长回文子串" class="headerlink" title="求字符串的最长回文子串"></a>求字符串的最长回文子串</h5><ul>
+<li><p>算法1：暴力解法，枚举所有子串，对每个子串判断是否为回文，复杂度为O(n^3)</p>
+</li>
+<li><p>算法2：删除暴力解法中有很多重复的判断。很容易想到动态规划，时间复杂度O（n^2）,空间O（n^2）,动态规划方程如下：</p>
+</li>
+</ul>
+<blockquote>
+<p>   dp[i][j] 表示子串s[i…j]是否是回文<br>    初始化：dp[i][i] = true (0 &lt;= i &lt;= n-1);  dp[i][i-1] = true (1 &lt;= i &lt;= n-1); 其余的初始化为false<br>    dp[i][j] = (s[i] == s[j] &amp;&amp; dp[i+1][j-1] == true)<br>    在动态规划中保存最长回文的长度及起点即可</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        bool dp[len][len];//dp[i][j]表示s[i..j]是否是回文</div><div class="line">        memset(dp, 0, sizeof(dp));</div><div class="line">        int resLeft = 0, resRight = 0;</div><div class="line">        dp[0][0] = true;</div><div class="line">        for(int i = 1; i &lt; len; i++)</div><div class="line">        &#123;</div><div class="line">            dp[i][i] = true;</div><div class="line">            dp[i][i-1] = true;//这个初始化容易忽略，当k=2时要用到</div><div class="line">        &#125;</div><div class="line">        for(int k = 2; k &lt;= len; k++)//枚举子串长度</div><div class="line">            for(int i = 0; i &lt;= len-k; i++)//枚举子串起始位置</div><div class="line">            &#123;</div><div class="line">                if(s[i] == s[i+k-1] &amp;&amp; dp[i+1][i+k-2])</div><div class="line">                &#123;</div><div class="line">                    dp[i][i+k-1] = true;</div><div class="line">                    if(resRight-resLeft+1 &lt; k)</div><div class="line">                    &#123;</div><div class="line">                        resLeft = i;</div><div class="line">                        resRight = i+k-1;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        return s.substr(resLeft, resRight-resLeft+1);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>算法3：以某个元素为中心，分别计算偶数长度的回文最大长度和奇数长度的回文最大长度。时间复杂度O(n^2)，空间O（1）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        int start, maxLen = 0;</div><div class="line">        for(int i = 1; i &lt; len; i++)</div><div class="line">        &#123;</div><div class="line">            //寻找以i-1,i为中点偶数长度的回文</div><div class="line">            int low = i-1, high = i;</div><div class="line">            while(low &gt;= 0 &amp;&amp; high &lt; len &amp;&amp; s[low] == s[high])</div><div class="line">            &#123;</div><div class="line">                low--;</div><div class="line">                high++;</div><div class="line">            &#125;</div><div class="line">            if(high - low - 1 &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = high - low -1;</div><div class="line">                start = low + 1;</div><div class="line">            &#125;</div><div class="line">             </div><div class="line">            //寻找以i为中心的奇数长度的回文</div><div class="line">            low = i- 1; high = i + 1;</div><div class="line">            while(low &gt;= 0 &amp;&amp; high &lt; len &amp;&amp; s[low] == s[high])</div><div class="line">            &#123;</div><div class="line">                low--;</div><div class="line">                high++;</div><div class="line">            &#125;</div><div class="line">            if(high - low - 1 &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = high - low -1;</div><div class="line">                start = low + 1;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return s.substr(start, maxLen);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>算法4：Manacher算法，时间复杂度O(n), 空间复杂度O(n)</li>
+</ul>
+<blockquote>
+<p>   该算法首先对字符串进行预处理，在字符串的每个字符前后都加入一个特殊符号，比如字符串 abcd 处理成 #a#b#c#d#,为了避免处理越界，在字符串首尾加上不同的两个特殊字符(c类型的字符串尾部不用加，因为自带‘\0’)，这样预处理后最终变成$#a#b#c#d#^，经过这样处理后有个好处是原来的偶数长度和奇数长度的回文在处理后的字符串中都是奇数长度。假设处理后的字符串为s                    本文地址</p>
+<p>   对于已经预处理好的字符串我们用数组p[i]来记录以字符S[i]为中心的最长回文子串向左/右扩张的长度（包括S[i]）,以字符串“12212321”为例，p数组如下</p>
+<p>   s：   $   #  1  #  2  #  2  #  1  #  2  #  3  #  2  #  1  #  ^<br>    p：       1  2  1  2   5  2  1  4  1   2  1  6  1   2  1  2  1<br>    可以看出，P[i]-1正好是原字符串中回文串的总长度, 如果p数组已知，遍历p数组找到最大的p[i]就可以求出最长回文的长度，<br>    也可以求出回文的位置</p>
+<p>   下面给出求p[]数组的方法：<br>    设id是当前求得的最长回文子串中心的位置，mx为当前最长回文子串的右边界（回文子串不包括该右边界），即mx = id + p[id]。<br>    记j = 2*id – i ，即 j 是 i 关于 id 的对称点。</p>
+<pre><code>- 1、 当i &lt; mx 时，如下图。此时可以得出一个非常神奇的结论p[i] &gt;= min(p[2*id - i], mx - i)，下面我们来解释这个结论
+如何根据p[j]来求p[i]呢，又要分成两种情况
+-- 1.1）当mx – i &gt; p[j], 这时候以S[j]为中心的回文子串包含在以S[id]为中心的回文子串中，由于 i 和 j 对称，以S[i]为中心的回文子串必然包含在以S[id]为中心的回文子串中，所以 P[i]  至少等于 p[j], 后面的再继续匹配。如下图
+注：这里其实p[i]一定等于p[j],后面不用再匹配了。因为如果p[i]后面还可以继续匹配，根据对称性，p[j]也可以继续扩展了
+-- 1.2）当mx – i &lt;= p[j]， 以S[j]为中心的回文子串不完全包含于以S[id]为中心的回文子串中，但是基于对称性可知，下图中两个绿框所包围的部分是相同的，也就是说以S[i]为中心的回文子串，其向右至少会扩张到mx的位置，也就是说 P[i] 至少等于 mx - i，至于mx之后的部分是否对称，就只能老老实实去匹配了。
+注：如果mx – i &lt; p[j] ，这时p[i]一定等于mx - i, 因为如果p[i]在mx之后还可以继续匹配，根据对称性，mx之后匹配的点(包括mx)一定会出现在my的前面，这说明p[id]也可以继续扩展了
+- 2、当i &gt;= mx, 无法对p[i]做更多的假设，只能p[i] = 1,然后再去匹配
+算法复杂度分析：根据斜体字部分的注释，只有当mx-i = p[j]时 以及 i &gt; mx时才要扩展比较，而mx也是在不断扩展的，总体而言每个元素比较次数是n的线性关系，所以时间复杂度为O(n)
+</code></pre></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        //Manncher算法 ，o（n）</div><div class="line">        string str = preProcess(s);</div><div class="line">        int n = str.size(), id = 0, mx = 0;</div><div class="line">        vector&lt;int&gt;p(n, 0);</div><div class="line">        for(int i = 1; i &lt; n-1; i++)</div><div class="line">        &#123;</div><div class="line">            p[i] = mx &gt; i ? min(p[2*id-i], mx-i) : 1;</div><div class="line">            //if(mx &lt;= i || (mx &gt; i &amp;&amp; p[2*id-i] == mx - i)) //根据正文斜体部分的注释，这里可要可不要</div><div class="line">            while(str[i+p[i]] == str[i-p[i]])p[i]++;</div><div class="line">            if(i + p[i] &gt; mx)</div><div class="line">            &#123;</div><div class="line">                mx = i + p[i];</div><div class="line">                id = i;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">         </div><div class="line">        //遍历p，寻找最大回文长度</div><div class="line">        int maxLen = 0, index = 0;</div><div class="line">        for(int i = 1; i &lt; n-1; i++)</div><div class="line">            if(p[i] &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = p[i];</div><div class="line">                index = i;</div><div class="line">            &#125;</div><div class="line">        return s.substr((index - maxLen)/2, maxLen-1);</div><div class="line">    &#125;</div><div class="line">    //预处理字符串，abc预处理后变成$#a#b#c#^</div><div class="line">    string preProcess(const string &amp;s)</div><div class="line">    &#123;</div><div class="line">        int n = s.size();</div><div class="line">        string res; </div><div class="line">        res.push_back(&apos;$&apos;);//把$放到字符串头部</div><div class="line">        res.push_back(&apos;#&apos;);//以#作为原来字符串中每个字符的间隔</div><div class="line">        for(int i = 0; i &lt; n; i++)</div><div class="line">        &#123;</div><div class="line">            res.push_back(s[i]);</div><div class="line">            res.push_back(&apos;#&apos;);</div><div class="line">        &#125;</div><div class="line">        res.push_back(&apos;^&apos;);//以^作为字符串的结尾</div><div class="line">        return res;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>算法5：可以用后缀数组来解，在源字符串后面加一个特殊字符，然后把源字符串的反转串连接到源字符串后面，那么问题就变成了求这个新字符串的某两个后缀的最长公共前缀，该问题是典型的后缀数组应用，可以参考here，关于后缀数组请关注我的后续博客</li>
+</ul>
+<hr>
+<p><a href="http://www.cnblogs.com/TenosDoIt/p/3675788.html" target="_blank" rel="external">来源</a></p>
 
-      
-        
-          
-          LeetCode:Longest Palindromic Substring 最长回文子串Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/13/manacher算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/13/manacher算法/" data-id="cjx5zi3l10005rb5ycs7bnolw" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+  
+    <article id="article-php提升路线" class="article article-type-article" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/11/php提升路线/" class="article-date">
+  <time datetime="2016-09-11T01:37:36.000Z" itemprop="datePublished">2016-09-11</time>
+</a>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/11/php提升路线/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张建">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/09/11/php提升路线/" itemprop="url">php提升路线</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/11/php提升路线/">php提升路线</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-11T09:37:36+08:00">
-                2016-09-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
+        <h3 id="第一阶段：基础阶段（基础PHP程序员）"><a href="#第一阶段：基础阶段（基础PHP程序员）" class="headerlink" title="第一阶段：基础阶段（基础PHP程序员）"></a>第一阶段：基础阶段（基础PHP程序员）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">重点：把LNMP搞熟练（核心是安装配置基本操作）</div><div class="line">目标：能够完成基本的LNMP系统安装，简单配置维护；能够做基本的简单系统的PHP开发;</div><div class="line">	 能够在PHP中型系统中支持某个PHP功能模块的开发。</div><div class="line">时间：完成本阶段的时间因人而异，有的成长快半年一年就过了，成长慢的两三年也有。</div></pre></td></tr></table></figure>
+<h5 id="1-Linux："><a href="#1-Linux：" class="headerlink" title="1.Linux："></a>1.Linux：</h5><p>基本命令、操作、启动、基本服务配置（包括rpm安装文件，各种服务配置等）；会写简单的shell脚本和awk/sed 脚本命令等。</p>
+<h5 id="2-Nginx："><a href="#2-Nginx：" class="headerlink" title="2.Nginx："></a>2.Nginx：</h5><p>做到能够安装配置nginx+php，知道基本的nginx核心配置选项，知道 server/fastcgi_pass/access_log 等基础配置，目标是能够让nginx+php_fpm顺利工作。</p>
+<h5 id="3-MySQL："><a href="#3-MySQL：" class="headerlink" title="3.MySQL："></a>3.MySQL：</h5><p>会自己搭建mysql，知道基本的mysql配置选项；知道innodb和myisam的区别，知道针对InnoDB和MyISAM两个引擎的不同配置选项；知道基本的两个引擎的差异和选择上面的区别；能够纯手工编译搭建一个MySQL数据库并且配置好编码等正常稳定运行；核心主旨是能够搭建一个可运行的MySQL数据库。</p>
+<h4 id="4-PHP："><a href="#4-PHP：" class="headerlink" title="4.PHP："></a>4.PHP：</h4><p>基本语法数组、字符串、数据库、XML、Socket、GD/ImageMgk图片处理等等；熟悉各种跟MySQL操作链接的api（mysql/mysqli/PDO)，知道各种编码问题的解决；知道常规熟练使用的PHP框架（ThinkPHP、Zendframework、Yii、Yaf等）；了解基本MVC的运行机制和为什么这么做，稍微知道不同的PHP框架之间的区别；能够快速学习一个MVC框架。能够知道开发工程中的文件目录组织，有基本的良好的代码结构和风格，能够完成小系统的开发和中型系统中某个模块的开发工作。</p>
+<h4 id="5-前端："><a href="#5-前端：" class="headerlink" title="5.前端："></a>5.前端：</h4><p>如果条件时间允许，可以适当学习下 HTML/CSS/JS 等相关知识，知道什么web标准，div+css的web/wap页面模式，知道HTML5和HTML4的区别；了解一些基本的前端只是和JS框架（jQuery之类的）；了解一些基本的JavaScript编程知识；（本项不是必须项，如果有时间，稍微了解一下是可以的，不过不建议作为重点，除非个人有强烈兴趣）</p>
+<h4 id="6-系统设计："><a href="#6-系统设计：" class="headerlink" title="6.系统设计："></a>6.系统设计：</h4><p>能够完成小型系统的基本设计，包括简单的数据库设计，能够完成基本的：浏览器 -&gt; Nginx+PHP -&gt; 数据库 架构的设计开发工作；能够支撑每天几十万到数百万流量网站的开发维护工作；</p>
+<h3 id="第二阶段：提高阶段-（中级PHP程序员）"><a href="#第二阶段：提高阶段-（中级PHP程序员）" class="headerlink" title="第二阶段：提高阶段 （中级PHP程序员）"></a>第二阶段：提高阶段 （中级PHP程序员）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">重点：提高针对LNMP的技能，能够更全面的对LNMP有熟练的应用。</div><div class="line">目标：能够随时随地搭建好LNMP环境，快速完成常规配置；能够追查解决大部分遇到的开发和线上环境的问题；</div><div class="line">	 能够独立承担中型系统的构架和开发工作；能够在大型系统中承担某个中型模块的开发工作；</div></pre></td></tr></table></figure>
+<h5 id="1-Linux"><a href="#1-Linux" class="headerlink" title="1. Linux:"></a>1. Linux:</h5><blockquote>
+<p>在第一阶段的基础上面，能够流畅的使用Shell脚本来完成很多自动化的工作；awk/sed/perl 也操作的不错，能够完成很多文本处理和数据统计等工作；基本能够安装大部分非特殊的Linux程序（包括各种库、包、第三方依赖等等，比如MongoDB/Redis/Sphinx/Luncene/SVN之类的）；了解基本的Linux服务，知道如何查看Linux的性能指标数据，知道基本的Linux下面的问题跟踪等。</p>
+</blockquote>
+<h5 id="2-Nginx"><a href="#2-Nginx" class="headerlink" title="2. Nginx:"></a>2. Nginx:</h5><p>在第一阶段的基础上面，了解复杂一些的Nginx配置；包括 多核配置、events、proxy<em>pass，sendfile/tcp</em>*配置，知道超时等相关配置和性能影响；知道nginx除了web server，还能够承担代理服务器、反向静态服务器等配置；知道基本的nginx配置调优；知道如何配置权限、编译一个nginx扩展到nginx；知道基本的nginx运行原理（master/worker机制，epoll），知道为什么nginx性能比apache性能好等知识；</p>
+<h5 id="3-MySQL-MongoDB："><a href="#3-MySQL-MongoDB：" class="headerlink" title="3. MySQL/MongoDB："></a>3. MySQL/MongoDB：</h5><p>在第一阶段的基础上面，在MySQL开发方面，掌握很多小技巧，包括常规SQL优化（group by/order by/rand优化等）；除了能够搭建MySQL，还能够冷热备份MySQL数据，还知道影响innodb/myisam性能的配置选项（比如key_buffer/query_cache/sort_buffer/innodb_buffer_pool_size/innodb_flush_log_at_trx_commit等），也知道这些选项配置成为多少值合适；另外也了解一些特殊的配置选项，比如  知道如何搭建mysql主从同步的环境，知道各个binlog_format的区别；知道MySQL的性能追查，包括slow_log/explain等，还能够知道基本的索引建立处理等知识；原理方面了解基本的MySQL的架构（Server+存储引擎），知道基本的InnoDB/MyISAM索引存储结构和不同（聚簇索引，B树）；知道基本的InnoDB事务处理机制；了解大部分MySQL异常情况的处理方案（或者知道哪儿找到处理方案）。条件允许的情况，建议了解一下NoSQL的代表MongoDB数据库，顺便对比跟MySQL的差别，同事能够在合适的应用场景安全谨慎的使用MongoDB，知道基本的PHP与MongoDB的结合开发。</p>
+<h5 id="4-Redis-Memcached："><a href="#4-Redis-Memcached：" class="headerlink" title="4. Redis/Memcached："></a>4. Redis/Memcached：</h5><p>在大部分中型系统里面一定会涉及到缓存处理，所以一定要了解基本的缓存；知道Memcached和Redis的异同和应用场景，能够独立安装 Redis/Memcached，了解Memcahed的一些基本特性和限制，比如最大的value值，知道PHP跟他们的使用结合；Redis了解基本工作原理和使用，了解常规的数据类型，知道什么场景应用什么类型，了解Redis的事务等等。原理部分，能够大概了解Memcached的内存结构（slab机制），redis就了解常用数据类型底层实现存储结构（SDS/链表/SkipList/HashTable）等等，顺便了解一下Redis的事务、RDB、AOF等机制更好</p>
+<h5 id="5-PHP："><a href="#5-PHP：" class="headerlink" title="5. PHP："></a>5. PHP：</h5><p>除了第一阶段的能力，安装配置方面能够随意安装PHP和各种第三方扩展的编译安装配置；了解php-fpm的大部分配置选项和含义（如max_requests/max_children/request_terminate_timeout之类的影响性能的配置），知道mod_php/fastcgi的区别；在PHP方面已经能够熟练各种基础技术，还包括各种深入些的PHP，包括对PHP面向对象的深入理解/SPL/语法层面的特殊特性比如反射之类的；在框架方面已经阅读过最少一个以上常规PHP MVC框架的代码了，知道基本PHP框架内部实现机制和设计思想；在PHP开发中已经能够熟练使用常规的设计模式来应用开发（抽象工厂/单例/观察者/命令链/策略/适配器 等模式）；建议开发自己的PHP MVC框架来充分让开发自由化，让自己深入理解MVC模式，也让自己能够在业务项目开发里快速升级；熟悉PHP的各种代码优化方法，熟悉大部分PHP安全方面问题的解决处理；熟悉基本的PHP执行的机制原理（Zend引擎/扩展基本工作机制）；</p>
+<h5 id="6-C-C-："><a href="#6-C-C-：" class="headerlink" title="6. C/C++："></a>6. C/C++：</h5><p>开始涉猎一定的C/C++语言，能够写基本的C/C++代码，对基本的C/C++语法熟悉（指针、数组操作、字符串、常规标准API）和数据结构（链表、树、哈希、队列）有一定的熟悉下；对Linux下面的C语言开发有基本的了解概念，会简单的makefile文件编写，能够使用简单的GCC/GDB的程序编译简单调试工作；对基本的网络编程有大概了解。（本项是为了向更高层次打下基础）</p>
+<h5 id="7-前端："><a href="#7-前端：" class="headerlink" title="7. 前端："></a>7. 前端：</h5><p>在第一阶段的基础上面，熟悉基本的HTTP协议（协议代码200/300/400/500，基本的HTTP交互头）；条件允许，可以在深入写出稍微优雅的HTML+CSS+JavaScript，或者能够大致简单使用某些前端框架（jQuery/YUI/ExtJS/RequireJS/BootStrap之类）；如果条件允许，可以深入学习JavaScript编程，比如闭包机制、DOM处理；再深入些可以读读jQuery源码做深入学习。（本项不做重点学习，除非对前端有兴趣）</p>
+<h5 id="8-系统设计："><a href="#8-系统设计：" class="headerlink" title="8. 系统设计："></a>8. 系统设计：</h5><p>能够设计大部分中型系统的网站架构、数据库、基本PHP框架选型；性能测试排查处理等；能够完成类似：浏览器 -&gt; CDN(Squid) -&gt; Nginx+PHP -&gt; 缓存 -&gt; 数据库 结构网站的基本设计开发维护；能够支撑每天数百万到千万流量基本网站的开发维护工作；</p>
+<h3 id="第三阶段：高级阶段-（高级PHP程序员）"><a href="#第三阶段：高级阶段-（高级PHP程序员）" class="headerlink" title="第三阶段：高级阶段 （高级PHP程序员）"></a>第三阶段：高级阶段 （高级PHP程序员）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">重点：除了基本的LNMP程序，还能够在某个方向或领域有深入学习。（纵深维度发展）</div><div class="line">目标：除了能够完成基本的PHP业务开发，还能够解决大部分深入复杂的技术问题，并且可以独立设计完成中大型的系统设计和开发工作；自己能够独立hold深入某个技术方向，在这块比较专业。（比如在MySQL、Nginx、PHP、Redis等等任一方向深入研究）</div></pre></td></tr></table></figure>
+<h5 id="1-Linux：-1"><a href="#1-Linux：-1" class="headerlink" title="1. Linux："></a>1. Linux：</h5><p>除了第二阶段的能力，在Linux下面除了常规的操作和性能监控跟踪，还能够使用很多高级复杂的命令完成工作（watch/tcpdump/starce/ldd/ar等)；在shell脚本方面，已经能够编写比较复杂的shell脚本（超过500行）来协助完成很多包括备份、自动化处理、监控等工作的shell；对awk/sed/perl 等应用已经如火纯青，能够随意操作控制处理文本统计分析各种复杂格式的数据；对Linux内部机制有一些了解，对内核模块加载，启动错误处理等等有个基本的处理；同时对一些其他相关的东西也了解，比如NFS、磁盘管理等等；</p>
+<h5 id="2-Nginx-1"><a href="#2-Nginx-1" class="headerlink" title="2. Nginx:"></a>2. Nginx:</h5><p>在第二阶段的基础上面，已经能够把Nginx操作的很熟练，能够对Nginx进行更深入的运维工作，比如监控、性能优化，复杂问题处理等等；看个人兴趣，更多方面可以考虑侧重在关于Nginx工作原理部分的深入学习，主要表现在阅读源码开始，比如具体的master/worker工作机制，Nginx内部的事件处理，内存管理等等；同时可以学习Nginx扩展的开发，可以定制一些自己私有的扩展；同时可以对Nginx+Lua有一定程度的了解，看看是否可以结合应用出更好模式；这个阶段的要求是对Nginx原理的深入理解，可以考虑成为Nginx方向的深入专业者。</p>
+<h5 id="3-MySQL-MongoDB：-1"><a href="#3-MySQL-MongoDB：-1" class="headerlink" title="3. MySQL/MongoDB："></a>3. MySQL/MongoDB：</h5><p>在第二阶段的基础上面，在MySQL应用方面，除了之前的基本SQL优化，还能够在完成一些复杂操作，比如大批量数据的导入导出，线上大批量数据的更改表结构或者增删索引字段等等高危操作；除了安装配置，已经能够处理更多复杂的MySQL的问题，比如各种问题的追查，主从同步延迟问题的解决、跨机房同步数据方案、MySQL高可用架构等都有涉及了解；对MySQL应用层面，对MySQL的核心关键技术比较熟悉，比如事务机制（隔离级别、锁等）、对触发器、分区等技术有一定了解和应用；对MySQL性能方面，有包括磁盘优化（SAS迁移到SSD）、服务器优化（内存、服务器本身配置）、除了二阶段的其他核心性能优化选项（innodb_log_buffer_size/back_log/table_open_cache/thread_cache_size/innodb_lock_wait_timeout等）、连接池软件选择应用，对show *（show status/show profile）类的操作语句有深入了解，能够完成大部分的性能问题追查；MySQL备份技术的深入熟悉，包括灾备还原、对Binlog的深入理解，冷热备份，多IDC备份等；在MySQL原理方面，有更多了解，比如对MySQL的工作机制开始阅读部分源码，比如对主从同步（复制）技术的源码学习，或者对某个存储引擎（MyISAM/Innodb/TokuDB）等等的源码学习理解，如果条件允许，可以参考CSV引擎开发自己简单的存储引擎来保存一些数据，增强对MySQL的理解；在这个过程，如果自己有兴趣，也可以考虑往DBA方向发展。MongoDB层面，可以考虑比如说在写少读多的情况开始在线上应用MongoDB，或者是做一些线上的数据分析处理的操作，具体场景可以按照工作来，不过核心是要更好的深入理解RMDBS和NoSQL的不同场景下面的应用，如果条件或者兴趣允许，可以开始深入学习一下MongoDB的工作机制。</p>
+<h5 id="4-Redis-Memcached：-1"><a href="#4-Redis-Memcached：-1" class="headerlink" title="4. Redis/Memcached："></a>4. Redis/Memcached：</h5><p>在第二阶段的基础上面，能够更深入的应用和学习。因为Memcached不是特别复杂，建议可以把源码进行阅读，特别是内存管理部分，方便深入理解；Redis部分，可以多做一些复杂的数据结构的应用（zset来做排行榜排序操作/事务处理用来保证原子性在秒杀类场景应用之类的使用操作）；多涉及aof等同步机制的学习应用，设计一个高可用的Redis应用架构和集群；建议可以深入的学习一下Redis的源码，把在第二阶段积累的知识都可以应用上，特别可以阅读一下包括核心事件管理、内存管理、内部核心数据结构等充分学习了解一下。如果兴趣允许，可以成为一个Redis方面非常专业的使用者。</p>
+<h5 id="5-PHP：-1"><a href="#5-PHP：-1" class="headerlink" title="5. PHP："></a>5. PHP：</h5><p>作为基础核心技能，我们在第二阶段的基础上面，需要有更深入的学习和应用。从基本代码应用上面来说，能够解决在PHP开发中遇到95%的问题，了解大部分PHP的技巧；对大部分的PHP框架能够迅速在一天内上手使用，并且了解各个主流PHP框架的优缺点，能够迅速方便项目开发中做技术选型；在配置方面，除了常规第二阶段会的知识，会了解一些比较偏门的配置选项（php auto_prepend_file/auto_append_file），包括扩展中的一些复杂高级配置和原理（比如memcached扩展配置中的memcache.hash_strategy、apc扩展配置中的apc.mmap_file_mask/apc.slam_defense/apc.file_update_protection之类的）；对php的工作机制比较了解，包括php-fpm工作机制（比如php-fpm在不同配置机器下面开启进程数量计算以及原理），对zend引擎有基本熟悉（vm/gc/stream处理），阅读过基本的PHP内核源码（或者阅读过相关文章），对PHP内部机制的大部分核心数据结构（基础类型/Array/Object）实现有了解，对于核心基础结构（zval/hashtable/gc）有深入学习了解；能够进行基本的PHP扩展开发，了解一些扩展开发的中高级知识（minit/rinit等），熟悉php跟apache/nginx不同的通信交互方式细节（mod_php/fastcgi）；除了开发PHP扩展，可以考虑学习开发Zend扩展，从更底层去了解PHP。</p>
+<h5 id="6-C-C-：-1"><a href="#6-C-C-：-1" class="headerlink" title="6. C/C++："></a>6. C/C++：</h5><p>在第二阶段基础上面，能够在C/C++语言方面有更深入的学习了解，能够完成中小型C/C++系统的开发工作；除了基本第二阶段的基础C/C++语法和数据结构，也能够学习一些特殊数据结构（b-tree/rb-tree/skiplist/lsm-tree/trie-tree等）方便在特殊工作中需求；在系统编程方面，熟悉多进程、多线程编程；多进程情况下面了解大部分多进程之间的通信方式，能够灵活选择通信方式（共享内存/信号量/管道等）；多线程编程能够良好的解决锁冲突问题，并且能够进行多线程程序的开发调试工作；同时对网络编程比较熟悉，了解多进程模型/多线程模型/异步网络IO模型的差别和选型，熟悉不同异步网络IO模型的原理和差异（select/poll/epoll/iocp等），并且熟悉常见的异步框架（ACE/ICE/libev/libevent/libuv/Boost.ASIO等）和使用，如果闲暇也可以看看一些国产自己开发的库（比如muduo）；同时能够设计好的高并发程序架构（leader-follow/master-worker等）；了解大部分C/C++后端Server开发中的问题（内存管理、日志打印、高并发、前后端通信协议、服务监控），知道各个后端服务RPC通信问题（struct/http/thirft/protobuf等）；能够更熟络的使用GCC和GDB来开发编译调试程序，在线上程序core掉后能够迅速追查跟踪解决问题；通用模块开发方面，可以积累或者开发一些通用的工具或库（比如异步网络框架、日志库、内存池、线程池等），不过开发后是否应用要谨慎，省的埋坑去追bug；</p>
+<h5 id="7-前端：-1"><a href="#7-前端：-1" class="headerlink" title="7. 前端："></a>7. 前端：</h5><p>深入了解HTTP协议（包括各个细致协议特殊协议代码和背后原因，比如302静态文件缓存了，502是nginx后面php挂了之类的）；除了之前的前端方面的各种框架应用整合能力，前端方面的学习如果有兴趣可以更深入，表现形式是，可以自己开发一些类似jQuery的前端框架，或者开发一个富文本编辑器之类的比较琐碎考验JavaScript功力；</p>
+<h5 id="8-其他领域语言学习："><a href="#8-其他领域语言学习：" class="headerlink" title="8. 其他领域语言学习："></a>8. 其他领域语言学习：</h5><p>在基础的PHP/C/C++语言方面有基本积累，建议在当前阶段可以尝试学习不同的编程语言，看个人兴趣爱好，脚本类语言可以学学 Python/Ruby 之类的，函数式编程语言可以试试 Lisp/Haskell/Scala/Erlang 之类的，静态语言可以试试 Java/Golang，数据统计分析可以了解了解R语言，如果想换个视角做后端业务，可以试试 Node.js还有前面提到的跟Nginx结合的Nginx_Lua等。学习不同的语言主要是提升自己的视野和解决问题手段的差异，比如会了解除了进程/线程，还有轻量级协程；比如在跨机器通信场景下面，Erlang的解决方案简单的惊人；比如在不想选择C/C++的情况下，还有类似高效的Erlang/Golang可用等等；主要是提升视野。</p>
+<h5 id="9-其他专业方向学习："><a href="#9-其他专业方向学习：" class="headerlink" title="9. 其他专业方向学习："></a>9. 其他专业方向学习：</h5><p>在本阶段里面，会除了基本的LNMP技能之外，会考虑一些其他领域知识的学习，这些都是可以的，看个人兴趣和长期的目标方向。目前情况能够选择的领域比较多，比如、云计算（分布式存储、分布式计算、虚拟机等），机器学习（数据挖掘、模式识别等，应用到统计、个性化推荐），自然语言处理（中文分词等），搜索引擎技术、图形图像、语音识别等等。除了这些高大上的，也有很多偏工程方面可以学习的地方，比如高性能系统、移动开发（Android/IOS）、计算机安全、嵌入式系统、硬件等方向。</p>
+<h5 id="10-系统设计："><a href="#10-系统设计：" class="headerlink" title="10. 系统设计："></a>10. 系统设计：</h5><p>系统设计在第二阶段的基础之上，能够应用掌握的经验技能，设计出比较复杂的中大型系统，能够解决大部分线上的各种复杂系统的问题，完成类似 浏览器 -&gt; CDN -&gt; 负载均衡 -&gt;接入层 -&gt; Nginx+PHP -&gt; 业务缓存 -&gt; 数据库 -&gt; 各路复杂后端RPC交互（存储后端、逻辑后端、反作弊后端、外部服务） -&gt; 更多后端 酱紫的复杂业务；能够支撑每天数千万到数亿流量网站的正常开发维护工作。</p>
+<p>来源于: <a href="http://blog.csdn.net/heiyeshuwu/article/details/40098043" target="_blank" rel="external">http://blog.csdn.net/heiyeshuwu/article/details/40098043</a></p>
 
-      
-        
-          
-          第一阶段：基础阶段（基础PHP程序员）1234重点：把LNMP搞熟练（核心是安装配置基本操作）目标：能够完成基本的LNMP系统安装，简单配置维护；能够做基本的简单系统的PHP开发;	 能够在PHP中型系统中支持某个PHP功能模块的开发。时间：完成本阶段的时间因人而异，有的成长快半年一年就过了，成长慢
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/09/11/php提升路线/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/11/php提升路线/" data-id="cjx5zi3lf000orb5yf82bdgbc" class="article-share-link">Partager</a>
       
       
-        <div class="post-eof"></div>
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-    
-  </section>
-
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
+</section>
         
-          
+          <aside id="sidebar">
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-data/">big data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phantomsjs问题/">phantomsjs问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-scrapy/">python scrapy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soar-sql优化/">soar-sql优化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人杂谈/">个人杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习计划系列/">学习计划系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作记录/">工作记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/新概念/">新概念</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统设计/">系统设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语/">英语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语词汇/">英语词汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机基础/">计算机基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a></li></ul>
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+
+  
     
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          
-            <img class="site-author-image" itemprop="image"
-              src="/images/tx.jpg"
-              alt="张建" />
-          
-            <p class="site-author-name" itemprop="name">张建</p>
-            <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">29</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/big-data/" style="font-size: 10px;">big data</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/phantomsjs问题/" style="font-size: 10px;">phantomsjs问题</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/python-scrapy/" style="font-size: 10px;">python scrapy</a> <a href="/tags/soar-sql优化/" style="font-size: 10px;">soar-sql优化</a> <a href="/tags/个人杂谈/" style="font-size: 10px;">个人杂谈</a> <a href="/tags/学习计划系列/" style="font-size: 10px;">学习计划系列</a> <a href="/tags/工作记录/" style="font-size: 10px;">工作记录</a> <a href="/tags/新概念/" style="font-size: 10px;">新概念</a> <a href="/tags/生活/" style="font-size: 20px;">生活</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/系统设计/" style="font-size: 10px;">系统设计</a> <a href="/tags/英语/" style="font-size: 10px;">英语</a> <a href="/tags/英语词汇/" style="font-size: 20px;">英语词汇</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a>
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">张建</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.2</div>
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
+    </div>
+  </div>
 
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/18/常用l函数/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/23/大数据笔记/">bigdata笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/07/大牛计划/">进阶计划</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/soar-sql优化/">soar-sql优化</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/phantomsjs问题/">phantomsjs问题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 张建<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
-  
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
+<script src="/js/script.js"></script>
 
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
+  </div>
 </body>
 </html>
