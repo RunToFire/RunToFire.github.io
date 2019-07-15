@@ -1,1132 +1,690 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
 
- <!DOCTYPE HTML>
-<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8">
-  
-    <title>Hexo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
+  <title>Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
     <meta name="author" content="张建">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
 
-    
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
 
-    
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-  <body>
-    <header>
-      
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="Hexo" title="Hexo"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main">
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/27/算法词/" title="算法词" itemprop="url">算法词</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-27T01:46:07.000Z" itemprop="datePublished"> Published 2017-10-27</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <blockquote>
-<p>fundamental 基本的 全然的 根本的<br>techniques  方法 技术<br>the growing number of people 越来越多的人们<br>in need of 需要<br>textbook 教科书<br>course  课程<br>acquire 获得（技能）<br>familiarity 熟悉<br>reference 提及 参考<br>engage 从事于<br>implementation 实施 执行<br>algorithms 算法<br>detail 细节 详细的<br>performance 表演表现 性能<br>characteristics 特征<br>clients 客户端</p>
-</blockquote>
+      <!-- ============================ Off-canvas navigation =========================== -->
 
-        
-        
-        <p class="article-more-link">
-          
-       </p>
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
     </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/英语词汇/">英语词汇</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/26/cpu执行代码？/" title="cpu执行代码？" itemprop="url">cpu执行代码？</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-26T07:29:00.000Z" itemprop="datePublished"> Published 2017-10-26</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p> in this video presentation on microprocessor i will further illustrate on how the CPU will execute a program by using a simple example</p>
-<p> here we will demonstrate on running a simple program with a series of the instruction that computes a 10%  sales tax on a $50 purchase as most program are composed of millions of simple machine language  </p>
-<p> instruction and the computer actually stores all instructions and data values as binary numbers but this has been represented as letters or number to make this example easier to follow the table below is an example of a program </p>
-<p> instructions in memory address 1002112 instant by translating the memory address 100 into english it means that the the cpu has to copy the numbers stored in memory location 2000 into register a inside the cpu and the process continue by increasing the address number but before the can be loaded from the hard disk drive into the RAM which stands for random access memory then the instruction will be loaded into the cpu through the cache and the register </p>
-<p> the instruction execution cycle has four main operation first fetch the instruction followed by decodes and excute the instruction </p>
-<p> lastly the result will be written or stopped in the register the main memory and this cycle will be repeated again to excute another instruction.</p>
-<p> therefore to compute  a 10% sales tax on a %50 purchase the cpu has to go through 12 steps to execute this for operation which will be shown in the next slides </p>
-<p> this slide shows the simplified version of a cpu and the RAM </p>
-<p> in step 1 the program counters is 100 the cpu will load the instruction at address 10 into the instruction register </p>
-<p> in step 2 the cpu will load content of memory location 200 into register a which is $15 </p>
-<p> in step 3 the cpu will increase the value of the program counter to 104 in order to contain the address of the next instruction </p>
-<p> in step 4 the cpu will load the instruction at address 104 into instruction register </p>
-<p> in step 5 the instruction will request the cpu to load the content of memory location to 04 which is 0.1 into the register B </p>
-<p> in step 6 the program counter will continue to increase its values to ones you`re eight </p>
-<p> and in step 7 the cpu will load the instruction at address once you`re eight into the instruction register instead eight which is also known as the execute stage the instruction will request the cpu to use the a allow you to multiply the content of register a and b and the register and the results will be stored in register see in this example five dollar sales tax has been calculated </p>
-<p> in step 9 the program counter will continue to increase is values to contain the next instruction </p>
-<p> in step 10 the cpu will load the instruction at register 112 into the instruction register and in step 11 the instruction will request the cpu to star the content of registers c at address to 0-8<br> ]<br> and lastly stepped off the cpu will continue to increase the value of the program counter in order to process the next instruction </p>
-<p> below this video presentation in the webpage i have liste down the chops tab which are used to compute the sales tax and also show how these steps are linked to the four main operations  </p>
+    <!-- ============================ END Off-canvas navigation =========================== -->
 
-        
-        
-        <p class="article-more-link">
-          
-       </p>
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
     </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
+</section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/计算机基础/">计算机基础</a>
-  </div>
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
 
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/25/你在努力工么？/" title="新概念一" itemprop="url">新概念一</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-25T03:12:38.000Z" itemprop="datePublished"> Published 2017-10-25</time>
-    
-  </p>
-</header>
-    <div class="article-content">
+<section id="intro">
+    <div class="container">
         
-        <h4 id="one"><a href="#one" class="headerlink" title="one"></a>one</h4><p>excuse me </p>
-<p> yes?</p>
-<p> is this you handbag?</p>
-<p> pardon?</p>
-<p> is this your handbag?</p>
-<p> Yes it is </p>
-<p> thank you very much </p>
-<h3 id="two"><a href="#two" class="headerlink" title="two"></a>two</h3><p>words ： umbrella ticker</p>
-<p>my coat and my umbrella , please<br>here is my ticket?</p>
-<p>thank you very much<br>number five </p>
-<p>here`s your umbrella and your coat</p>
-<p>this is not my umbrella?</p>
-<p>sorry sir?</p>
-<p>is this you umbrella ?<br>no it isn`t</p>
-<p>is this it ?</p>
-<p>yes it is </p>
-<p>thank you very much </p>
-<h4 id="three"><a href="#three" class="headerlink" title="three"></a>three</h4><p>word：japanese german德国 Norwegian bean teacup</p>
-<p>good morning!</p>
-<p>good morning Mr. Blake.</p>
-<p>This is Miss Sophie Dupont </p>
-<p>Sophie is a new student.</p>
-<p>she is frech</p>
-<p>Sophie ,this is hans</p>
-<p>nice to meet to you </p>
-<p>and this is Naoko</p>
-<p>he is japanese</p>
-<h4 id="four"><a href="#four" class="headerlink" title="four"></a>four</h4><p>word: Wednesday describe correct</p>
-<p>I am a new student</p>
-<p>My name is </p>
-<h4 id="7"><a href="#7" class="headerlink" title="7"></a>7</h4><p>word：nationality(国籍 民族)  keyboard  operator </p>
-<p>Are you a teacher?</p>
-<p>No,I`m not </p>
-<p>what`s your job?</p>
-<p>I`m a keyboard operator</p>
-<p>what`s your job?</p>
-<p>I`m an engineer?</p>
-<p>What nationality are you?</p>
-<p>I`am italian</p>
-<h4 id="9"><a href="#9" class="headerlink" title="9"></a>9</h4><p>word:</p>
-<p>hello helen </p>
-<p>Hi, steven</p>
-<p>how are you today ?</p>
-<p>I`m very well, and you?</p>
-<p>I`m fine, thanks.</p>
-<p>How`s Tony?</p>
-<p>He`s fine, thanks.</p>
-<p>How`s Emma?</p>
-<p>She`s ver well too, helen.</p>
-<h4 id="11"><a href="#11" class="headerlink" title="11"></a>11</h4><p>words: Perhaps(也许是) white(白色)</p>
-<p>Whose is shirt is that?</p>
-<p>is this your shirt,Dave?</p>
-<p>No.Sir<br>It<code>s not my shirt
-This is my shirt
-My shirt</code>s blue.</p>
-<p>is this shirt Tim`s?</p>
-<p>Perhaps it is,Sir<br>Tim`s shirt white</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/生活/">生活</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/27/算法词/">算法词</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-27T01:46:07.000Z" itemprop="datePublished">
+          2017-10-27
+      </time>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
     
-      <a href="/2017/10/24/英语学习法则/" title="英语学习法则" itemprop="url">英语学习法则</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-24T10:18:56.000Z" itemprop="datePublished"> Published 2017-10-24</time>
+    | 
+    <a href='/tags/英语词汇/'>英语词汇</a>
     
-  </p>
-</header>
-    <div class="article-content">
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+fundamental 基本的 全然的 根本的techniques  方法 技术the growing number of people 越来越多的人们in need of 需要textbook 教科书course  课程acquire 获得（技能）familiarity 熟悉reference 提及 参考engage 从事于implementation 实施 执行algorithms 算法detail 细节 详细的performan
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/27/算法词/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
-        <h4 id="一、总则："><a href="#一、总则：" class="headerlink" title="一、总则："></a>一、总则：</h4><pre><code>1. 坚持每天至少背50-100个单词。没有一定的单词量，英语就不可能学好。
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/26/cpu执行代码？/">cpu执行代码？</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-26T07:29:00.000Z" itemprop="datePublished">
+          2017-10-26
+      </time>
+    
+    
+    | 
+    <a href='/tags/计算机基础/'>计算机基础</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         in this video presentation on microprocessor i will further illustrate on how the CPU will execute a program by using a simple example
+ here we will demonstrate on running a simple program with a series of the instructi
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/26/cpu执行代码？/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/25/你在努力工么？/">新概念一</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-25T03:12:38.000Z" itemprop="datePublished">
+          2017-10-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/生活/'>生活</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        oneexcuse me 
+ yes?
+ is this you handbag?
+ pardon?
+ is this your handbag?
+ Yes it is 
+ thank you very much 
+twowords ： umbrella ticker
+my coat and my umbrella , pleasehere is my ticket?
+thank you very muchnumber five 
+he
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/25/你在努力工么？/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/24/英语学习法则/">英语学习法则</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-24T10:18:56.000Z" itemprop="datePublished">
+          2017-10-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/生活/'>生活</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        一、总则：1. 坚持每天至少背50-100个单词。没有一定的单词量，英语就不可能学好。
 2. 每天听写一篇文章，以此文章为中心，展开一天的学习。
 3. 听说读写译五项都要练，以听说为主，听说资料，可以选慢速英语。
 4. 求质不求量，把听写的文章彻底搞懂足矣，不要好大喜功，贪大贪快。扎扎实实，按部就班，是学好英语的必经之路。
 5. 把零碎的时间充分利用起来学英语，不断地重复。
 6. 听写是个学习英语的好方法，要继续加强。
-7. 早睡早起学英语。
-8. 抓住一套教材足矣，不要盲目的更换教材，好教材，我选择新概念英语，每一篇都是经典。
-9. 每天学习英语必须要有详细可行的计划，必须坚决执行，没有任何借口。
-10. 相信自己，一定能够学好英语。
-11. 坚持每一天，充分利用一切可以利用的时间学英语。没有持之以恒的学习和大量的时将做保障，一切都是空谈。
-</code></pre><h4 id="二、分则："><a href="#二、分则：" class="headerlink" title="二、分则："></a>二、分则：</h4><h6 id="（一）词汇："><a href="#（一）词汇：" class="headerlink" title="（一）词汇："></a>（一）词汇：</h6><pre><code>1. 英语的学习还是需要一定单词量积累的，每天可以早晚各半小时用来集中背单词，最少也要保证早晚各15分钟，可以选新概念或四六级的词汇背，这些比较基础并且常用。
-2. 在阅读中或者看电影时遇到不认识的生词，你认为不错的就抄下来，可以制成小卡片或者摘抄在小本子上记忆。  
-</code></pre><h6 id="（二）听力："><a href="#（二）听力：" class="headerlink" title="（二）听力："></a>（二）听力：</h6><pre><code>1. 除周末外，每天晚上10：00——12：00听写一篇五分钟左右的短文。着重听力后的分析过程。
-2. 早晚都随身带MP3，一有空闲时间就反复听这篇短文，直到听烂为止。
-3. 周末看一部外国电影，复习就内容，检查一周来的学习计划执行情况。
-4. 重视精听，听无数遍。  
-</code></pre><h6 id="（三）口语："><a href="#（三）口语：" class="headerlink" title="（三）口语："></a>（三）口语：</h6><pre><code>1. 朗读并努力复述听写的短文
-2. 每天坚持张嘴说，每周参加英语角。
-3. 注意在朗读过程中纠正发音。 
-</code></pre><h6 id="（四）阅读："><a href="#（四）阅读：" class="headerlink" title="（四）阅读："></a>（四）阅读：</h6><pre><code>1. 每周阅读一份英语报纸（网上）。
-2. 每次整理笔记。  
-</code></pre><h6 id="（五）写译："><a href="#（五）写译：" class="headerlink" title="（五）写译："></a>（五）写译：</h6><pre><code>1. 争取把每天听写的短文都翻译，先英汉，再汉英。
-2. 注意整理笔记。
-</code></pre>
+7. 早睡早起学
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/24/英语学习法则/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/24/音乐心情/">关于郑州的记忆</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-24T09:17:43.000Z" itemprop="datePublished">
+          2017-10-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/music/'>music</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        关于郑州我知道的不多为了爱情曾经去过那里多少次在火车上路过这城市一个人悄悄地想起她她说她喜欢郑州冬天的阳光巷子里飘满煤炉的味道雾气穿过她年轻的脖子直到今天都没有散去关于郑州我想的全是你想来想去都是忏悔和委屈关于郑州我爱的全是你爱来爱去不明白爱的意义关于郑州只是偶尔想起现在她的味道都在回忆里每次和朋友聊起过去的旅行我不敢说我曾去过那里关于郑州我想的全是你想来生活无非是痛苦和美丽关于郑州我爱的全是你爱到最后我们都无路可去似是而非或是世事可畏
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/24/音乐心情/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
-        <p class="article-more-link">
-          
-       </p>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/19/erpChange/">erp采购模块需求修改</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-19T01:29:31.000Z" itemprop="datePublished">
+          2017-10-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/工作记录/'>工作记录</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        点赞部分
+
+数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：
+ 12alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &apos;报价三点赞&apos;alter table `erp_supplier_quote` add `second_like` varc
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/19/erpChange/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/17/mysqlError1449/">mysql异常1449</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-17T09:37:29.000Z" itemprop="datePublished">
+          2017-10-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/mysql/'>mysql</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        mysql异常1449
+问题：CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1449 The user specified as a definer (‘root’@’%’) does not exist. The SQL statement executed was: select getChildUserByID(256)解决办法：mysql执行命令grant all
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/17/mysqlError1449/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/13/erpzhangting/">Linux软件安装</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-13T02:16:42.000Z" itemprop="datePublished">
+          2017-10-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/Linux/'>Linux</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        软件分类源码包 脚本安装包（直接看到源代码）
+
+源码包的优点是：
+开源
+可以自由选择功能
+软件编译安装，所以更加适合自己的系统，更加稳定
+卸载方便，不会残留 
+
+
+源码包的缺点：
+安装过程步骤多，尤其是较大集合软件（如LAMP环境搭建），容易出现拼写错误
+编译过程时间较长，安装比二进制安装时间长
+因为是编译安装，安装过程一旦报错新手很难解决
+
+
+
+
+二进制包（RPM包、系统默认包)
+
+二进制包优点
+包管理系统简单，只通过几个命令就可以实
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/13/erpzhangting/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/10/02/2016plan/">2016plan</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-10-02T02:28:13.000Z" itemprop="datePublished">
+          2017-10-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/生活/'>生活</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        One 腹肌计划Two 学习计划
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/10/02/2016plan/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/09/13/manacher算法/">manacher算法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-09-13T09:09:31.000Z" itemprop="datePublished">
+          2017-09-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/算法/'>算法</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        LeetCode:Longest Palindromic Substring 最长回文子串Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/09/13/manacher算法/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/page/2/">← Newer Posts</a>
+          <a class="pull-right" href="/page/4/">Older Posts →</a>
+        </nav>
     </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
 
+      
+<!-- ============================ Footer =========================== -->
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/生活/">生活</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 张建. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/24/音乐心情/" title="关于郑州的记忆" itemprop="url">关于郑州的记忆</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-24T09:17:43.000Z" itemprop="datePublished"> Published 2017-10-24</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h6 id="关于郑州我知道的不多"><a href="#关于郑州我知道的不多" class="headerlink" title="关于郑州我知道的不多"></a><center>关于郑州我知道的不多</center></h6><h6 id="为了爱情曾经去过那里"><a href="#为了爱情曾经去过那里" class="headerlink" title="为了爱情曾经去过那里"></a><center>为了爱情曾经去过那里</center></h6><h6 id="多少次在火车上路过这城市"><a href="#多少次在火车上路过这城市" class="headerlink" title="多少次在火车上路过这城市"></a><center>多少次在火车上路过这城市</center></h6><h6 id="一个人悄悄地想起她"><a href="#一个人悄悄地想起她" class="headerlink" title="一个人悄悄地想起她"></a><center>一个人悄悄地想起她</center></h6><h6 id="她说她喜欢郑州冬天的阳光"><a href="#她说她喜欢郑州冬天的阳光" class="headerlink" title="她说她喜欢郑州冬天的阳光"></a><center>她说她喜欢郑州冬天的阳光</center></h6><h6 id="巷子里飘满煤炉的味道"><a href="#巷子里飘满煤炉的味道" class="headerlink" title="巷子里飘满煤炉的味道"></a><center>巷子里飘满煤炉的味道</center></h6><h6 id="雾气穿过她年轻的脖子"><a href="#雾气穿过她年轻的脖子" class="headerlink" title="雾气穿过她年轻的脖子"></a><center>雾气穿过她年轻的脖子</center></h6><h6 id="直到今天都没有散去"><a href="#直到今天都没有散去" class="headerlink" title="直到今天都没有散去"></a><center>直到今天都没有散去</center></h6><h6 id="关于郑州我想的全是你"><a href="#关于郑州我想的全是你" class="headerlink" title="关于郑州我想的全是你"></a><center>关于郑州我想的全是你</center></h6><h6 id="想来想去都是忏悔和委屈"><a href="#想来想去都是忏悔和委屈" class="headerlink" title="想来想去都是忏悔和委屈"></a><center>想来想去都是忏悔和委屈</center></h6><h6 id="关于郑州我爱的全是你"><a href="#关于郑州我爱的全是你" class="headerlink" title="关于郑州我爱的全是你"></a><center>关于郑州我爱的全是你</center></h6><h6 id="爱来爱去不明白爱的意义"><a href="#爱来爱去不明白爱的意义" class="headerlink" title="爱来爱去不明白爱的意义"></a><center>爱来爱去不明白爱的意义</center></h6><h6 id="关于郑州只是偶尔想起"><a href="#关于郑州只是偶尔想起" class="headerlink" title="关于郑州只是偶尔想起"></a><center>关于郑州只是偶尔想起</center></h6><h6 id="现在她的味道都在回忆里"><a href="#现在她的味道都在回忆里" class="headerlink" title="现在她的味道都在回忆里"></a><center>现在她的味道都在回忆里</center></h6><h6 id="每次和朋友聊起过去的旅行"><a href="#每次和朋友聊起过去的旅行" class="headerlink" title="每次和朋友聊起过去的旅行"></a><center>每次和朋友聊起过去的旅行</center></h6><h6 id="我不敢说我曾去过那里"><a href="#我不敢说我曾去过那里" class="headerlink" title="我不敢说我曾去过那里"></a><center>我不敢说我曾去过那里</center></h6><h6 id="关于郑州我想的全是你-1"><a href="#关于郑州我想的全是你-1" class="headerlink" title="关于郑州我想的全是你"></a><center>关于郑州我想的全是你</center></h6><h6 id="想来生活无非是痛苦和美丽"><a href="#想来生活无非是痛苦和美丽" class="headerlink" title="想来生活无非是痛苦和美丽"></a><center>想来生活无非是痛苦和美丽</center></h6><h6 id="关于郑州我爱的全是你-1"><a href="#关于郑州我爱的全是你-1" class="headerlink" title="关于郑州我爱的全是你"></a><center>关于郑州我爱的全是你</center></h6><h6 id="爱到最后我们都无路可去"><a href="#爱到最后我们都无路可去" class="headerlink" title="爱到最后我们都无路可去"></a><center>爱到最后我们都无路可去</center></h6><h6 id="似是而非或是世事可畏"><a href="#似是而非或是世事可畏" class="headerlink" title="似是而非或是世事可畏"></a><center>似是而非或是世事可畏</center></h6><h6 id="有情有义又是有米无炊"><a href="#有情有义又是有米无炊" class="headerlink" title="有情有义又是有米无炊"></a><center>有情有义又是有米无炊</center></h6><h6 id="时间改变了很多也什么都没有"><a href="#时间改变了很多也什么都没有" class="headerlink" title="时间改变了很多也什么都没有"></a><center>时间改变了很多也什么都没有</center></h6><h6 id="让我再次拥抱你-郑州"><a href="#让我再次拥抱你-郑州" class="headerlink" title="让我再次拥抱你 郑州"></a><center>让我再次拥抱你 郑州</center></h6>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/music/">music</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/19/erpChange/" title="erp采购模块需求修改" itemprop="url">erp采购模块需求修改</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-19T01:29:31.000Z" itemprop="datePublished"> Published 2017-10-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h5 id="点赞部分"><a href="#点赞部分" class="headerlink" title="点赞部分"></a>点赞部分</h5><blockquote>
-<ol>
-<li><p>数据库部分修改：表supplier_quote新增字段second_like third_like命令如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alter table `erp_supplier_quote` add `third_like` varchar(128) DEFAULT NULL COMMENT &apos;报价三点赞&apos;</div><div class="line">alter table `erp_supplier_quote` add `second_like` varchar(128) DEFAULT NULL COMMENT &apos;报价二点赞&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件：控制器ProjectController、视图stateInfo</p>
-</li>
-</ol>
-</blockquote>
-<h5 id="分类筛选部分"><a href="#分类筛选部分" class="headerlink" title="分类筛选部分"></a>分类筛选部分</h5><blockquote>
-<ol>
-<li>修改文件：控制器ProjectController actionAddSupplierSigning方法、视图stateInfo</li>
-</ol>
-</blockquote>
-<h5 id="添加评定人部分"><a href="#添加评定人部分" class="headerlink" title="添加评定人部分"></a>添加评定人部分</h5><blockquote>
-<ol>
-<li><p>数据库部分修改：表supplier_quote新增字段checker命令如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alter table `erp_supplier_quote` add `checker` varchar(128) DEFAULT NULL COMMENT &apos;评价人&apos;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件：控制器ProjectController、视图stateInfo</p>
-</li>
-</ol>
-</blockquote>
-<h5 id="评论分区部分"><a href="#评论分区部分" class="headerlink" title="评论分区部分"></a>评论分区部分</h5><blockquote>
-<ol>
-<li><p>数据库部分修改：新增评论记录表erp_supplier_evaluation命令如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE `erp_supplier_evaluation` (</div><div class="line">`e_id` int(11) unsigned NOT NULL AUTO_INCREMENT,</div><div class="line">`b_id` int(11) NOT NULL COMMENT &apos;项目ID&apos;,</div><div class="line">`sup_id` int(11) NOT NULL COMMENT &apos;供应商ID&apos;,</div><div class="line">`sup_name` varchar(225) DEFAULT NULL COMMENT &apos;供应商名称&apos;</div><div class="line">`sup_type` varchar(11) DEFAULT NULL COMMENT &apos;供应商类型&apos;,</div><div class="line">`content` varchar(1024) DEFAULT NULL COMMENT &apos;评论内容&apos;,</div><div class="line">`adduser` int(11) DEFAULT NULL COMMENT &apos;评价人id&apos;,</div><div class="line">`addusername` varchar(225) DEFAULT NULL COMMENT &apos;评价人姓名&apos;,</div><div class="line">`addtime` datetime DEFAULT NULL COMMENT &apos;评价时间&apos;,</div><div class="line">PRIMARY KEY (`e_id`)</div><div class="line">) ENGINE=MyISAM DEFAULT CHARSET=utf8;</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件：控制器ProjectController、视图stateInfo.php supplierquoteadd.php</p>
-</li>
-</ol>
-</blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/工作记录/">工作记录</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/17/mysqlError1449/" title="mysql异常1449" itemprop="url">mysql异常1449</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-17T09:37:29.000Z" itemprop="datePublished"> Published 2017-10-17</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h4 id="mysql异常1449"><a href="#mysql异常1449" class="headerlink" title="mysql异常1449"></a>mysql异常1449</h4><blockquote>
-<p>问题：CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1449 The user specified as a definer (‘root’@’%’) does not exist. The SQL statement executed was: select getChildUserByID(256)<br><img src="/images/mysql1449.png" alt="avatar"><br>解决办法：mysql执行命令grant all privileges on <em>.</em> to root@”%” identified by “.”;对不同主机IP授权命令<br>若无立即生效参考：注意授权后必须FLUSH PRIVILEGES;否则无法立即生效。</p>
-</blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/mysql/">mysql</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/13/erpzhangting/" title="Linux软件安装" itemprop="url">Linux软件安装</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-13T02:16:42.000Z" itemprop="datePublished"> Published 2017-10-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h4 id="软件分类"><a href="#软件分类" class="headerlink" title="软件分类"></a>软件分类</h4><h5 id="源码包-脚本安装包（直接看到源代码）"><a href="#源码包-脚本安装包（直接看到源代码）" class="headerlink" title="源码包 脚本安装包（直接看到源代码）"></a>源码包 脚本安装包（直接看到源代码）</h5><blockquote>
-<ol>
-<li>源码包的优点是：<ul>
-<li>开源</li>
-<li>可以自由选择功能</li>
-<li>软件编译安装，所以更加适合自己的系统，更加稳定</li>
-<li>卸载方便，不会残留 </li>
-</ul>
-</li>
-<li>源码包的缺点：<ul>
-<li>安装过程步骤多，尤其是较大集合软件（如LAMP环境搭建），容易出现拼写错误</li>
-<li>编译过程时间较长，安装比二进制安装时间长</li>
-<li>因为是编译安装，安装过程一旦报错新手很难解决</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<h5 id="二进制包（RPM包、系统默认包"><a href="#二进制包（RPM包、系统默认包" class="headerlink" title="二进制包（RPM包、系统默认包)"></a>二进制包（RPM包、系统默认包)</h5><blockquote>
-<ol>
-<li>二进制包优点<ul>
-<li>包管理系统简单，只通过几个命令就可以实现包的安装、升级、 查询和卸载</li>
-<li>安装速度比源码包安装快的多</li>
-</ul>
-</li>
-<li>二进制包的缺点：<ul>
-<li>经过编译，不可在看到源代码</li>
-<li>功能选择不如源码包灵活</li>
-<li>依赖性<h5 id="rpm命令管理"><a href="#rpm命令管理" class="headerlink" title="rpm命令管理"></a>rpm命令管理</h5></li>
-</ul>
-</li>
-<li>rpm在系统光盘中</li>
-<li>rpm包命名规则 名称-版本-发布次数.适合的平台.适合的硬件平台.rpm包扩展名。</li>
-<li>rpm包依赖性 树形依赖 环形依赖 模块依赖<h5 id="rpm安装命令"><a href="#rpm安装命令" class="headerlink" title="rpm安装命令"></a>rpm安装命令</h5></li>
-<li>包全名（操作从未安装的包安装使用全名） 包名（操作安装过的包）</li>
-<li>RPM安装命令： rpm -ivh 包全名<ul>
-<li>-i（install）安装</li>
-<li>-v（verbose）显示详细信息</li>
-<li>-h（hash）显示进度</li>
-<li>–nodeps不检测依赖性</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Linux/">Linux</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/10/02/2016plan/" title="2016plan" itemprop="url">2016plan</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-10-02T02:28:13.000Z" itemprop="datePublished"> Published 2017-10-02</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h4 id="One-腹肌计划"><a href="#One-腹肌计划" class="headerlink" title="One 腹肌计划"></a>One 腹肌计划</h4><h4 id="Two-学习计划"><a href="#Two-学习计划" class="headerlink" title="Two 学习计划"></a>Two 学习计划</h4>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/生活/">生活</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/09/13/manacher算法/" title="manacher算法" itemprop="url">manacher算法</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2017-09-13T09:09:31.000Z" itemprop="datePublished"> Published 2017-09-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="LeetCode-Longest-Palindromic-Substring-最长回文子串"><a href="#LeetCode-Longest-Palindromic-Substring-最长回文子串" class="headerlink" title="LeetCode:Longest Palindromic Substring 最长回文子串"></a><a href="https://leetcode.com/problems/longest-palindromic-substring/description/" target="_blank" rel="external">LeetCode:Longest Palindromic Substring</a> 最长回文子串</h3><p>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.</p>
-<h5 id="求字符串的最长回文子串"><a href="#求字符串的最长回文子串" class="headerlink" title="求字符串的最长回文子串"></a>求字符串的最长回文子串</h5><ul>
-<li><p>算法1：暴力解法，枚举所有子串，对每个子串判断是否为回文，复杂度为O(n^3)</p>
-</li>
-<li><p>算法2：删除暴力解法中有很多重复的判断。很容易想到动态规划，时间复杂度O（n^2）,空间O（n^2）,动态规划方程如下：</p>
-</li>
-</ul>
-<blockquote>
-<p>   dp[i][j] 表示子串s[i…j]是否是回文<br>    初始化：dp[i][i] = true (0 &lt;= i &lt;= n-1);  dp[i][i-1] = true (1 &lt;= i &lt;= n-1); 其余的初始化为false<br>    dp[i][j] = (s[i] == s[j] &amp;&amp; dp[i+1][j-1] == true)<br>    在动态规划中保存最长回文的长度及起点即可</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        bool dp[len][len];//dp[i][j]表示s[i..j]是否是回文</div><div class="line">        memset(dp, 0, sizeof(dp));</div><div class="line">        int resLeft = 0, resRight = 0;</div><div class="line">        dp[0][0] = true;</div><div class="line">        for(int i = 1; i &lt; len; i++)</div><div class="line">        &#123;</div><div class="line">            dp[i][i] = true;</div><div class="line">            dp[i][i-1] = true;//这个初始化容易忽略，当k=2时要用到</div><div class="line">        &#125;</div><div class="line">        for(int k = 2; k &lt;= len; k++)//枚举子串长度</div><div class="line">            for(int i = 0; i &lt;= len-k; i++)//枚举子串起始位置</div><div class="line">            &#123;</div><div class="line">                if(s[i] == s[i+k-1] &amp;&amp; dp[i+1][i+k-2])</div><div class="line">                &#123;</div><div class="line">                    dp[i][i+k-1] = true;</div><div class="line">                    if(resRight-resLeft+1 &lt; k)</div><div class="line">                    &#123;</div><div class="line">                        resLeft = i;</div><div class="line">                        resRight = i+k-1;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        return s.substr(resLeft, resRight-resLeft+1);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>算法3：以某个元素为中心，分别计算偶数长度的回文最大长度和奇数长度的回文最大长度。时间复杂度O(n^2)，空间O（1）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        int start, maxLen = 0;</div><div class="line">        for(int i = 1; i &lt; len; i++)</div><div class="line">        &#123;</div><div class="line">            //寻找以i-1,i为中点偶数长度的回文</div><div class="line">            int low = i-1, high = i;</div><div class="line">            while(low &gt;= 0 &amp;&amp; high &lt; len &amp;&amp; s[low] == s[high])</div><div class="line">            &#123;</div><div class="line">                low--;</div><div class="line">                high++;</div><div class="line">            &#125;</div><div class="line">            if(high - low - 1 &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = high - low -1;</div><div class="line">                start = low + 1;</div><div class="line">            &#125;</div><div class="line">             </div><div class="line">            //寻找以i为中心的奇数长度的回文</div><div class="line">            low = i- 1; high = i + 1;</div><div class="line">            while(low &gt;= 0 &amp;&amp; high &lt; len &amp;&amp; s[low] == s[high])</div><div class="line">            &#123;</div><div class="line">                low--;</div><div class="line">                high++;</div><div class="line">            &#125;</div><div class="line">            if(high - low - 1 &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = high - low -1;</div><div class="line">                start = low + 1;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return s.substr(start, maxLen);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>算法4：Manacher算法，时间复杂度O(n), 空间复杂度O(n)</li>
-</ul>
-<blockquote>
-<p>   该算法首先对字符串进行预处理，在字符串的每个字符前后都加入一个特殊符号，比如字符串 abcd 处理成 #a#b#c#d#,为了避免处理越界，在字符串首尾加上不同的两个特殊字符(c类型的字符串尾部不用加，因为自带‘\0’)，这样预处理后最终变成$#a#b#c#d#^，经过这样处理后有个好处是原来的偶数长度和奇数长度的回文在处理后的字符串中都是奇数长度。假设处理后的字符串为s                    本文地址</p>
-<p>   对于已经预处理好的字符串我们用数组p[i]来记录以字符S[i]为中心的最长回文子串向左/右扩张的长度（包括S[i]）,以字符串“12212321”为例，p数组如下</p>
-<p>   s：   $   #  1  #  2  #  2  #  1  #  2  #  3  #  2  #  1  #  ^<br>    p：       1  2  1  2   5  2  1  4  1   2  1  6  1   2  1  2  1<br>    可以看出，P[i]-1正好是原字符串中回文串的总长度, 如果p数组已知，遍历p数组找到最大的p[i]就可以求出最长回文的长度，<br>    也可以求出回文的位置</p>
-<p>   下面给出求p[]数组的方法：<br>    设id是当前求得的最长回文子串中心的位置，mx为当前最长回文子串的右边界（回文子串不包括该右边界），即mx = id + p[id]。<br>    记j = 2*id – i ，即 j 是 i 关于 id 的对称点。</p>
-<pre><code>- 1、 当i &lt; mx 时，如下图。此时可以得出一个非常神奇的结论p[i] &gt;= min(p[2*id - i], mx - i)，下面我们来解释这个结论
-如何根据p[j]来求p[i]呢，又要分成两种情况
--- 1.1）当mx – i &gt; p[j], 这时候以S[j]为中心的回文子串包含在以S[id]为中心的回文子串中，由于 i 和 j 对称，以S[i]为中心的回文子串必然包含在以S[id]为中心的回文子串中，所以 P[i]  至少等于 p[j], 后面的再继续匹配。如下图
-注：这里其实p[i]一定等于p[j],后面不用再匹配了。因为如果p[i]后面还可以继续匹配，根据对称性，p[j]也可以继续扩展了
--- 1.2）当mx – i &lt;= p[j]， 以S[j]为中心的回文子串不完全包含于以S[id]为中心的回文子串中，但是基于对称性可知，下图中两个绿框所包围的部分是相同的，也就是说以S[i]为中心的回文子串，其向右至少会扩张到mx的位置，也就是说 P[i] 至少等于 mx - i，至于mx之后的部分是否对称，就只能老老实实去匹配了。
-注：如果mx – i &lt; p[j] ，这时p[i]一定等于mx - i, 因为如果p[i]在mx之后还可以继续匹配，根据对称性，mx之后匹配的点(包括mx)一定会出现在my的前面，这说明p[id]也可以继续扩展了
-- 2、当i &gt;= mx, 无法对p[i]做更多的假设，只能p[i] = 1,然后再去匹配
-算法复杂度分析：根据斜体字部分的注释，只有当mx-i = p[j]时 以及 i &gt; mx时才要扩展比较，而mx也是在不断扩展的，总体而言每个元素比较次数是n的线性关系，所以时间复杂度为O(n)
-</code></pre></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        //Manncher算法 ，o（n）</div><div class="line">        string str = preProcess(s);</div><div class="line">        int n = str.size(), id = 0, mx = 0;</div><div class="line">        vector&lt;int&gt;p(n, 0);</div><div class="line">        for(int i = 1; i &lt; n-1; i++)</div><div class="line">        &#123;</div><div class="line">            p[i] = mx &gt; i ? min(p[2*id-i], mx-i) : 1;</div><div class="line">            //if(mx &lt;= i || (mx &gt; i &amp;&amp; p[2*id-i] == mx - i)) //根据正文斜体部分的注释，这里可要可不要</div><div class="line">            while(str[i+p[i]] == str[i-p[i]])p[i]++;</div><div class="line">            if(i + p[i] &gt; mx)</div><div class="line">            &#123;</div><div class="line">                mx = i + p[i];</div><div class="line">                id = i;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">         </div><div class="line">        //遍历p，寻找最大回文长度</div><div class="line">        int maxLen = 0, index = 0;</div><div class="line">        for(int i = 1; i &lt; n-1; i++)</div><div class="line">            if(p[i] &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = p[i];</div><div class="line">                index = i;</div><div class="line">            &#125;</div><div class="line">        return s.substr((index - maxLen)/2, maxLen-1);</div><div class="line">    &#125;</div><div class="line">    //预处理字符串，abc预处理后变成$#a#b#c#^</div><div class="line">    string preProcess(const string &amp;s)</div><div class="line">    &#123;</div><div class="line">        int n = s.size();</div><div class="line">        string res; </div><div class="line">        res.push_back(&apos;$&apos;);//把$放到字符串头部</div><div class="line">        res.push_back(&apos;#&apos;);//以#作为原来字符串中每个字符的间隔</div><div class="line">        for(int i = 0; i &lt; n; i++)</div><div class="line">        &#123;</div><div class="line">            res.push_back(s[i]);</div><div class="line">            res.push_back(&apos;#&apos;);</div><div class="line">        &#125;</div><div class="line">        res.push_back(&apos;^&apos;);//以^作为字符串的结尾</div><div class="line">        return res;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>算法5：可以用后缀数组来解，在源字符串后面加一个特殊字符，然后把源字符串的反转串连接到源字符串后面，那么问题就变成了求这个新字符串的某两个后缀的最长公共前缀，该问题是典型的后缀数组应用，可以参考here，关于后缀数组请关注我的后续博客</li>
-</ul>
-<hr>
-<p><a href="http://www.cnblogs.com/TenosDoIt/p/3675788.html" target="_blank" rel="external">来源</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/page/2/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next<span></span></a>
-  </nav>
-
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
-<aside class="clearfix">
-
-  
-
-
-  
-
-  
-<div class="tagslist">
-	<p class="asidetitle">Tags</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/生活/" title="生活">生活<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/诗词/" title="诗词">诗词<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/英语词汇/" title="英语词汇">英语词汇<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/php/" title="php">php<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/学习计划系列/" title="学习计划系列">学习计划系列<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机基础/" title="计算机基础">计算机基础<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/phantomsjs问题/" title="phantomsjs问题">phantomsjs问题<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/python-scrapy/" title="python scrapy">python scrapy<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工作记录/" title="工作记录">工作记录<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/soar-sql优化/" title="soar-sql优化">soar-sql优化<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/个人杂谈/" title="个人杂谈">个人杂谈<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/英语/" title="英语">英语<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/新概念/" title="新概念">新概念<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/系统设计/" title="系统设计">系统设计<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Homebrew/" title="Homebrew">Homebrew<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/music/" title="music">music<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
-</div>
-
-  <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello ,I&#39;m Larry Page in Google. <br/>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</div>
-			
-		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
-		
-		<a href="/about" target="_blank" title="张建">张建</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
 <script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
     };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
-});
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
 </script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
   }
-}); 
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
 
 
-<!-- Analytics Begin -->
-
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
-
-  </body>
- </html>
+      
+</body>
+</html>

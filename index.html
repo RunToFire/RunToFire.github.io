@@ -1,1245 +1,657 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
 
- <!DOCTYPE HTML>
-<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8">
-  
-    <title>Hexo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
+  <title>Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
     <meta name="author" content="张建">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
 
-    
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
 
-    
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-  <body>
-    <header>
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
+    </div>
+</section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/15/Homebrew默认源更换和重置/">Homebrew默认源更换和重置</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-15T10:26:13.000Z" itemprop="datePublished">
+          2019-07-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/Homebrew/'>Homebrew</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Homebrew默认源更换和重置
+
+中科大源1234567替换brew.git:cd &quot;$(brew --repo)&quot;git remote set-url origin https://mirrors.ustc.edu.cn/brew.git替换homebrew-core.git:cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;git 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/15/Homebrew默认源更换和重置/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/15/中科大源/">中科大源</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-15T10:24:35.000Z" itemprop="datePublished">
+          2019-07-15
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/15/中科大源/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/18/常用l函数/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-18T05:26:35.000Z" itemprop="datePublished">
+          2019-06-18
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+select id,if(@total=avg_people_account,@rowno:=@rowno,@rowno:=@rowno+1)  as avg_people_account_rate from group_saidao,(select @rowno:=0,@total:=null) t where account_date=’2019-06-10’ order by avg_people_account desc
+
+S
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/18/常用l函数/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/23/大数据笔记/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-23T03:46:33.000Z" itemprop="datePublished">
+          2019-05-23
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        SELECTc.id, –租约id,c.flag, –租约状态,c.house_id, –房源ID,c.land_company_id, –机构ID,da.name, –城市,wa.name, –区域,wb.name, –板块,ws.name, –工作站,g.name , –工作组,o.nickname, –拓客,o.id, –拓客ID,from_unixtime(int(c.create_time)), –建租时间,count(cl.
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/23/大数据笔记/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/04/07/大牛计划/">进阶计划</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-04-06T16:48:43.000Z" itemprop="datePublished">
+          2019-04-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/学习计划系列/'>学习计划系列</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        学习计划前提
+坚持学习
+动手 再简单的例子都要亲手实现一次
+学会思考，为什么要这样而不是那样 举一反三
+不要乱买书
+回顾历史技术发展，才能推测未来
+
+
+阶段一 零基础启蒙
+学习下python(自己找资料) javascrip 网址一 网址二
+linux学习
+前段端基础 css html js操作dom
+后段php W3C-php php 官方
+
+
+学习要点
+
+在一台 Linux 机器上配置 LEMP - Ubuntu/Nginx/PHP
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/04/07/大牛计划/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/25/soar-sql优化/">soar-sql优化</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-25T10:32:43.000Z" itemprop="datePublished">
+          2018-10-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/soar-sql优化/'>soar-sql优化</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        网站sql优化
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/25/soar-sql优化/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/25/phantomsjs问题/">phantomsjs问题</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-25T10:23:50.000Z" itemprop="datePublished">
+          2018-10-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/phantomsjs问题/'>phantomsjs问题</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        phantomjs 抓取、截图中文网站乱码的问题的解决
+1、用phantomjs抓取html乱码的解决方案：phantomjs –output-encoding=gbk test.js http://webscan.360.cn/index/checkwebsite?url=www.coding123.net这两个参数可以指定编码 …
+–output-encoding=encoding sets the encoding used fo
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/25/phantomsjs问题/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/09/29/学习计划/">学习计划</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-09-28T17:09:52.000Z" itemprop="datePublished">
+          2018-09-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/个人杂谈/'>个人杂谈</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1 后台开发宏观了解 http://systemdesigns.blogspot.com/ 
+2 算法与数据结构 https://github.com/jwasham/coding-interview-university 算法数据结构系统教程git https://leetcode-cn.com/explore/ 算法题训练 算法设计技巧与分析 吴伟
+3 java编程思想
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/09/29/学习计划/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/22/mysql/">mysql</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-22T09:58:09.000Z" itemprop="datePublished">
+          2018-08-22
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        mysql -h rm-bp1189620q55roplq.mysql.rds.aliyuncs.com  -u zhangjian -p -P 3306
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/22/mysql/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/10/scrapy学习笔记/">scrapy学习笔记</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-10T09:07:25.000Z" itemprop="datePublished">
+          2018-08-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/python-scrapy/'>python scrapy</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        安装pip install Scrapy
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/10/scrapy学习笔记/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          
+          <a class="pull-right" href="/page/2/">Older Posts →</a>
+        </nav>
+    </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
+
       
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="Hexo" title="Hexo"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main">
+<!-- ============================ Footer =========================== -->
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2019/07/15/Homebrew默认源更换和重置/" title="Homebrew默认源更换和重置" itemprop="url">Homebrew默认源更换和重置</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2019-07-15T10:26:13.000Z" itemprop="datePublished"> Published 2019-07-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h4 id="Homebrew默认源更换和重置"><a href="#Homebrew默认源更换和重置" class="headerlink" title="Homebrew默认源更换和重置"></a>Homebrew默认源更换和重置</h4><hr>
-<blockquote>
-<p>中科大源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">替换brew.git:</div><div class="line">cd &quot;$(brew --repo)&quot;</div><div class="line">git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</div><div class="line"></div><div class="line">替换homebrew-core.git:</div><div class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</div><div class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</div></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">重置brew.git:</div><div class="line">cd &quot;$(brew --repo)&quot;</div><div class="line">git remote set-url origin https://github.com/Homebrew/brew.git</div><div class="line"></div><div class="line">重置homebrew-core.git:</div><div class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</div><div class="line">git remote set-url origin https://github.com/Homebrew/homebrew-core.git</div></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p>清华同方源</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">替换：</div><div class="line">git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</div><div class="line"></div><div class="line">git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</div><div class="line"></div><div class="line">brew update</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">重置：</div><div class="line">git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homebrew/brew.git</div><div class="line"></div><div class="line">git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://github.com/Homebrew/homebrew-core</div><div class="line"></div><div class="line">brew update</div></pre></td></tr></table></figure>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Homebrew/">Homebrew</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 张建. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand &gt;" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2019/07/15/中科大源/" title="中科大源" itemprop="url">中科大源</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2019-07-15T10:24:35.000Z" itemprop="datePublished"> Published 2019-07-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2019/06/18/常用l函数/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2019-06-18T05:26:35.000Z" itemprop="datePublished"> Published 2019-06-18</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <ul>
-<li>select id,if(@total=avg_people_account,@rowno:=@rowno,@rowno:=@rowno+1)  as avg_people_account_rate from group_saidao,(select @rowno:=0,@total:=null) t where account_date=’2019-06-10’ order by avg_people_account desc</li>
-</ul>
-<p>SELECT AAA.id,<br>AAA.avg_people_account,<br>AAA.grade_name,<br>if(@grade_name = AAA.grade_name, @rank:=@rank+1,@rank:=1) as rank,<br>@grade_name:=AAA.grade_name<br>FROM<br>(SELECT * FROM group_saidao ORDER BY grade_name,avg_people_account DESC,id) AS AAA,<br>(select @grade_name:=null,@rank:=0 ) AS BBB;</p>
-<p>SELECT a.id,<br>a.avg_people_account,<br>a.grade_name,<br>if(@grade_name = a.grade_name, @rank:=@rank+1,@rank:=1) as rank,<br>@grade_name:=a.grade_name<br>FROM<br>(SELECT * FROM group_saidao where account_date=’2019-06-10’ ORDER BY grade_name,avg_people_account DESC,id) AS a,<br>(select @grade_name:=null,@rank:=0 ) AS b;</p>
-<ul>
-<li><p>组内排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">SELECT AAA.id,</div><div class="line">AAA.ticket,</div><div class="line">AAA.sex,</div><div class="line">if(@sex = AAA.sex, @rank:=@rank+1,@rank:=1) as rank,</div><div class="line">@sex:=AAA.sex</div><div class="line">FROM</div><div class="line">(SELECT *</div><div class="line">FROM test </div><div class="line">ORDER BY </div><div class="line">test.sex,</div><div class="line">test.ticket DESC,</div><div class="line">test.id) AS AAA ,(select @sex:=null,@rank:=0 ) AS BBB</div></pre></td></tr></table></figure>
-</li>
-<li><p>并列排名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT u.user_id, u.score, </div><div class="line"> CASE </div><div class="line">   WHEN @last_score = u.score</div><div class="line">     THEN @rank </div><div class="line">   WHEN @last_score := u.score </div><div class="line">     THEN @rank := @rank + 1    </div><div class="line">  END AS rank    </div><div class="line">FROM </div><div class="line">(SELECT * FROM user_score ORDER BY score DESC) u, (SELECT @rank := 0, @last_score := NULL) r;</div></pre></td></tr></table></figure>
-</li>
-<li><p>并列占位排行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">SELECT t.user_id, t.score, t.rank </div><div class="line">FROM </div><div class="line">  (SELECT u.user_id, u.score, @rank := @rank + 1, </div><div class="line">    @last_rank := CASE </div><div class="line">      WHEN @last_score = u.score</div><div class="line">        THEN @last_rank </div><div class="line">      WHEN @last_score := u.score </div><div class="line">        THEN @rank </div><div class="line">    END AS rank    </div><div class="line">  FROM </div><div class="line">    (SELECT * FROM user_score ORDER BY score DESC) u, </div><div class="line">    (SELECT @rank := 0, @last_score := NULL, @last_rank := 0) r</div><div class="line">) t;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p>作者：whyalwaysmea<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/u013435893/article/details/80350269" target="_blank" rel="external">https://blog.csdn.net/u013435893/article/details/80350269</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2019/05/23/大数据笔记/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2019-05-23T03:46:33.000Z" itemprop="datePublished"> Published 2019-05-23</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>SELECT<br>c.id, –租约id,<br>c.flag, –租约状态,<br>c.house_id, –房源ID,<br>c.land_company_id, –机构ID,<br>da.name, –城市,<br>wa.name, –区域,<br>wb.name, –板块,<br>ws.name, –工作站,<br>g.name , –工作组,<br>o.nickname, –拓客,<br>o.id, –拓客ID,<br>from_unixtime(int(c.create_time)), –建租时间,<br>count(cl.id), –联系房东次数,<br>from_unixtime(max(int(cl.create_time))), –最近时间,<br>c.offset_fee, –抵扣费用,<br>c.offset_memo, –抵扣备注,<br>c.front_money, –定金金额,<br>c.close_reason, –关闭原因,<br>from_unixtime(int(h.create_time)), –创建房源时间,<br>concat_ws(‘|’, collect_set( concat(case ald.room<em>type when 1 then ‘基本</em>‘ when 2 then ‘私有<em>‘  when 3 then ‘公共</em>‘ else ‘’ end,ald.device_name,ald.device_num,ald.classifier) )),  –基本项目<br>date_sub(current_date,1) –日期<br>from contract as c<br>left join house h on h.id=c.house_id<br>left join acceptance_list al on al.contract_id=c.id<br>left join acceptance_list_detail_attr ald on ald.acceptance_list_id=al.id<br>left join operator as o on c.sign_user_id = o.user_id<br>left join work_group g on g.id=o.group_id<br>left join work_group as ws on g.fid = ws.id<br>left join work_group as wb on ws.fid = wb.id<br>left join work_group as wa on wb.fid = wa.id<br>left join dd_area as da on wa.city_id=da.id<br>left join agency_company as ac on h.lan_co_id = ac.id<br>left join contract_subsidiary_info csi on csi.contract_id = c.id<br>left join <code>user</code> u on c.lan_user_id=u.id<br>left join call cl on u.mobile=cl.answer_mobile and cl.mobile=o.account and cl.create_time<c.create_time and="" cl.create_time="">c.create_time-360<em>24</em>2<br>where ac.type=2 AND c.type !=5<br>and g.id&gt;0 and o.id&gt;0 AND ac.auth_status = 2  and c.id=493567<br>group by<br>c.id,<br>c.flag,<br>c.house_id,<br>c.land_company_id,<br>da.name,<br>wa.name,<br>wb.name,<br>ws.name,<br>g.name ,<br>o.nickname,<br>o.id,<br>cl.create_time,<br>c.offset_fee,<br>c.offset_memo,<br>c.front_money,<br>c.close_reason,<br>h.create_time,<br>c.create_time<br>scp root@10.80.221.39:/home/zhangjian/phpdata/remoteReport/file/2019_07_03租约贷数据.csv /Users/zj/report_blt/暂存</c.create_time></p>
-<p>scp zhangjian@47.97.65.6:/home/zhangjian/phpdata/remoteReport/file/2019_07_03租约贷数据.csv /Users/zj/report_blt/暂存</p>
-<p>   select<br>   account_date as ‘日期’,<br>   city_manager as ‘城市经理’,<br>   current_target_finished as ‘当前增量完成’,<br>   target as ‘增量目标’,<br>   target_rate as ‘增量目标完成率’,<br>   current_account as ‘当周流水’,<br>   current_month_avg as ‘当月周均’,<br>   season_start_avg as ‘季初周均’,<br>   season_end_avg as ‘季末周均’,<br>   all_people as ‘总人数’,<br>   win_group_people as ‘盈利小组人数’,<br>   entry_num as ‘入职拓客数’,<br>   success_num as ‘育成拓客数’,<br>   leave_num as ‘离职A拓客数’,<br>   week_people_avg as ‘当月周均人均’,<br>   week_profit_loss as ‘当周盈亏’,<br>   new_add_house as ‘新增房源’,<br>   current_contract as ‘当周成单’<br>   from manage_data where type=1<br>   order by account_date desc,current_target_finished desc</p>
-<p>   type as’类型为1城市2板块’,</p>
-<p>结束时间<br>2019-07-03<br>2019-07-05<br>2019-06-25<br>2019-07-10<br>2019-07-30<br>2019-07-21<br>2019-07-05<br>2019-07-11<br>2019-08-09<br>2019-07-29<br>2019-07-01<br>2019-07-05<br>2019-07-18<br>2019-07-21<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-22<br>2019-07-20<br>2019-06-24<br>2019-07-01<br>2019-07-05<br>2019-07-05<br>2019-07-18<br>2019-07-25<br>2019-07-30<br>2019-07-10<br>2019-07-17<br>2019-07-17<br>2019-08-01<br>2019-07-17<br>2019-07-27<br>2019-07-21<br>2019-07-20<br>2019-07-30<br>2019-07-20<br>2019-07-17<br>2019-06-30<br>2019-07-05<br>2019-07-11<br>2019-07-15<br>2019-07-19<br>2019-07-20<br>2019-07-25<br>2019-07-17<br>2019-06-23<br>2019-07-05<br>2019-07-22<br>2019-07-18<br>2019-07-10<br>2019-07-06<br>2019-07-10<br>2019-07-10<br>2019-07-13<br>2019-07-13<br>2019-07-19<br>2019-08-08<br>2019-07-19<br>2019-08-03<br>2019-08-02</p>
-<p>张建同学，在拓客周报、月报中，要调整几个逻辑。</p>
-<p>1）拍照、接电话、回电中，目标任务数是零的，<br>    在排名时，排到当中。例如排名一共排到了2000名，对于给到目标是零的拓客，其最终结果就是1000名；<br>    排名如果有2100名，那最终结果就是1050名，</p>
-<pre><code>`pic_traget` int(10) DEFAULT &apos;0&apos; COMMENT &apos;拍照任务目标&apos;,
-
-`call_all_num` int(10) DEFAULT &apos;0&apos; COMMENT &apos;来电总数&apos;,
-`call_answer` int(10) DEFAULT &apos;0&apos; COMMENT &apos;来电及时接听&apos;,
-
-`pingtai_yuyue_five_back` int(10) DEFAULT &apos;0&apos; COMMENT &apos;平台预约客五分钟回电数&apos;,
-`pingtai_yuyue` int(10) DEFAULT &apos;0&apos; COMMENT &apos;平台预约客数&apos;,
-
-`pic_rate_sort` int(10) DEFAULT &apos;0&apos; COMMENT &apos;拍照完成率排行&apos;,
-`answer_rate_sort` int(10) DEFAULT &apos;0&apos; COMMENT &apos;及时接听率排行&apos;,
-`back_rate_sort` int(10) DEFAULT &apos;0&apos; COMMENT &apos;预约回电率排行&apos;,
-</code></pre><p>select     finish_pic,pic_traget,pic_rate_sort from personal_week where account_date = ‘2019-06-24’;</p>
-<p>select pic_rate_sort,id from personal_week where account_date = ‘2019-06-24’ and finish_pic=0 and pic_traget=0;</p>
-<p>select * from (<br>select @rowno:=@rowno+1 as rowno,a.pic_rate_sort from (<br>select pic_rate_sort from personal_week where account_date = ‘2019-06-24’ group by pic_rate_sort order by pic_rate_sort<br>) a,(select @rowno:=0) t<br>) a where rowno=(select round(count(distinct pic_rate_sort)/2) from personal_week where account_date = ‘2019-06-24’);</p>
-<p>update personal_week;</p>
-<p>2）业绩这里去掉周流水增量数据，增量排名不再作为排名参考。以绝对流水作为排名依据；</p>
-<p>3）杭州拍照任务的目标调整成5张/周</p>
-<p>CREATE TABLE <code>` (</code>id<code>int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT &#39;主键id&#39;,
-quarter VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;季度&#39;,
-city VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;城市&#39;,
-city_manager VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;城市经理&#39;,
-bankuai_manager VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;板块经理&#39;,
-work_site VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;工作站&#39;,
-quarter_week_avg VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;季末周均&#39;,
-PRIMARY KEY (</code>id`) USING BTREE<br>) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT=’工作站数据季末流水设置’;</p>
-<p> p.area_name=’上海西南区’ or p.area_name=’上海东一区’ or p.area_name=’上海东二区’ or p.area_name=’上海东北区’ or p.area_name=’上海西北区’ or p.area_name=’上海北区’</p>
-<p>退租：<br>    当前累计退租需求量、<br>    本周房东完成的累计退租需求量、<br>    本周新增退租需求量、<br>    本周房东完成的新增退租量</p>
-<pre><code>本周房东发起的退租量
-本周房东完成的累计需求量在24小时内响应数量
-本周房东完成的新增量在24小时内响应数量（进入选择验房方式的时间-租客发起退房申请的时间）
-
-SELECT c.`land_company_id` as id,
-COUNT(distinct case when cn.checkout_apply_from=1 and b3.contract_id is null then cn.id else null end) as 当前累计退租需求量,
-count(distinct case when cn.checkout_apply_from=1 and b3.contract_id is not null then c.id else null end) 本周房东完成的累计退租需求量,
-count(distinct case when cn.checkout_apply_from=1 
-                     and b3.trade_success_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                 and b3.trade_success_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周新增退租需求量,
-count(distinct case when cn.checkout_apply_from=1 and b3.contract_id is not null
-                     and b3.trade_success_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                 and b3.trade_success_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周房东完成的新增退租量,             
-count(distinct case when cn.checkout_apply_from=2 and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周房东发起的退租量,
-count(distinct case when cn.checkout_apply_from=1 and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600 then c.id else null end) as 本周房东完成的累计需求量在24小时内响应数量,
-count(distinct case when cn.checkout_apply_from=1
-                 and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600 
-                 and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周房东完成的新增量在24小时内响应数量
-from contract_checkout_new cn
-left join contract c on c.id=cn.`contract_id`
-left join (select contract_id,create_time,amount,trade_success_time from bill_payable_head where type=6 and flag=0 and amount&gt;0 group by contract_id) b3 on b3.contract_id=cn.contract_id 
-group by c.`land_company_id`;
-</code></pre><p>当前累计退租需求量：来源=租客APP，退款金额为空的数量<br>    select count(distinct cn.id),count(cn.id) from contract_checkout_new cn<br>    left join (select contract_id,create_time,amount,trade_success_time from baletoo.bill_payable_head where type=6 and flag=0 and amount&gt;0 group by contract_id) b3 on b3.contract_id=cn.contract_id where cn.checkout_apply_from=1 and b3.contract_id is null</p>
-<pre><code>本周房东完成的累计退租需求量：来源为租客APP的，房东在本周退款的数量（ 退款金额&gt;=0，具体退款时间要问小黄 ）
-select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
-left join (select contract_id,create_time,amount,trade_success_time from baletoo.bill_payable_head where type=6 and flag=0 and amount&gt;0 group by contract_id) b3 on b3.contract_id=cn.contract_id where cn.checkout_apply_from=1 and b3.contract_id is not null
-and b3.trade_success_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and b3.trade_success_time&lt;unix_timestamp(&apos;2019-07-08&apos;);
-
-本周新增退租需求量、：来源-租客APP，申请时间=当周的
-select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
-where cn.checkout_apply_from=1 
-and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;);
-
-本周房东完成的新增退租量：来源-租客APP，申请时间
-select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
-where cn.checkout_apply_from=1 
-and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) 
-and is_manage=1;
-
-本周房东发起的退租量：申请=房东，创建时间=当周的
-select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
-where cn.checkout_apply_from=2 
-and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;);
-
-
-本周房东完成的累计需求量在24小时内响应数量：房东选择验房方式在当周，且距离创建时间小于在24小时内的数量
-select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
-where cn.checkout_apply_from=1
-and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600;  
-
-
-
-本周房东完成的新增量在24小时内响应数量（进入选择验房方式的时间-租客发起退房申请的时间）：创建时间为当周的退房单且房东选择验房方式在24小时内的数量
-select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
-where cn.checkout_apply_from=1
-and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600  
-and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;);
-</code></pre><p>转租：<br>    当前累计转租需求量<br>    本周房东完成的累计转租需求量<br>    本周新增转租需求量<br>    本周房东完成的新增转租量<br>    本周房东完成的累计需求量在24小时内响应数量<br>    本周房东完成的新增量在24小时内响应数量<br>    本周总计完成的累计需求在24小时内响应数量（包含了客服操作）<br>    本周总计完成的新增量在24小时内响应数量（包含了客服操作）（审核时间-租客发起时间）</p>
-<pre><code>SELECT ac.id,
-COUNT(distinct s.id) as 当前累计转租需求量,
-COUNT(distinct case when sr.id is not null then s.id else null end) 本周房东完成的累计转租需求量,
-COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then s.id else null end) 本周新增转租需求量,
-COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and s.id is not null then 1 else null end) 本周房东完成的新增转租量,
-COUNT(distinct case when sr.create_time&gt;0 and sr.create_time-s.create_time&lt;24*3600 then s.id else null end) as 本周房东完成的累计需求量在24小时内响应数量,
-COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-             and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) 
-             and sr.create_time&gt;0 
-             and sr.create_time-s.create_time&lt;24*3600 
-             then s.id else null end) as 本周房东完成的新增量在24小时内响应数量,
-COUNT(distinct case when (sr.create_time&gt;0 or sr1.create_time&gt;0) and sr.create_time-s.create_time&lt;24*3600 then s.id else null end) as 本周房东完成的累计需求量在24小时内响应数量_总,
-COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-             and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) 
-             and ((sr.create_time&gt;0 
-             and sr.create_time-s.create_time&lt;24*3600) 
-             or (sr1.create_time&gt;0 
-             and sr1.create_time-s.create_time&lt;24*3600))
-             then s.id else null end) as 本周房东完成的新增量在24小时内响应数量_总     
-from sublet_order s 
-left join agency_company ac on ac.id=s.co_id
-left join sublet_record sr on sr.s_order_id= s.id and sr.user_role=&apos;房东&apos;
-left join sublet_record sr1 on sr1.s_order_id= s.id and sr1.user_role=&apos;后台人员&apos; 
-GROUP BY ac.id;
-</code></pre><p>续租：<br>    当前累计续租需求量 cr.source=1 and c.is_agency_agree =0 and c.flag =0<br>    本周房东完成的累计续租需求量 cr.source=1 and (cr.relation_contract_id is not null or cr.land_apply_status=2) </p>
-<pre><code>本周新增续租需求量     cr.source=1 and unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                    and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
-
-
-本周房东完成的新增续租量:  unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                       and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
-                       and (cr.relation_contract_id is not null or cr.land_apply_status=2)
-
-本周房东发起的续租量：unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                   and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
-                   and cr.source in (4,5) 
-
-本周房东完成的累计需求量在72小时内响应数量  (c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
-                                   or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600)
-
-
-本周房东完成的新增量在72小时内响应数量（房东操作时间-租客申请时间）:
-                                    unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                                       and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) 
-                                    and ((c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
-                                    or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600))
-
-
-
-当前累计续租需求量：来源为租客APP的，is_agency =0 且原租约未关闭的租约数量
-
-本周房东完成的累计续租需求量：来源为租客APP的，房东在本周创建续租租约的数量（contract_rele中relation_contract_id ！=null）+或在本周拒绝租客续租申请的数量（取contract_rele做主表，关联contract表）
-
-本周新增续租需求量：创建时间在本周的，来源为租客APP的（取contract_rele）
-
-本周房东完成的新增续租量：创建时间在本周，且房东在本周创建续租租约的数量+拒绝租客续租申请的数量
-
-本周房东发起的续租量：创建时间在本周，来源=房东APP或者房东PC的数量
-
-本周房东完成的累计需求量在72小时内响应数量：房东在本周创建续租租约-续租任务生成时间小于72小时的数量+
-                                    或在本周拒绝租客续租申请-续租任务生成时间（create_time）的数量
-本周房东完成的新增量在72小时内响应数量（房东操作时间-租客申请时间）:
-                                  续租任务创建时间在本周，房东在本周创建续租租约-续租任务生成时间小于72小时的数量+或在本周拒绝租客续租申请-续租任务生成时间（create_time）的数量
-SELECT 
-c.`land_company_id` as id,
-count(distinct case when cr.source=1 and cr.is_agency_agree =0 and c.flag =0 then cr.contract_id else null end) as 当前累计续租需求量,
-count(distinct case when cr.source=1 and (cr.relation_contract_id is not null or cr.land_apply_status=2) then cr.contract_id else null end) as 本周房东完成的累计续租需求量,
-count(distinct case when cr.source=1 and unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                     and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) then cr.contract_id else null end) as 本周新增续租需求量,
-count(distinct case when unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-               and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
-               and (cr.relation_contract_id is not null or cr.land_apply_status=2) then cr.contract_id else null end) as 本周房东完成的新增续租量,
-count(distinct case when unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-           and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
-           and cr.source in (4,5) then cr.contract_id else null end) as 本周房东发起的续租量,
-count(distinct case when (c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
-                           or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600) then cr.contract_id else null end) as 本周房东完成的累计需求量在72小时内响应数量,
-count(distinct case when unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
-                               and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) 
-                            and ((c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
-                            or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600)) then cr.contract_id else null end) as 本周房东完成的新增量在72小时内响应数量_总
-
-FROM `contract_rele` cr 
-left join `contract` c on c.id=cr.`contract_id`
-left join contract c1 on cr.relation_contract_id=c1.id 
-GROUP BY c.`land_company_id`;
-</code></pre><p>报修：<br>    当前累计报修申请量<br>    本周房东完成的累计需求量<br>    本周新增报修申请量<br>    本周房东完成的新增量<br>    本周房东完成的累计需求量在72小时内响应的数量<br>    本周房东完成的新增量在72小时内响应的数量<br>    count(distinct r.<code>id</code>) as 当前累计报修申请量,<br>    count(distinct case when r.finish_time&gt;0 then r.<code>id</code> else null end) as 本周房东完成的累计需求量,<br>    count(distinct case when r.create_time&gt;unix_timestamp(‘2019-07-01’) and r.create_time<unix_timestamp('2019-07-08') then="" r.`id`="" else="" null="" end)="" as="" 本周新增报修申请量,="" count(distinct="" case="" when="" r.finish_time="">unix_timestamp(‘2019-07-01’) and r.finish_time<unix_timestamp('2019-07-08') then="" r.`id`="" else="" null="" end)="" as="" 本周房东完成的新增量,="" count(distinct="" case="" when="" r.finish_time="">0 and r.finish_time-r.create_time<72*3600 then="" r.`id`="" else="" null="" end)="" as="" 本周房东完成的累计需求量在72小时内响应的数量,="" count(distinct="" case="" when="" r.create_time="">unix_timestamp(‘2019-07-01’) and r.create_time<unix_timestamp('2019-07-08') and="" r.finish_time="">0 and r.finish_time-r.create_time&lt;72*3600 then r.<code>id</code> else null end) as 本周房东完成的新增量在72小时内响应的数量</unix_timestamp('2019-07-08')></72*3600></unix_timestamp('2019-07-08')></unix_timestamp('2019-07-08')></p>
-<pre><code>SELECT 
-r.`company` as id,
-count(distinct case when r.handle_type in（0,1）then r.`id` else null end) as 当前累计报修申请量,
-count(distinct case when r.finish_time&gt;0 then r.`id` else null end) as 本周房东完成的累计需求量,
-count(distinct case when r.handle_type in（0,1) and r.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and r.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then r.`id` else null end) as 本周新增报修申请量,
-count(distinct case when r.finish_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and r.finish_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then r.`id` else null end) as 本周房东完成的新增量,
-count(distinct case when r.finish_time&gt;0 and r.finish_time-r.create_time&lt;72*3600  then r.`id` else null end) as 本周房东完成的累计需求量在72小时内响应的数量,
-count(distinct case when r.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and r.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and r.finish_time&gt;0 and r.finish_time-r.create_time&lt;72*3600 then r.`id` else null end) as 本周房东完成的新增量在72小时内响应的数量
-FROM `repair` r 
-left join `agency_company` ac on ac.id=r.`company` 
-where r.`company`&gt;0 
-GROUP BY r.`company`;
-</code></pre><p>垫资还款：</p>
-<p>当前累计未还垫资金额<br>本周房东归还的垫资金额<br>垫资笔数<br>本周房东在72小时内归还垫资的笔数（房东还款时间-垫资生成时间，以归还时间在本周进行统计）<br>本周房东在72小时内归还垫资的金额</p>
-<p>回复租评：<br>    累计租评数<br>    本周新增租评数<br>    当前累计未读租评<br>    当前累计未回复租评<br>    本周在48小时内回复的租评数量（回复时间-评价时间）</p>
-<pre><code>select 
-count(distinct ueh.id) as 累计租评数,
-count(distinct case when ueh.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and ueh.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then ueh.id else null end) as 本周新增租评数,
-count(distinct case when ueh.is_read=0 then ueh.id else null end) as 当前累计未读租评,
-count(distinct case when r.id is null then ueh.id else null end) as 当前累计未回复租评,
-count(distinct case when ueh.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and ueh.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and r.create_time-ueh.create_time&lt;48*3600 then ueh.id else null end) 本周在48小时内回复的租评数量
-from user_eval_house ueh
-left join (select id,min(create_time) as create_time,eval_house_id from user_eval_house_reply where type=1 and flag=0 group by eval_house_id) r on r.eval_house_id=ueh.id
-where ueh.to_type=1 group by lan_co_id;
-</code></pre><p>催租反馈：<br>    累计的催租反馈数<br>    本周新增的催租反馈数<br>    本周在48小时内回复催租反馈数量</p>
-<pre><code>select 
-p.lan_co_id,
-count(distinct p.id) as 累计的催租反馈数,
-count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then p.id else null end) as 本周新增的催租反馈数,
-count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and p.create_time-p.modify_time then p.id else null end) as 本周新增的催租反馈数
-from pay_rent_message p 
-where p.flag=0 
-group by p.lan_co_id
-
-
-在 pay_rent_message 表中，
-通过 lan_co_id 去 重，并且ﬂag=0，
-去计算机构累计的催租反馈 数，
-通过create_time去判断是否本周，并且 create_time 和 modify_time 去计算48小时反馈
-select 
-p.lan_co_id,
-count(distinct p.id) as 累计的催租反馈数,
-count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then p.id else null end) as 本周新增的催租反馈数,
-count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and p.modify_time-p.create_time&lt;48*3600 then p.id else null end) as 本周在48小时内回复催租反馈数量
-from pay_rent_message p 
-where p.flag=0 and p.lan_co_id&gt;0
-group by p.lan_co_id;
-</code></pre><p>$sql = “select bph.contract_id,bph.status,bph.type,bph.trade_time,bph.start_date,bph.amount,bph.settlement,bph.id as bill_payable_head_id,bph.refund_user_is_advance”;<br>$sql .= “,s.name as sub_name,s.address”;<br>$sql .= “,h.room_detail,h.room_name”;<br>$sql .= “,sum(bd.deduct_amount) as deduct_amount”;<br>$sql .= “,sum(bph_tui.amount) as tui_amount”;<br>$sql .= “ from bill_payable_head bph”;</p>
-<p>$sql .= “ left join bill_payable_head_deduct_detail as bd ON bd.head_id=bph.id”;<br>$sql .= “ left join bill_payable_head as bph_tui ON bph_tui.id=bd.deduct_head_id AND bph_tui.type = 5”;<br>$sql .= “ left join contract as c ON c.id = bph.contract_id”;<br>$sql .= “ left join house as h ON h.id = c.house_id”;<br>$sql .= “ left join subdistrict as s ON s.id = h.subdistrict_id”;</p>
-<p>$sql .= “ where bph.land_company_id = $co_id and bph.settlement_status &lt;&gt; 15”;<br>$sql .= “ and (bph.type = 3 or bph.type = 17 or (bph.type = 18 and bph.refund_user_is_advance=1) or bph.type = 19) and bph.amount &lt; 0 and bph.flag = 0 “;<br>$sql .= “ group by bph.id”;<br>$sql .= “ order by c.modify_time desc”;</p>
-<p>CREATE EXTERNAL TABLE result.company_about_msg<br>(<br>)<br>PARTITIONED BY (monthday string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘\001’<br>stored as textfile<br>location ‘/user/hdfs/result/company_about_msg’;</p>
-<p>CREATE TABLE <code>company_about_msg</code> (<br>    id varchar(50) default ‘’ comment ‘机构id’,<br>    name varchar(50) default ‘’ comment ‘机构名称’,<br>    a1 varchar(50) default ‘’ comment ‘当前累计退租需求量’,<br>    b1 varchar(50) default ‘’ comment ‘本周房东完成的累计退租需求量’,<br>    c1 varchar(50) default ‘’ comment ‘本周新增退租需求量’,<br>    d1 varchar(50) default ‘’ comment ‘本周房东完成的新增退租量’,<br>    e1 varchar(50) default ‘’ comment ‘本周房东发起的退租量’,<br>    f1 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在24小时内响应数量’,<br>    g1 varchar(50) default ‘’ comment ‘本周房东完成的新增量在24小时内响应数量’,<br>    a2 varchar(50) default ‘’ comment ‘当前累计转租需求量’,<br>    b2 varchar(50) default ‘’ comment ‘本周房东完成的累计转租需求量’,<br>    c2 varchar(50) default ‘’ comment ‘本周新增转租需求量’,<br>    d2 varchar(50) default ‘’ comment ‘本周房东完成的新增转租量’,<br>    e2 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在24小时内响应数量’,<br>    f2 varchar(50) default ‘’ comment ‘本周房东完成的新增量在24小时内响应数量’,<br>    g2 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在24小时内响应数量<em>总’,<br>    h2 varchar(50) default ‘’ comment ‘本周房东完成的新增量在24小时内响应数量</em>总’,<br>    a3 varchar(50) default ‘’ comment ‘当前累计续租需求量’,<br>    b3 varchar(50) default ‘’ comment ‘本周房东完成的累计续租需求量’,<br>    c3 varchar(50) default ‘’ comment ‘本周新增续租需求量’,<br>    d3 varchar(50) default ‘’ comment ‘本周房东完成的新增续租量’,<br>    e3 varchar(50) default ‘’ comment ‘本周房东发起的续租量’,<br>    f3 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在72小时内响应数量’,<br>    g3 varchar(50) default ‘’ comment ‘本周房东完成的新增量在72小时内响应数量_总’,<br>    a4 varchar(50) default ‘’ comment ‘当前累计报修申请量’,<br>    b4 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量’,<br>    c4 varchar(50) default ‘’ comment ‘本周新增报修申请量’,<br>    d4 varchar(50) default ‘’ comment ‘本周房东完成的新增量’,<br>    e4 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在72小时内响应的数量’,<br>    f4 varchar(50) default ‘’ comment ‘本周房东完成的新增量在72小时内响应的数量’,<br>    a5 varchar(50) default ‘’ comment ‘累计租评数’,<br>    b5 varchar(50) default ‘’ comment ‘本周新增租评数’,<br>    c5 varchar(50) default ‘’ comment ‘当前累计未读租评’,<br>    d5 varchar(50) default ‘’ comment ‘当前累计未回复租评’,<br>    e5 varchar(50) default ‘’ comment ‘本周在48小时内回复的租评数量’,<br>    a6 varchar(50) default ‘’ comment ‘累计的催租反馈数’,<br>    b6 varchar(50) default ‘’ comment ‘本周新增的催租反馈数’,<br>    c6 varchar(50) default ‘’ comment ‘本周在48小时内回复催租反馈数量’,<br>    a7 varchar(50) default ‘’ comment ‘当前累计未还垫资金额’,<br>    b7 varchar(50) default ‘’ comment ‘本周房东归还的垫资金额’,<br>    c7 varchar(50) default ‘’ comment ‘垫资笔数’,<br>    d7 varchar(50) default ‘’ comment ‘本周房东在72小时内归还垫资的笔数’,<br>    e7 varchar(50) default ‘’ comment ‘本周房东在72小时内归还垫资的金额’,<br>    create_time  varchar(50) default ‘’ string COMMENT ‘时间戳’,<br>    account_date varchar(50) default ‘’ string COMMENT ‘统计日期’,<br>    KEY <code>idx_account_date</code> (<code>account_date</code>)<br>) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’机构转租退租保修垫资续租等业务数据表’;<br>select<br>account<em>date  as ‘日期’,<br>id  as ‘机构id’,<br>name  as ‘机构名称’,<br>a1  as ‘当前累计退租需求量’,<br>b1  as ‘本周房东完成的累计退租需求量’,<br>c1  as ‘本周新增退租需求量’,<br>d1  as ‘本周房东完成的新增退租量’,<br>e1  as ‘本周房东发起的退租量’,<br>f1  as ‘本周房东完成的累计需求量在24小时内响应数量’,<br>g1  as ‘本周房东完成的新增量在24小时内响应数量’,<br>a2  as ‘当前累计转租需求量’,<br>b2  as ‘本周房东完成的累计转租需求量’,<br>c2  as ‘本周新增转租需求量’,<br>d2  as ‘本周房东完成的新增转租量’,<br>e2  as ‘本周房东完成的累计需求量在24小时内响应数量’,<br>f2  as ‘本周房东完成的新增量在24小时内响应数量’,<br>g2  as ‘本周房东完成的累计需求量在24小时内响应数量</em>总’,<br>h2  as ‘本周房东完成的新增量在24小时内响应数量<em>总’,<br>a3  as ‘当前累计续租需求量’,<br>b3  as ‘本周房东完成的累计续租需求量’,<br>c3  as ‘本周新增续租需求量’,<br>d3  as ‘本周房东完成的新增续租量’,<br>e3  as ‘本周房东发起的续租量’,<br>f3  as ‘本周房东完成的累计需求量在72小时内响应数量’,<br>g3  as ‘本周房东完成的新增量在72小时内响应数量</em>总’,<br>a4  as ‘当前累计报修申请量’,<br>b4  as ‘本周房东完成的累计需求量’,<br>c4  as ‘本周新增报修申请量’,<br>d4  as ‘本周房东完成的新增量’,<br>e4  as ‘本周房东完成的累计需求量在72小时内响应的数量’,<br>f4  as ‘本周房东完成的新增量在72小时内响应的数量’,<br>a5  as ‘累计租评数’,<br>b5  as ‘本周新增租评数’,<br>c5  as ‘当前累计未读租评’,<br>d5  as ‘当前累计未回复租评’,<br>e5  as ‘本周在48小时内回复的租评数量’,<br>a6  as ‘累计的催租反馈数’,<br>b6  as ‘本周新增的催租反馈数’,<br>c6  as ‘本周在48小时内回复催租反馈数量’,<br>a7  as ‘当前累计未还垫资金额’,<br>b7  as ‘本周房东归还的垫资金额’,<br>c7  as ‘垫资笔数’,<br>d7  as ‘本周房东在72小时内归还垫资的笔数’,<br>e7  as ‘本周房东在72小时内归还垫资的金额’<br>from company_about_msg order by account_date</p>
-<p>from_unixtime(unix_timestamp(‘2019-07-08 00:00:00’)-3600<em>24</em>7,’yyyy-MM-dd’)</p>
-<p>select<br>account_date as  ‘日期’,<br>n.城市 as  ‘城市’<br>n.板块 as  ‘板块’,<br>n.bankuai_manager_name as  ‘板块经理’<br>n.站点名称 as  ‘站点名称’,<br>dd_name as  ‘据点’,<br>week_rent_house as  ‘当周成交数’,<br>account as  ‘当周成交流水’<br>from dd_data_week d left join (<br>        select<br>        city_name ‘城市<br>        bankuai_name ‘板块’,<br>        bankuai_manager_name ‘板块经理’<br>        site_name ‘站点名称’,<br>        dd_name ‘据点’<br>        from dd_data_week<br>        where account_date=’2019-07-01’<br>) n on n.据点=d.dd_name;</p>
-<p>select<br>日期 as 日期,<br>城市 as 城市,<br>板块 as 板块,<br>板块经理 as 板块经理,<br>站点名称 as 站点名称,<br>据点 as 据点,<br>当周成交数 as 当周成交数,<br>当周成交流水 as 当周成交流水<br>from<br>dd_data_week_view<br>order by 日期;</p>
-<p>日期<br>机构名称<br>机构ID<br>总房数：机构所有有效房的数量<br>空房数：节点招租中的房源数数量<br>预期月总额：所有有效房的月租金总和<br>租约总额 ：留存租约的月租金+其他费用总和<br>实收总额：线上付款租金+核销+其他费用的总金额<br>线上收款总额：线上付的租金总额，不包括其他费用</p>
-<p>SELECT<br>ac.id,<br>count(case when h.house_status != 2 then h.id else null end) as 总房数,<br>count(case when h.house_status=0 then h.id else null end) as 空房数,<br>sum(case when h.house_status != 2 then h.month_rent else 0 end) as 预期月总额,<br>sum(case when c.id is not null then c.month_rent+c.other_fee else ene) as 租约总额,<br>b.real_amount as 实收总额,<br>b.online_amount as 线上收款总额<br>from agency_company ac<br>left join house as h on h.lan_co_id=ac.id<br>left join subdistrict as s on h.subdistrict_id=s.id<br>left join dd_call dc on dc.id=s.dd_call_id<br>left join agency_company as ac on h.lan_co_id = ac.id<br>left join contract c on c.house_id = h.id and c.flag=0<br>left join (<br>select c.land_company_id,<br>sum(b.other_fee+b.total_amount) as real_amount,<br>sum(case when b.check_status=0 then b.total_amount else 0 end) as online_amount<br>from bill b<br>left join contract c on c.id=b.contract_id<br>where b.flag=0 and c.flag=0 and b.status=1 and c.land_company_id&gt;0<br>group by c.land_company_id) b on b.land_company_id=ac.id<br>where<br>h.<code>show</code> !=1<br>and h.virtual = 0<br>and h.house_source = 2<br>and ac.type=2<br>and ac.status=1<br>and ac.auth_status = 2<br>GROUP BY ac.id</p>
-<p>select<br>c.land_company_id,<br>sum(b.other_fee+b.total_amount) as 实收总额,<br>sum(case when b.check_status=0 then else end) as 线上收款总额<br>from bill b<br>left join contract c on c.id=b.contract_id<br>where b.flag=0 and c.flag=0 and b.status=1 and c.land_company_id&gt;0 and<br>group by c.land_company_id;</p>
-<p>echo “use datawarehouse;delete from company_day_data” | mysql -h rm-bp1189620q55roplq.mysql.rds.aliyuncs.com -P 3306 -ubigdata -pCflY04l1L680PM1h &gt; /home/hdfs/test/haha.txt<br>SELECT<br>da.id,<br>da.name,<br>ac.id,<br>ac.name,<br>count(case when h.house_status != 2 then h.id else null end), – 总房数,<br>count(case when h.house_status=0 then h.id else null end), – 空房数,<br>sum(case when h.house_status != 2 then h.month_rent else 0 end), – 预期月总额,<br>sum(case when c.id is not null then c.month_rent+c.other_fee else 0 end), – 租约总额,<br>b.real_amount, – 实收总额,<br>b.online_amount – 线上收款总额<br>from agency_company ac<br>left join house as h on h.lan_co_id=ac.id<br>left join subdistrict as s on h.subdistrict_id=s.id<br>left join dd_call dc on dc.id=s.dd_call_id<br>left join contract c on c.house_id = h.id and c.flag=0<br>left join dd_area da on da.id=ac.<code>city_id</code><br>left join (<br>select c.land_company_id,<br>sum(b.other_fee+b.total_amount) as real_amount,<br>sum(case when b.check_status=0 then b.total_amount else 0 end) as online_amount<br>from bill b<br>left join contract c on c.id=b.contract_id<br>where b.flag=0 and c.flag=0 and b.status=1 and c.land_company_id&gt;0<br>group by c.land_company_id) b on b.land_company_id=ac.id<br>where h.<code>hive_show</code> !=1<br>and h.virtual = 0<br>and h.house_source = 2<br>and ac.type=2<br>and ac.status=1<br>and ac.auth_status = 2<br>GROUP BY<br>da.id,<br>da.name,<br>ac.id,<br>ac.name,<br>b.real_amount,<br>b.online_amount;</p>
-<p>da.id,<br>da.name,<br>ac.id,<br>ac.name,<br>count(case when h.house_status != 2 then h.id else null end), – 总房数,<br>count(case when h.house_status=0 then h.id else null end), – 空房数,<br>sum(case when h.house_status != 2 then h.month_rent else 0 end), – 预期月总额,<br>sum(case when c.id is not null then c.month_rent+c.other_fee else 0 end), – 租约总额,<br>b.real_amount, – 实收总额,<br>b.online_amount – 线上收款总额</p>
-<p>CREATE EXTERNAL TABLE result.company_day_data (<br>    city string COMMENT ‘城市’,<br>    city_id string COMMENT ‘城市id’,<br>    co_id string COMMENT ‘机构id’,<br>    name string COMMENT ‘机构名称’,<br>    house_num string COMMENT ‘总房数’,<br>    empty_house_num string COMMENT ‘空房数’,<br>    pre_all_amount string comment ‘预期月总额’,<br>    contract_amount string comment ‘租约总额’,<br>    real_amount string comment ‘实收总额’,<br>    online_amount string comment ‘线上收款总额’,<br>    create_time string COMMENT ‘时间戳’<br>) PARTITIONED BY (monthday string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘\001’<br>stored as textfile<br>location ‘/user/hdfs/result/company_day_data’;</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2019/04/07/大牛计划/" title="进阶计划" itemprop="url">进阶计划</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2019-04-06T16:48:43.000Z" itemprop="datePublished"> Published 2019-04-07</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h1><h5 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h5><ul>
-<li>坚持学习</li>
-<li>动手 再简单的例子都要亲手实现一次</li>
-<li>学会思考，为什么要这样而不是那样 举一反三</li>
-<li>不要乱买书</li>
-<li>回顾历史技术发展，才能推测未来</li>
-</ul>
-<hr>
-<h2 id="阶段一-零基础启蒙"><a href="#阶段一-零基础启蒙" class="headerlink" title="阶段一 零基础启蒙"></a>阶段一 零基础启蒙</h2><ul>
-<li>学习下python(自己找资料) javascrip <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">网址一</a> <a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">网址二</a></li>
-<li><a href="https://www.w3cschool.cn/linux/" target="_blank" rel="external">linux学习</a></li>
-<li>前段端基础 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS" target="_blank" rel="external">css</a> <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank" rel="external">html</a> <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" rel="external">js操作dom</a></li>
-<li>后段php <a href="http://www.w3school.com.cn/php/index.asp" target="_blank" rel="external">W3C-php</a> <a href="http://php.net/manual/zh/" target="_blank" rel="external">php 官方</a></li>
-</ul>
-<hr>
-<p>学习要点</p>
-<ul>
-<li>在一台 Linux 机器上配置 LEMP - Ubuntu/Nginx/PHP/MySQL 这个环境</li>
-</ul>
-<p>实践项目</p>
-<ul>
-<li>用户登录和注册（不需密码找回）。</li>
-<li>用户发贴（不需要支持富文本，只需要支持纯文本）。</li>
-<li>用户评论（不需要支持富文本，只需要支持纯文本）。</li>
-<li>用户登录时的密码不应该保存为明文 应该用 MD5+Salt 来保存</li>
-<li>图片验证码</li>
-<li>阻止用户在发文章或评论时输入带 HTML 或 JavaScript 内容</li>
-<li>防范 SQL 注入 <a href="https://technet.microsoft.com/zh-cn/library/ms161953%28v=sql.105%29.aspx?f=255&amp;MSPPError=-2147217396" target="_blank" rel="external">微软官方</a> <a href="http://php.net/manual/zh/security.database.sql-injection.php" target="_blank" rel="external">PHP官方</a></li>
-</ul>
-<h2 id="阶段二-正式入门"><a href="#阶段二-正式入门" class="headerlink" title="阶段二 正式入门"></a>阶段二 正式入门</h2><p>编程技巧</p>
-<ul>
-<li>代码大全 书籍</li>
-<li>java编程思想 书籍 spring实战 springboot实战</li>
-<li>鸟哥私房菜</li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" target="_blank" rel="external">网络协议</a> 配合极客时间趣谈协议</li>
-<li>数据库设计 mysql官方文档 高性能mysql 书籍</li>
-<li>前端方面 jq <a href="https://getbootstrap.com/" target="_blank" rel="external">bootstrap</a> javascrip ajax <a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank" rel="external">javascrip的promise模式</a></li>
-<li>字符编码方面 <a href="http://www.imkevinyang.com/2010/06/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%EF%BC%8C%E4%BD%A0%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84.html" target="_blank" rel="external">关于字符编码</a> <a href="https://github.com/jagracey/Awesome-Unicode" target="_blank" rel="external">git两个库</a><a href="https://github.com/Codepoints/awesome-codepoints" target="_blank" rel="external">库二</a></li>
-</ul>
-<p>编程工具</p>
-<ul>
-<li>ide vscode intellijIDEA eclipe</li>
-<li>版本管理git</li>
-<li>调试前端 <a href="http://www.igeekbar.com/igeekbar/post/156.htm" target="_blank" rel="external">谷歌调试</a></li>
-<li>数据库设计工具 <a href="https://dev.mysql.com/doc/refman/5.7/en/" target="_blank" rel="external">官方文档</a></li>
-</ul>
-<p>实践项目 这回我们需要设计一个投票系统的项目<br>业务上的需求如下：</p>
-<ul>
-<li>用户只有在登录后，才可以生成投票表单。</li>
-<li>投票项可以单选，可以多选。</li>
-<li>其它用户投票后显示当前投票结果（但是不能刷票）。</li>
-<li>投票有相应的时间，页面上需要出现倒计时。</li>
-<li>投票结果需要用不同颜色不同长度的横条，并显示百分比和人数。h</li>
-</ul>
-<hr>
-<p>技术上的需求如下</p>
-<ul>
-<li>这回要用 Java Spring Boot 来实现了，然后，后端不返回任何的 HTML，只返回 JSON 数据给前端。</li>
-<li>由前端的 JQuery 来处理并操作相关的 HTML 动态生成在前端展示的页面。</li>
-<li>前端的页面还要是响应式的，也就是可以在手机端和电脑端有不同的呈现。 这个可以用 Bootstrap 来完成。</li>
-<li>如果你有兴趣，还可以挑战以下这些功能在微信中，通过微信授权后记录用户信息，以防止刷票。</li>
-<li>可以不用刷页面，就可以动态地看到投票结果的变化。</li>
-<li>Google 一些画图表的 JavaScript 库，然后把图表画得漂亮一些。</li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/学习计划系列/">学习计划系列</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/10/25/soar-sql优化/" title="soar-sql优化" itemprop="url">soar-sql优化</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-10-25T10:32:43.000Z" itemprop="datePublished"> Published 2018-10-25</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>网站sql优化</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/soar-sql优化/">soar-sql优化</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/10/25/phantomsjs问题/" title="phantomsjs问题" itemprop="url">phantomsjs问题</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-10-25T10:23:50.000Z" itemprop="datePublished"> Published 2018-10-25</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>phantomjs 抓取、截图中文网站乱码的问题的解决</p>
-<p>1、用phantomjs抓取html乱码的解决方案：<br>phantomjs –output-encoding=gbk test.js <a href="http://webscan.360.cn/index/checkwebsite?url=www.coding123.net" target="_blank" rel="external">http://webscan.360.cn/index/checkwebsite?url=www.coding123.net</a><br>这两个参数可以指定编码 …</p>
-<p>–output-encoding=encoding sets the encoding used for terminal output (default is utf8).<br>–script-encoding=encoding sets the encoding used for the starting script (default is utf8).</p>
-<p>设置成 GBK 就可以了 …</p>
-<p>或者</p>
-<p>phantom.outputEncoding=”gbk”;</p>
-<p>2、用phantomjs截图时中文乱码的解决方案：<br>用phantomjs去截取中文页面的网站可能会出现乱码的情况，也就是截图中中文的位置全是方框。解决办法就是安装字体。</p>
-<p>在centos中执行：yum install bitmap-fonts bitmap-fonts-cjk<br>在ubuntu中执行：sudo apt-get install xfonts-wqy</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/phantomsjs问题/">phantomsjs问题</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/09/29/学习计划/" title="学习计划" itemprop="url">学习计划</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-09-28T17:09:52.000Z" itemprop="datePublished"> Published 2018-09-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>1 后台开发宏观了解<br> <a href="http://systemdesigns.blogspot.com/" target="_blank" rel="external">http://systemdesigns.blogspot.com/</a> </p>
-<p>2 算法与数据结构<br> <a href="https://github.com/jwasham/coding-interview-university" target="_blank" rel="external">https://github.com/jwasham/coding-interview-university</a> 算法数据结构系统教程git<br> <a href="https://leetcode-cn.com/explore/" target="_blank" rel="external">https://leetcode-cn.com/explore/</a> 算法题训练<br> 算法设计技巧与分析 吴伟</p>
-<p>3 java编程思想</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/个人杂谈/">个人杂谈</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/08/22/mysql/" title="mysql" itemprop="url">mysql</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-08-22T09:58:09.000Z" itemprop="datePublished"> Published 2018-08-22</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>mysql -h rm-bp1189620q55roplq.mysql.rds.aliyuncs.com  -u zhangjian -p -P 3306</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/08/10/scrapy学习笔记/" title="scrapy学习笔记" itemprop="url">scrapy学习笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-08-10T09:07:25.000Z" itemprop="datePublished"> Published 2018-08-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>pip install Scrapy</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/python-scrapy/">python scrapy</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
-  </nav>
-
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
-<aside class="clearfix">
-
-  
-
-
-  
-
-  
-<div class="tagslist">
-	<p class="asidetitle">Tags</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/生活/" title="生活">生活<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/诗词/" title="诗词">诗词<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/英语词汇/" title="英语词汇">英语词汇<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/php/" title="php">php<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/学习计划系列/" title="学习计划系列">学习计划系列<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/计算机基础/" title="计算机基础">计算机基础<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/phantomsjs问题/" title="phantomsjs问题">phantomsjs问题<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/python-scrapy/" title="python scrapy">python scrapy<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工作记录/" title="工作记录">工作记录<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/soar-sql优化/" title="soar-sql优化">soar-sql优化<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/个人杂谈/" title="个人杂谈">个人杂谈<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/英语/" title="英语">英语<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/新概念/" title="新概念">新概念<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/系统设计/" title="系统设计">系统设计<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Homebrew/" title="Homebrew">Homebrew<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/music/" title="music">music<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
-</div>
-
-  <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello ,I&#39;m Larry Page in Google. <br/>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</div>
-			
-		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
-		
-		<a href="/about" target="_blank" title="张建">张建</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
 <script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
     };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
-});
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
 </script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
   }
-}); 
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
 
 
-<!-- Analytics Begin -->
-
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
-
-  </body>
- </html>
+      
+</body>
+</html>
