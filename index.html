@@ -79,6 +79,119 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2019/07/15/Homebrew默认源更换和重置/" title="Homebrew默认源更换和重置" itemprop="url">Homebrew默认源更换和重置</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
+		
+  <p class="article-time">
+    <time datetime="2019-07-15T10:26:13.000Z" itemprop="datePublished"> Published 2019-07-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h4 id="Homebrew默认源更换和重置"><a href="#Homebrew默认源更换和重置" class="headerlink" title="Homebrew默认源更换和重置"></a>Homebrew默认源更换和重置</h4><hr>
+<blockquote>
+<p>中科大源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">替换brew.git:</div><div class="line">cd &quot;$(brew --repo)&quot;</div><div class="line">git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</div><div class="line"></div><div class="line">替换homebrew-core.git:</div><div class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</div><div class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">重置brew.git:</div><div class="line">cd &quot;$(brew --repo)&quot;</div><div class="line">git remote set-url origin https://github.com/Homebrew/brew.git</div><div class="line"></div><div class="line">重置homebrew-core.git:</div><div class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</div><div class="line">git remote set-url origin https://github.com/Homebrew/homebrew-core.git</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>清华同方源</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">替换：</div><div class="line">git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</div><div class="line"></div><div class="line">git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</div><div class="line"></div><div class="line">brew update</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">重置：</div><div class="line">git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homebrew/brew.git</div><div class="line"></div><div class="line">git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://github.com/Homebrew/homebrew-core</div><div class="line"></div><div class="line">brew update</div></pre></td></tr></table></figure>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Homebrew/">Homebrew</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand &gt;" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2019/07/15/中科大源/" title="中科大源" itemprop="url">中科大源</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
+		
+  <p class="article-time">
+    <time datetime="2019-07-15T10:24:35.000Z" itemprop="datePublished"> Published 2019-07-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2019/06/18/常用l函数/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
@@ -93,6 +206,14 @@
     <div class="article-content">
         
         <ul>
+<li>select id,if(@total=avg_people_account,@rowno:=@rowno,@rowno:=@rowno+1)  as avg_people_account_rate from group_saidao,(select @rowno:=0,@total:=null) t where account_date=’2019-06-10’ order by avg_people_account desc</li>
+</ul>
+<p>SELECT AAA.id,<br>AAA.avg_people_account,<br>AAA.grade_name,<br>if(@grade_name = AAA.grade_name, @rank:=@rank+1,@rank:=1) as rank,<br>@grade_name:=AAA.grade_name<br>FROM<br>(SELECT * FROM group_saidao ORDER BY grade_name,avg_people_account DESC,id) AS AAA,<br>(select @grade_name:=null,@rank:=0 ) AS BBB;</p>
+<p>SELECT a.id,<br>a.avg_people_account,<br>a.grade_name,<br>if(@grade_name = a.grade_name, @rank:=@rank+1,@rank:=1) as rank,<br>@grade_name:=a.grade_name<br>FROM<br>(SELECT * FROM group_saidao where account_date=’2019-06-10’ ORDER BY grade_name,avg_people_account DESC,id) AS a,<br>(select @grade_name:=null,@rank:=0 ) AS b;</p>
+<ul>
+<li><p>组内排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">SELECT AAA.id,</div><div class="line">AAA.ticket,</div><div class="line">AAA.sex,</div><div class="line">if(@sex = AAA.sex, @rank:=@rank+1,@rank:=1) as rank,</div><div class="line">@sex:=AAA.sex</div><div class="line">FROM</div><div class="line">(SELECT *</div><div class="line">FROM test </div><div class="line">ORDER BY </div><div class="line">test.sex,</div><div class="line">test.ticket DESC,</div><div class="line">test.id) AS AAA ,(select @sex:=null,@rank:=0 ) AS BBB</div></pre></td></tr></table></figure>
+</li>
 <li><p>并列排名</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT u.user_id, u.score, </div><div class="line"> CASE </div><div class="line">   WHEN @last_score = u.score</div><div class="line">     THEN @rank </div><div class="line">   WHEN @last_score := u.score </div><div class="line">     THEN @rank := @rank + 1    </div><div class="line">  END AS rank    </div><div class="line">FROM </div><div class="line">(SELECT * FROM user_score ORDER BY score DESC) u, (SELECT @rank := 0, @last_score := NULL) r;</div></pre></td></tr></table></figure>
 </li>
@@ -138,7 +259,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2019/05/23/大数据笔记/" title="bigdata笔记" itemprop="url">bigdata笔记</a>
+      <a href="/2019/05/23/大数据笔记/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
@@ -151,20 +272,251 @@
 </header>
     <div class="article-content">
         
-        <p>yarn      引入资源管理和任务调度的框架</p>
-<p>Ganglia   监控Hadoop及Hbase集群性能(安装配置)</p>
-<p>Zookeeper 是分布式服务框架，主要是用来解决分布式应用中经常遇到的一些数据管理问题，如：统一命名服务、状态同步服务、集群管理、分布式应用配置项的管理等等。</p>
-<p>Spark 最早是2009年Berkeley大学AMPLab实验室开发的一个分布式、内存式、流式计算引擎</p>
-<p>HBase－－DataBase on Hadoop，基于分布式文件系统上面建立的数据库</p>
-<p>机构<br>小区</p>
-<p>据点<br>工作站</p>
-<p>总房<br>可租房<br>新增可租房<br>导客出房</p>
-<p>可租有图房<br>//当周新建总房<br>//昨日新建总房<br>//当周新建机构数 </p>
-<p>机构激活时间<br>//昨日新建机构数</p>
-<p>租金在500以下可租房数<br>租金在500-799可租房数<br>租金在800-1199可租房数<br>租金在1200-1399可租房数€<br>租金在1400-1999可租房数<br>租金在2000-2999可租房数<br>租金在3000-3999可租房数<br>租金在4000以上可租房数</p>
-<p>可租房总价</p>
-<p>带看客源数<br>当周成交数<br>留存租约数<br>成交上架比</p>
-<p>CREATE TABLE <code>agency_company</code> (<br>  <code>id</code> int(11) NOT NULL AUTO_INCREMENT COMMENT ‘序号’,<br>  <code>crm_id</code> int(11) DEFAULT ‘0’ COMMENT ‘crm中机构的id（杨晓杰）’,<br>  <code>crm_contract_id</code> varchar(32) DEFAULT ‘’ COMMENT ‘crm合同编号’,<br>  <code>deposits_secondexits</code> int(1) NOT NULL DEFAULT ‘0’ COMMENT ‘押金秒退’,<br>  <code>name</code> varchar(100) NOT NULL COMMENT ‘中介公司名称’,<br>  <code>status</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘状态1有效0无效2待生效’,<br>  <code>type</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘公司性质:0中介公司,1大房东公司,2二房东公司,3公寓’,<br>  <code>bossid</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘公司老板的userid,0为未知’,<br>  <code>city_id</code> int(11) NOT NULL DEFAULT ‘1’,<br>  <code>operator_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘对应客服id,0为未知’,<br>  <code>server_opr_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘站长ID - 傅仕仁’,<br>  <code>service_id</code> int(10) DEFAULT ‘0’ COMMENT ‘机构客服id-侯祥飞’,<br>  <code>labels</code> varchar(45) DEFAULT NULL COMMENT ‘公司标签’,<br>  <code>remark</code> varchar(45) DEFAULT NULL COMMENT ‘公司备注’,<br>  <code>commission_ratio</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘对应佣金比例’,<br>  <code>address</code> varchar(100) DEFAULT ‘’ COMMENT ‘机构实际(房东)联系地址-侯祥飞’,<br>  <code>see_type</code> int(11) NOT NULL DEFAULT ‘1’ COMMENT ‘带看类型，1自己带看 2非自己带看’,<br>  <code>auth_status</code> int(1) NOT NULL DEFAULT ‘0’ COMMENT ‘认证状态0未认证1认证中2已认证’,<br>  <code>create_time</code> int(11) DEFAULT ‘0’ COMMENT ‘创建时间’,<br>  <code>modify_time</code> int(11) DEFAULT ‘0’ COMMENT ‘修改时间’,<br>  <code>size</code> int(1) NOT NULL DEFAULT ‘0’ COMMENT ‘机构规模1A2B3C4D’,<br>  <code>auth_level</code> tinyint(1) NOT NULL DEFAULT ‘0’ COMMENT ‘认证级别0无1为导客2为金融10为缴租11月付’,<br>  <code>way_rent</code> char(2) NOT NULL COMMENT ‘缴租方式’,<br>  <code>rate</code> decimal(4,2) DEFAULT ‘0.00’ COMMENT ‘利率’,<br>  <code>is_brand_apartment</code> tinyint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘是否品牌公寓 0不是 1 是’,<br>  <code>shop_name</code> varchar(255) NOT NULL DEFAULT ‘’ COMMENT ‘店铺名称’,<br>  <code>shop_address</code> varchar(255) NOT NULL DEFAULT ‘’ COMMENT ‘店铺地址’,<br>  <code>discount_type</code> int(11) DEFAULT ‘0’ COMMENT ‘机构是否有优惠0为无1为有’,<br>  <code>subway_desc</code> varchar(255) DEFAULT ‘’ COMMENT ‘地铁描述’,<br>  <code>credit_limit</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘额度’,<br>  <code>credit_used</code> decimal(11,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘已用额度’,<br>  <code>prearm_status</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘预警状态 0初始状态 5有预警 10预警被解除 ‘,<br>  <code>checker_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘最新审核人id’,<br>  <code>checker_name</code> varchar(32) NOT NULL DEFAULT ‘’ COMMENT ‘最新审核人名字’,<br>  <code>check_status</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘审核状态0待审核1通过2不通过9审核中’,<br>  <code>check_time</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘审核时间’,<br>  <code>check_auto_note</code> text COMMENT ‘系统自动备注’,<br>  <code>check_note</code> text COMMENT ‘审核备注’,<br>  <code>product_id</code> int(11) DEFAULT ‘0’ COMMENT ‘产品id’,<br>  <code>pay_day</code> int(4) NOT NULL DEFAULT ‘0’ COMMENT ‘机构提前付款天数’,<br>  <code>open_loop</code> int(11) DEFAULT ‘0’ COMMENT ‘开启轮循  0:未开启  1:已开启’,<br>  <code>execute_count</code> int(11) DEFAULT ‘0’ COMMENT ‘执行次数’,<br>  <code>loop_rule</code> varchar(512) DEFAULT NULL COMMENT ‘轮循规则’,<br>  <code>finance_occupancy</code> decimal(5,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘金融占有率’,<br>  <code>day_ahead</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘提前催租日’,<br>  <code>jingdong_qishu</code> varchar(20) DEFAULT ‘’ COMMENT ‘白条使用期数’,<br>  <code>is_jingdong</code> smallint(2) DEFAULT ‘0’ COMMENT ‘0:未使用 1:使用’,<br>  <code>da_finance</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘大金融’,<br>  <code>xiao_finance</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘小金融’,<br>  <code>checkout_rule</code> varchar(255) DEFAULT NULL COMMENT ‘退房规则’,<br>  <code>renter_finance</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘租客金融:0 无金融  1 房东付费  2 租客付费’,<br>  <code>add_month_rent</code> decimal(6,2) DEFAULT ‘0.00’ COMMENT ‘加成收费金额’,<br>  <code>max_contract_num</code> int(11) DEFAULT ‘0’ COMMENT ‘机构峰值租约数’,<br>  <code>daoke_fee_type</code> smallint(2) DEFAULT ‘0’ COMMENT ‘导客费收取类型0不收1按照%3利率2按照固定金额收取’,<br>  <code>meter_card</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否支持电卡：0 不支持 1 支持’,<br>  <code>is_frontmoney_auto_outmoney</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘定金是否自动出款 1-是 0-否’,<br>  <code>is_top</code> int(11) DEFAULT ‘0’ COMMENT ‘1置顶’,<br>  <code>is_top_time</code> datetime DEFAULT NULL COMMENT ‘置顶时间’,<br>  <code>allow_term</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘是否允许使用电子合同：0，不允许 1，允许’,<br>  <code>jingdong_max_qishu</code> smallint(2) DEFAULT ‘6’ COMMENT ‘京东最大贷款期数’,<br>  <code>is_dianrong</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否使用点融贷款 0-未使用 1-使用’,<br>  <code>dianrong_max_qishu</code> smallint(2) DEFAULT ‘3’ COMMENT ‘点融最大贷款期数’,<br>  <code>uniform_credit_code</code> varchar(32) DEFAULT NULL COMMENT ‘统一社会信用代码’,<br>  <code>business_license_num</code> varchar(32) DEFAULT NULL COMMENT ‘营业执照号码’,<br>  <code>organization_code_certificate_num</code> varchar(32) DEFAULT NULL COMMENT ‘组织机构代码证编号’,<br>  <code>tax_registration_certificate_num</code> varchar(32) DEFAULT NULL COMMENT ‘税务登记许可证编号’,<br>  <code>establish_date</code> varchar(16) DEFAULT NULL COMMENT ‘成立时间’,<br>  <code>legal_representative</code> varchar(16) DEFAULT NULL COMMENT ‘企业法人’,<br>  <code>legal_representative_mobile</code> varchar(11) DEFAULT NULL COMMENT ‘企业法人手机号’,<br>  <code>legal_representative_idcard</code> varchar(18) DEFAULT NULL COMMENT ‘企业法人身份证号’,<br>  <code>telephone_pre</code> varchar(16) DEFAULT NULL COMMENT ‘企业电话区号’,<br>  <code>telephone</code> varchar(16) DEFAULT NULL COMMENT ‘企业电话’,<br>  <code>telephone_ext</code> varchar(16) DEFAULT NULL COMMENT ‘企业电话分机号’,<br>  <code>email</code> varchar(64) DEFAULT NULL COMMENT ‘企业邮箱’,<br>  <code>dianrong_available_amount</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘点融剩余可用额度’,<br>  <code>sign_company</code> varchar(64) NOT NULL DEFAULT ‘’ COMMENT ‘签约公司’,<br>  <code>is_monthlypay_autopayland</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘月付秒出开关 0-关 1-开’,<br>  <code>listen_type</code> smallint(4) NOT NULL DEFAULT ‘1’ COMMENT ‘接听规则:1呼叫中心2服务3据点服务4房源联系人接听5接听人接听’,<br>  <code>is_auto_payland</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘是否自动出款’,<br>  <code>way_refund</code> smallint(2) DEFAULT ‘1’ COMMENT ‘退款方式：0 未选择 1 退款 2 抵扣’,<br>  <code>way_refund_memo</code> varchar(255) DEFAULT ‘’ COMMENT ‘退款方式备注’,<br>  <code>pinyin</code> varchar(32) DEFAULT NULL COMMENT ‘拼音简称’,<br>  <code>weiyue_rate</code> decimal(5,2) DEFAULT ‘0.00’ COMMENT ‘违约金利率’,<br>  <code>overdue_grace_day</code> int(11) NOT NULL DEFAULT ‘3’ COMMENT ‘逾期宽限天数’,<br>  <code>is_receive_agreement_original</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否收到协议原件：0 否 1 是’,<br>  <code>is_proxy_served</code> smallint(3) DEFAULT ‘0’ COMMENT ‘是否提供代管服务：0 否 1 是’,<br>  <code>proxy_served_operator_id</code> int(11) DEFAULT ‘0’ COMMENT ‘代管客服ID–杨江霞’,<br>  <code>is_run_crm</code> smallint(1) DEFAULT ‘0’ COMMENT ‘CRM是否同步过状态，0无1有（杨晓杰）’,<br>  <code>is_cuizu</code> smallint(1) DEFAULT ‘0’ COMMENT ‘是否需要催租0需要1不需要’,<br>  <code>cuizu_require</code> varchar(256) DEFAULT ‘’ COMMENT ‘催租个性化需求’,<br>  <code>company_level</code> smallint(1) DEFAULT ‘0’ COMMENT ‘0普通机构1优质机构 默认0’,<br>  <code>money_channel</code> varchar(32) DEFAULT ‘’ COMMENT ‘固定打款渠道别名 —黄小舟’,<br>  <code>payment_lock</code> int(1) DEFAULT ‘0’ COMMENT ‘0加锁 1 解锁 建租时房东收租方式付一付方式加锁解锁(金俊俊)’,<br>  <code>is_overdue_power_outage</code> smallint(2) DEFAULT ‘0’ COMMENT ‘是否逾期断电 0不断 1断 -郑阳’,<br>  <code>company_customer_id</code> varchar(255) DEFAULT ‘’ COMMENT ‘企业CA认证客户编号’,<br>  <code>is_tuizu</code> smallint(1) DEFAULT ‘0’ COMMENT ‘是否需要退租处理0需要1不需要 –黄小舟’,<br>  <code>activation_time</code> int(11) DEFAULT ‘0’ COMMENT ‘激活时间–祝枝清’,<br>  <code>good_price</code> smallint(1) DEFAULT ‘0’ COMMENT ‘出价优标签0未标记1标记’,<br>  <code>company_remark</code> varchar(200) DEFAULT ‘’ COMMENT ‘业主房源二房东沟通备注’,<br>  <code>sign_contract</code> varchar(32) DEFAULT ‘’ COMMENT ‘原始签约人(负责人)-侯祥飞’,<br>  <code>stair_pass_man</code> varchar(32) DEFAULT ‘’ COMMENT ‘机构业务准入审批人(一级审批通过人)-侯祥飞’,<br>  <code>total_amount</code> int(10) DEFAULT ‘0’ COMMENT ‘初始总房量-侯祥飞’,<br>  <code>rent_scale</code> varchar(50) DEFAULT ‘’ COMMENT ‘租赁方式比例-侯祥飞’,<br>  <code>sign_money</code> int(10) DEFAULT ‘0’ COMMENT ‘公司注册资金-侯祥飞’,<br>  <code>tuoke_change_house_status</code> smallint(3) DEFAULT ‘1’ COMMENT ‘服务版更新房态功能 0 关闭 1 开启(翟继江)’,<br>  <code>channel_name</code> varchar(50) DEFAULT ‘’ COMMENT ‘渠道名称-侯祥飞’,<br>  <code>is_push_daily</code> smallint(5) DEFAULT ‘0’ COMMENT ‘是否推送租房日报 0否 1是-侯祥飞’,<br>  <code>overdue_day</code> int(4) DEFAULT ‘0’ COMMENT ‘逾期清退天数’,<br>  <code>is_tu_plus</code> smallint(5) DEFAULT ‘0’ COMMENT ‘0无 1兔Plus认证即优选品牌 2连锁品牌 3分散式品牌 (原注释 是否兔Plus认证 0否 1是-侯祥飞）–高爽’,<br>  <code>master_set</code> int(11) DEFAULT ‘0’ COMMENT ‘如果还未设置母版为0，设置了母版为母版ID’,<br>  <code>crm_contract_operator_id</code> int(11) DEFAULT ‘0’ COMMENT ‘协议使用人’,<br>  <code>is_suitable_monthly_pay</code> smallint(4) NOT NULL DEFAULT ‘0’ COMMENT ‘是否适合月付：0无选择，1是，2否’,<br>  <code>meter_operaotr_id</code> int(11) DEFAULT ‘0’ COMMENT ‘电表维护人-郑阳’,<br>  <code>not_suitable_monthly_pay_grade</code> smallint(4) NOT NULL DEFAULT ‘0’ COMMENT ‘不适合月付等级：0无选择，1低，2中，3高’,<br>  <code>overdue_rate</code> decimal(5,2) NOT NULL DEFAULT ‘0.05’ COMMENT ‘滞纳金费率’,<br>  <code>credit_rate</code> char(4) DEFAULT ‘C3’ COMMENT ‘ 信用等级：A B C1 C2 C3 C4 D ‘,<br>  <code>is_need_follow</code> smallint(3) DEFAULT ‘0’ COMMENT ‘是否需要进行退款跟进 0:未选择 1:否 2:是 –吴玎祥’,<br>  <code>special_company_type</code> smallint(2) DEFAULT ‘0’ COMMENT ‘特殊的机构类型 0:正常 1:城中村’,<br>  <code>land_finance</code> smallint(2) DEFAULT ‘0’ COMMENT ‘房东金融：0 无金融 1 单单放0.9%’,<br>  <code>land_finance_discount</code> decimal(4,2) DEFAULT ‘0.00’ COMMENT ‘月付房东金额折扣率’,<br>  <code>credit_value</code> int(11) DEFAULT ‘0’ COMMENT ‘ 巴乐兔信用分 ‘,<br>  <code>dao_ke_monthly</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘导客费月结 0 账扣 1 后收（月结） 2 预收’,<br>  <code>word_type</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘文案类型  AB测试’,<br>  <code>credit_protocol</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘是否签署租约贷协议 0：否  1：是’,<br>  <code>loan_quota</code> decimal(9,2) DEFAULT ‘0.00’ COMMENT ‘租约贷额度’,<br>  <code>loan_product_id</code> int(11) DEFAULT ‘0’ COMMENT ‘租约贷产品id’,<br>  <code>is_upgrade</code> decimal(2,0) NOT NULL DEFAULT ‘0’ COMMENT ‘是否申请提额  0:否  1：是  – 江浩’,<br>  <code>loan_discount</code> decimal(4,2) DEFAULT ‘0.00’ COMMENT ‘租约贷折扣’,<br>  <code>is_agreements</code> smallint(2) DEFAULT ‘0’ COMMENT ‘  是否有约定条款  0  为否  1为是  –黄小舟’,<br>  <code>loan_finance_product</code> varchar(32) NOT NULL DEFAULT ‘0’ COMMENT ‘金融产品 1 收房贷 2 租约贷–杨耿杰’,<br>  <code>credit_follow</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘租约贷跟进状态 0:默认 1:跟进 2:不跟进–江浩’,<br>  <code>credit_cooperation</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘租约贷合作意向 0：默认 1:近期有意向 2:暂时无意向–江浩’,<br>  <code>min_meter_recharge</code> int(11) DEFAULT ‘0’ COMMENT ‘最低电费充值金额(郑阳)’,<br>  <code>fixed_pay_day</code> smallint(2) DEFAULT ‘0’ COMMENT ‘固定交租日 –杨耿杰’,<br>  <code>pay_day_type</code> smallint(2) DEFAULT ‘0’ COMMENT ‘交租日类型：0 非固定 1 固定 –杨耿杰’,<br>  <code>scattered_days_compute_method</code> smallint(2) DEFAULT ‘0’ COMMENT ‘账单计算方法：0 自然月 1 30天 –杨耿杰’,<br>  <code>able_custom_fixed_pay_day</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘能否自定义固定交租日 0.不允许 1.允许 –黄志波’,<br>  <code>bankuai</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘crm提交机构板块id’,<br>  <code>work_station</code> varchar(255) NOT NULL DEFAULT ‘’ COMMENT ‘crm提交机构工作站’,<br>  <code>is_daiguan_cuizu</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘是否代管催租 0:否 1:是 –范杰’,<br>  <code>is_daoke_cuizu</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘是否导客催租 0:否 1:是 –范杰’,<br>  <code>is_run_newcompany</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘crm是否修改成待生效状态 0-无 1-有(刘勇)’,<br>  <code>rule_id</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘退房规则id (renting_rules) –文雪’,<br>  <code>banking_lock</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘金融产品锁 0：否 1：锁’,<br>  <code>credit_query_time</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘同盾上次查询时间 – 梁莹莹’,<br>  <code>gold_ceiling</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘大金融机构封顶额度–jianghao’,<br>  <code>gold_line</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘大金融机构额度–jianghao’,<br>  <code>nodaoke_monthly</code> tinyint(1) NOT NULL DEFAULT ‘0’ COMMENT ‘1 非导客月付’,<br>  <code>can_credit</code> decimal(9,2) NOT NULL DEFAULT ‘0.00’ COMMENT ‘预收租 可借额度 – by jianghao’,<br>  <code>special_activity_type</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘0 无优惠 1.首月租金减半’,<br>  <code>activity_start_date</code> int(10) unsigned NOT NULL DEFAULT ‘0’ COMMENT ‘活动开始时间’,<br>  <code>activity_end_date</code> int(10) unsigned NOT NULL DEFAULT ‘0’ COMMENT ‘活动结束时间’,<br>  <code>min_term</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘导客租约最小租期-黄志波’,<br>  <code>ca_status</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘企业CA认证状态0未认证1已认证2认证失败—谷冰丽’,<br>  <code>is_ka_agency</code> smallint(2) unsigned NOT NULL DEFAULT ‘0’ COMMENT ‘是否KA机构: 0非KA，1普通KA，2超级KA –ganqixin’,<br>  <code>pay_scattered_days_method</code> smallint(2) NOT NULL DEFAULT ‘0’ COMMENT ‘零散天数计算方法0 30日计算 1 自然月 2 365天平摊–黄志波2019-01-17’,<br>  <code>ban_least_rent_month</code> int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘禁用交租方式值-单鑫芝20190121’,<br>  <code>avg_eval_score</code> varchar(50) NOT NULL DEFAULT ‘0’ COMMENT ‘机构综合评分 千分制-侯祥飞’,<br>  <code>overdue_node_type</code> smallint(2) NOT NULL DEFAULT ‘1’ COMMENT ‘逾期节点依据 1约定付款日 2结算终止日-黄志波’,<br>  PRIMARY KEY (<code>id</code>),<br>  KEY <code>idx_bossid</code> (<code>bossid</code>),<br>  KEY <code>idx_name</code> (<code>name</code>,<code>address</code>),<br>  KEY <code>idx_type_status_city</code> (<code>type</code>,<code>status</code>,<code>city_id</code>),<br>  KEY <code>idx_service_id</code> (<code>service_id</code>),<br>  KEY <code>idx_crm_id</code> (<code>crm_id</code>),<br>  KEY <code>idx_is_daiguan_cuizu</code> (<code>is_daiguan_cuizu</code>)<br>) ENGINE=InnoDB AUTO_INCREMENT=31563 DEFAULT CHARSET=utf8 COMMENT=’中介公司表’;</p>
+        <p>SELECT<br>c.id, –租约id,<br>c.flag, –租约状态,<br>c.house_id, –房源ID,<br>c.land_company_id, –机构ID,<br>da.name, –城市,<br>wa.name, –区域,<br>wb.name, –板块,<br>ws.name, –工作站,<br>g.name , –工作组,<br>o.nickname, –拓客,<br>o.id, –拓客ID,<br>from_unixtime(int(c.create_time)), –建租时间,<br>count(cl.id), –联系房东次数,<br>from_unixtime(max(int(cl.create_time))), –最近时间,<br>c.offset_fee, –抵扣费用,<br>c.offset_memo, –抵扣备注,<br>c.front_money, –定金金额,<br>c.close_reason, –关闭原因,<br>from_unixtime(int(h.create_time)), –创建房源时间,<br>concat_ws(‘|’, collect_set( concat(case ald.room<em>type when 1 then ‘基本</em>‘ when 2 then ‘私有<em>‘  when 3 then ‘公共</em>‘ else ‘’ end,ald.device_name,ald.device_num,ald.classifier) )),  –基本项目<br>date_sub(current_date,1) –日期<br>from contract as c<br>left join house h on h.id=c.house_id<br>left join acceptance_list al on al.contract_id=c.id<br>left join acceptance_list_detail_attr ald on ald.acceptance_list_id=al.id<br>left join operator as o on c.sign_user_id = o.user_id<br>left join work_group g on g.id=o.group_id<br>left join work_group as ws on g.fid = ws.id<br>left join work_group as wb on ws.fid = wb.id<br>left join work_group as wa on wb.fid = wa.id<br>left join dd_area as da on wa.city_id=da.id<br>left join agency_company as ac on h.lan_co_id = ac.id<br>left join contract_subsidiary_info csi on csi.contract_id = c.id<br>left join <code>user</code> u on c.lan_user_id=u.id<br>left join call cl on u.mobile=cl.answer_mobile and cl.mobile=o.account and cl.create_time<c.create_time and="" cl.create_time="">c.create_time-360<em>24</em>2<br>where ac.type=2 AND c.type !=5<br>and g.id&gt;0 and o.id&gt;0 AND ac.auth_status = 2  and c.id=493567<br>group by<br>c.id,<br>c.flag,<br>c.house_id,<br>c.land_company_id,<br>da.name,<br>wa.name,<br>wb.name,<br>ws.name,<br>g.name ,<br>o.nickname,<br>o.id,<br>cl.create_time,<br>c.offset_fee,<br>c.offset_memo,<br>c.front_money,<br>c.close_reason,<br>h.create_time,<br>c.create_time<br>scp root@10.80.221.39:/home/zhangjian/phpdata/remoteReport/file/2019_07_03租约贷数据.csv /Users/zj/report_blt/暂存</c.create_time></p>
+<p>scp zhangjian@47.97.65.6:/home/zhangjian/phpdata/remoteReport/file/2019_07_03租约贷数据.csv /Users/zj/report_blt/暂存</p>
+<p>   select<br>   account_date as ‘日期’,<br>   city_manager as ‘城市经理’,<br>   current_target_finished as ‘当前增量完成’,<br>   target as ‘增量目标’,<br>   target_rate as ‘增量目标完成率’,<br>   current_account as ‘当周流水’,<br>   current_month_avg as ‘当月周均’,<br>   season_start_avg as ‘季初周均’,<br>   season_end_avg as ‘季末周均’,<br>   all_people as ‘总人数’,<br>   win_group_people as ‘盈利小组人数’,<br>   entry_num as ‘入职拓客数’,<br>   success_num as ‘育成拓客数’,<br>   leave_num as ‘离职A拓客数’,<br>   week_people_avg as ‘当月周均人均’,<br>   week_profit_loss as ‘当周盈亏’,<br>   new_add_house as ‘新增房源’,<br>   current_contract as ‘当周成单’<br>   from manage_data where type=1<br>   order by account_date desc,current_target_finished desc</p>
+<p>   type as’类型为1城市2板块’,</p>
+<p>结束时间<br>2019-07-03<br>2019-07-05<br>2019-06-25<br>2019-07-10<br>2019-07-30<br>2019-07-21<br>2019-07-05<br>2019-07-11<br>2019-08-09<br>2019-07-29<br>2019-07-01<br>2019-07-05<br>2019-07-18<br>2019-07-21<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-12<br>2019-07-22<br>2019-07-20<br>2019-06-24<br>2019-07-01<br>2019-07-05<br>2019-07-05<br>2019-07-18<br>2019-07-25<br>2019-07-30<br>2019-07-10<br>2019-07-17<br>2019-07-17<br>2019-08-01<br>2019-07-17<br>2019-07-27<br>2019-07-21<br>2019-07-20<br>2019-07-30<br>2019-07-20<br>2019-07-17<br>2019-06-30<br>2019-07-05<br>2019-07-11<br>2019-07-15<br>2019-07-19<br>2019-07-20<br>2019-07-25<br>2019-07-17<br>2019-06-23<br>2019-07-05<br>2019-07-22<br>2019-07-18<br>2019-07-10<br>2019-07-06<br>2019-07-10<br>2019-07-10<br>2019-07-13<br>2019-07-13<br>2019-07-19<br>2019-08-08<br>2019-07-19<br>2019-08-03<br>2019-08-02</p>
+<p>张建同学，在拓客周报、月报中，要调整几个逻辑。</p>
+<p>1）拍照、接电话、回电中，目标任务数是零的，<br>    在排名时，排到当中。例如排名一共排到了2000名，对于给到目标是零的拓客，其最终结果就是1000名；<br>    排名如果有2100名，那最终结果就是1050名，</p>
+<pre><code>`pic_traget` int(10) DEFAULT &apos;0&apos; COMMENT &apos;拍照任务目标&apos;,
+
+`call_all_num` int(10) DEFAULT &apos;0&apos; COMMENT &apos;来电总数&apos;,
+`call_answer` int(10) DEFAULT &apos;0&apos; COMMENT &apos;来电及时接听&apos;,
+
+`pingtai_yuyue_five_back` int(10) DEFAULT &apos;0&apos; COMMENT &apos;平台预约客五分钟回电数&apos;,
+`pingtai_yuyue` int(10) DEFAULT &apos;0&apos; COMMENT &apos;平台预约客数&apos;,
+
+`pic_rate_sort` int(10) DEFAULT &apos;0&apos; COMMENT &apos;拍照完成率排行&apos;,
+`answer_rate_sort` int(10) DEFAULT &apos;0&apos; COMMENT &apos;及时接听率排行&apos;,
+`back_rate_sort` int(10) DEFAULT &apos;0&apos; COMMENT &apos;预约回电率排行&apos;,
+</code></pre><p>select     finish_pic,pic_traget,pic_rate_sort from personal_week where account_date = ‘2019-06-24’;</p>
+<p>select pic_rate_sort,id from personal_week where account_date = ‘2019-06-24’ and finish_pic=0 and pic_traget=0;</p>
+<p>select * from (<br>select @rowno:=@rowno+1 as rowno,a.pic_rate_sort from (<br>select pic_rate_sort from personal_week where account_date = ‘2019-06-24’ group by pic_rate_sort order by pic_rate_sort<br>) a,(select @rowno:=0) t<br>) a where rowno=(select round(count(distinct pic_rate_sort)/2) from personal_week where account_date = ‘2019-06-24’);</p>
+<p>update personal_week;</p>
+<p>2）业绩这里去掉周流水增量数据，增量排名不再作为排名参考。以绝对流水作为排名依据；</p>
+<p>3）杭州拍照任务的目标调整成5张/周</p>
+<p>CREATE TABLE <code>` (</code>id<code>int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT &#39;主键id&#39;,
+quarter VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;季度&#39;,
+city VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;城市&#39;,
+city_manager VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;城市经理&#39;,
+bankuai_manager VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;板块经理&#39;,
+work_site VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;工作站&#39;,
+quarter_week_avg VARCHAR(100) DEFAULT &#39;&#39; COMMENT=&#39;季末周均&#39;,
+PRIMARY KEY (</code>id`) USING BTREE<br>) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT=’工作站数据季末流水设置’;</p>
+<p> p.area_name=’上海西南区’ or p.area_name=’上海东一区’ or p.area_name=’上海东二区’ or p.area_name=’上海东北区’ or p.area_name=’上海西北区’ or p.area_name=’上海北区’</p>
+<p>退租：<br>    当前累计退租需求量、<br>    本周房东完成的累计退租需求量、<br>    本周新增退租需求量、<br>    本周房东完成的新增退租量</p>
+<pre><code>本周房东发起的退租量
+本周房东完成的累计需求量在24小时内响应数量
+本周房东完成的新增量在24小时内响应数量（进入选择验房方式的时间-租客发起退房申请的时间）
+
+SELECT c.`land_company_id` as id,
+COUNT(distinct case when cn.checkout_apply_from=1 and b3.contract_id is null then cn.id else null end) as 当前累计退租需求量,
+count(distinct case when cn.checkout_apply_from=1 and b3.contract_id is not null then c.id else null end) 本周房东完成的累计退租需求量,
+count(distinct case when cn.checkout_apply_from=1 
+                     and b3.trade_success_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                 and b3.trade_success_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周新增退租需求量,
+count(distinct case when cn.checkout_apply_from=1 and b3.contract_id is not null
+                     and b3.trade_success_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                 and b3.trade_success_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周房东完成的新增退租量,             
+count(distinct case when cn.checkout_apply_from=2 and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周房东发起的退租量,
+count(distinct case when cn.checkout_apply_from=1 and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600 then c.id else null end) as 本周房东完成的累计需求量在24小时内响应数量,
+count(distinct case when cn.checkout_apply_from=1
+                 and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600 
+                 and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) then c.id else null end) as 本周房东完成的新增量在24小时内响应数量
+from contract_checkout_new cn
+left join contract c on c.id=cn.`contract_id`
+left join (select contract_id,create_time,amount,trade_success_time from bill_payable_head where type=6 and flag=0 and amount&gt;0 group by contract_id) b3 on b3.contract_id=cn.contract_id 
+group by c.`land_company_id`;
+</code></pre><p>当前累计退租需求量：来源=租客APP，退款金额为空的数量<br>    select count(distinct cn.id),count(cn.id) from contract_checkout_new cn<br>    left join (select contract_id,create_time,amount,trade_success_time from baletoo.bill_payable_head where type=6 and flag=0 and amount&gt;0 group by contract_id) b3 on b3.contract_id=cn.contract_id where cn.checkout_apply_from=1 and b3.contract_id is null</p>
+<pre><code>本周房东完成的累计退租需求量：来源为租客APP的，房东在本周退款的数量（ 退款金额&gt;=0，具体退款时间要问小黄 ）
+select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
+left join (select contract_id,create_time,amount,trade_success_time from baletoo.bill_payable_head where type=6 and flag=0 and amount&gt;0 group by contract_id) b3 on b3.contract_id=cn.contract_id where cn.checkout_apply_from=1 and b3.contract_id is not null
+and b3.trade_success_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and b3.trade_success_time&lt;unix_timestamp(&apos;2019-07-08&apos;);
+
+本周新增退租需求量、：来源-租客APP，申请时间=当周的
+select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
+where cn.checkout_apply_from=1 
+and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;);
+
+本周房东完成的新增退租量：来源-租客APP，申请时间
+select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
+where cn.checkout_apply_from=1 
+and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) 
+and is_manage=1;
+
+本周房东发起的退租量：申请=房东，创建时间=当周的
+select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
+where cn.checkout_apply_from=2 
+and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;);
+
+
+本周房东完成的累计需求量在24小时内响应数量：房东选择验房方式在当周，且距离创建时间小于在24小时内的数量
+select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
+where cn.checkout_apply_from=1
+and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600;  
+
+
+
+本周房东完成的新增量在24小时内响应数量（进入选择验房方式的时间-租客发起退房申请的时间）：创建时间为当周的退房单且房东选择验房方式在24小时内的数量
+select count(distinct cn.id),count(cn.id) from contract_checkout_new cn
+where cn.checkout_apply_from=1
+and cn.respond_time-unix_timestamp(cn.on_create)&lt;24*3600  
+and unix_timestamp(cn.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+and unix_timestamp(cn.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;);
+</code></pre><p>转租：<br>    当前累计转租需求量<br>    本周房东完成的累计转租需求量<br>    本周新增转租需求量<br>    本周房东完成的新增转租量<br>    本周房东完成的累计需求量在24小时内响应数量<br>    本周房东完成的新增量在24小时内响应数量<br>    本周总计完成的累计需求在24小时内响应数量（包含了客服操作）<br>    本周总计完成的新增量在24小时内响应数量（包含了客服操作）（审核时间-租客发起时间）</p>
+<pre><code>SELECT ac.id,
+COUNT(distinct s.id) as 当前累计转租需求量,
+COUNT(distinct case when sr.id is not null then s.id else null end) 本周房东完成的累计转租需求量,
+COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then s.id else null end) 本周新增转租需求量,
+COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and s.id is not null then 1 else null end) 本周房东完成的新增转租量,
+COUNT(distinct case when sr.create_time&gt;0 and sr.create_time-s.create_time&lt;24*3600 then s.id else null end) as 本周房东完成的累计需求量在24小时内响应数量,
+COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+             and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) 
+             and sr.create_time&gt;0 
+             and sr.create_time-s.create_time&lt;24*3600 
+             then s.id else null end) as 本周房东完成的新增量在24小时内响应数量,
+COUNT(distinct case when (sr.create_time&gt;0 or sr1.create_time&gt;0) and sr.create_time-s.create_time&lt;24*3600 then s.id else null end) as 本周房东完成的累计需求量在24小时内响应数量_总,
+COUNT(distinct case when s.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+             and s.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) 
+             and ((sr.create_time&gt;0 
+             and sr.create_time-s.create_time&lt;24*3600) 
+             or (sr1.create_time&gt;0 
+             and sr1.create_time-s.create_time&lt;24*3600))
+             then s.id else null end) as 本周房东完成的新增量在24小时内响应数量_总     
+from sublet_order s 
+left join agency_company ac on ac.id=s.co_id
+left join sublet_record sr on sr.s_order_id= s.id and sr.user_role=&apos;房东&apos;
+left join sublet_record sr1 on sr1.s_order_id= s.id and sr1.user_role=&apos;后台人员&apos; 
+GROUP BY ac.id;
+</code></pre><p>续租：<br>    当前累计续租需求量 cr.source=1 and c.is_agency_agree =0 and c.flag =0<br>    本周房东完成的累计续租需求量 cr.source=1 and (cr.relation_contract_id is not null or cr.land_apply_status=2) </p>
+<pre><code>本周新增续租需求量     cr.source=1 and unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                    and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
+
+
+本周房东完成的新增续租量:  unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                       and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
+                       and (cr.relation_contract_id is not null or cr.land_apply_status=2)
+
+本周房东发起的续租量：unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                   and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
+                   and cr.source in (4,5) 
+
+本周房东完成的累计需求量在72小时内响应数量  (c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
+                                   or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600)
+
+
+本周房东完成的新增量在72小时内响应数量（房东操作时间-租客申请时间）:
+                                    unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                                       and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) 
+                                    and ((c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
+                                    or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600))
+
+
+
+当前累计续租需求量：来源为租客APP的，is_agency =0 且原租约未关闭的租约数量
+
+本周房东完成的累计续租需求量：来源为租客APP的，房东在本周创建续租租约的数量（contract_rele中relation_contract_id ！=null）+或在本周拒绝租客续租申请的数量（取contract_rele做主表，关联contract表）
+
+本周新增续租需求量：创建时间在本周的，来源为租客APP的（取contract_rele）
+
+本周房东完成的新增续租量：创建时间在本周，且房东在本周创建续租租约的数量+拒绝租客续租申请的数量
+
+本周房东发起的续租量：创建时间在本周，来源=房东APP或者房东PC的数量
+
+本周房东完成的累计需求量在72小时内响应数量：房东在本周创建续租租约-续租任务生成时间小于72小时的数量+
+                                    或在本周拒绝租客续租申请-续租任务生成时间（create_time）的数量
+本周房东完成的新增量在72小时内响应数量（房东操作时间-租客申请时间）:
+                                  续租任务创建时间在本周，房东在本周创建续租租约-续租任务生成时间小于72小时的数量+或在本周拒绝租客续租申请-续租任务生成时间（create_time）的数量
+SELECT 
+c.`land_company_id` as id,
+count(distinct case when cr.source=1 and cr.is_agency_agree =0 and c.flag =0 then cr.contract_id else null end) as 当前累计续租需求量,
+count(distinct case when cr.source=1 and (cr.relation_contract_id is not null or cr.land_apply_status=2) then cr.contract_id else null end) as 本周房东完成的累计续租需求量,
+count(distinct case when cr.source=1 and unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                     and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) then cr.contract_id else null end) as 本周新增续租需求量,
+count(distinct case when unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+               and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
+               and (cr.relation_contract_id is not null or cr.land_apply_status=2) then cr.contract_id else null end) as 本周房东完成的新增续租量,
+count(distinct case when unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+           and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;)
+           and cr.source in (4,5) then cr.contract_id else null end) as 本周房东发起的续租量,
+count(distinct case when (c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
+                           or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600) then cr.contract_id else null end) as 本周房东完成的累计需求量在72小时内响应数量,
+count(distinct case when unix_timestamp(cr.on_create)&gt;unix_timestamp(&apos;2019-07-01&apos;) 
+                               and unix_timestamp(cr.on_create)&lt;unix_timestamp(&apos;2019-07-08&apos;) 
+                            and ((c1.create_time&gt;0 and c1.create_time-unix_timestamp(cr.on_create)&lt;72*3600) 
+                            or (unix_timestamp(cr.on_create)-unix_timestamp(cr.land_apply_date)&lt;72*3600)) then cr.contract_id else null end) as 本周房东完成的新增量在72小时内响应数量_总
+
+FROM `contract_rele` cr 
+left join `contract` c on c.id=cr.`contract_id`
+left join contract c1 on cr.relation_contract_id=c1.id 
+GROUP BY c.`land_company_id`;
+</code></pre><p>报修：<br>    当前累计报修申请量<br>    本周房东完成的累计需求量<br>    本周新增报修申请量<br>    本周房东完成的新增量<br>    本周房东完成的累计需求量在72小时内响应的数量<br>    本周房东完成的新增量在72小时内响应的数量<br>    count(distinct r.<code>id</code>) as 当前累计报修申请量,<br>    count(distinct case when r.finish_time&gt;0 then r.<code>id</code> else null end) as 本周房东完成的累计需求量,<br>    count(distinct case when r.create_time&gt;unix_timestamp(‘2019-07-01’) and r.create_time<unix_timestamp('2019-07-08') then="" r.`id`="" else="" null="" end)="" as="" 本周新增报修申请量,="" count(distinct="" case="" when="" r.finish_time="">unix_timestamp(‘2019-07-01’) and r.finish_time<unix_timestamp('2019-07-08') then="" r.`id`="" else="" null="" end)="" as="" 本周房东完成的新增量,="" count(distinct="" case="" when="" r.finish_time="">0 and r.finish_time-r.create_time<72*3600 then="" r.`id`="" else="" null="" end)="" as="" 本周房东完成的累计需求量在72小时内响应的数量,="" count(distinct="" case="" when="" r.create_time="">unix_timestamp(‘2019-07-01’) and r.create_time<unix_timestamp('2019-07-08') and="" r.finish_time="">0 and r.finish_time-r.create_time&lt;72*3600 then r.<code>id</code> else null end) as 本周房东完成的新增量在72小时内响应的数量</unix_timestamp('2019-07-08')></72*3600></unix_timestamp('2019-07-08')></unix_timestamp('2019-07-08')></p>
+<pre><code>SELECT 
+r.`company` as id,
+count(distinct case when r.handle_type in（0,1）then r.`id` else null end) as 当前累计报修申请量,
+count(distinct case when r.finish_time&gt;0 then r.`id` else null end) as 本周房东完成的累计需求量,
+count(distinct case when r.handle_type in（0,1) and r.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and r.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then r.`id` else null end) as 本周新增报修申请量,
+count(distinct case when r.finish_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and r.finish_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then r.`id` else null end) as 本周房东完成的新增量,
+count(distinct case when r.finish_time&gt;0 and r.finish_time-r.create_time&lt;72*3600  then r.`id` else null end) as 本周房东完成的累计需求量在72小时内响应的数量,
+count(distinct case when r.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and r.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and r.finish_time&gt;0 and r.finish_time-r.create_time&lt;72*3600 then r.`id` else null end) as 本周房东完成的新增量在72小时内响应的数量
+FROM `repair` r 
+left join `agency_company` ac on ac.id=r.`company` 
+where r.`company`&gt;0 
+GROUP BY r.`company`;
+</code></pre><p>垫资还款：</p>
+<p>当前累计未还垫资金额<br>本周房东归还的垫资金额<br>垫资笔数<br>本周房东在72小时内归还垫资的笔数（房东还款时间-垫资生成时间，以归还时间在本周进行统计）<br>本周房东在72小时内归还垫资的金额</p>
+<p>回复租评：<br>    累计租评数<br>    本周新增租评数<br>    当前累计未读租评<br>    当前累计未回复租评<br>    本周在48小时内回复的租评数量（回复时间-评价时间）</p>
+<pre><code>select 
+count(distinct ueh.id) as 累计租评数,
+count(distinct case when ueh.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and ueh.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then ueh.id else null end) as 本周新增租评数,
+count(distinct case when ueh.is_read=0 then ueh.id else null end) as 当前累计未读租评,
+count(distinct case when r.id is null then ueh.id else null end) as 当前累计未回复租评,
+count(distinct case when ueh.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and ueh.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and r.create_time-ueh.create_time&lt;48*3600 then ueh.id else null end) 本周在48小时内回复的租评数量
+from user_eval_house ueh
+left join (select id,min(create_time) as create_time,eval_house_id from user_eval_house_reply where type=1 and flag=0 group by eval_house_id) r on r.eval_house_id=ueh.id
+where ueh.to_type=1 group by lan_co_id;
+</code></pre><p>催租反馈：<br>    累计的催租反馈数<br>    本周新增的催租反馈数<br>    本周在48小时内回复催租反馈数量</p>
+<pre><code>select 
+p.lan_co_id,
+count(distinct p.id) as 累计的催租反馈数,
+count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then p.id else null end) as 本周新增的催租反馈数,
+count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and p.create_time-p.modify_time then p.id else null end) as 本周新增的催租反馈数
+from pay_rent_message p 
+where p.flag=0 
+group by p.lan_co_id
+
+
+在 pay_rent_message 表中，
+通过 lan_co_id 去 重，并且ﬂag=0，
+去计算机构累计的催租反馈 数，
+通过create_time去判断是否本周，并且 create_time 和 modify_time 去计算48小时反馈
+select 
+p.lan_co_id,
+count(distinct p.id) as 累计的催租反馈数,
+count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) then p.id else null end) as 本周新增的催租反馈数,
+count(distinct case when p.create_time&gt;unix_timestamp(&apos;2019-07-01&apos;) and p.create_time&lt;unix_timestamp(&apos;2019-07-08&apos;) and p.modify_time-p.create_time&lt;48*3600 then p.id else null end) as 本周在48小时内回复催租反馈数量
+from pay_rent_message p 
+where p.flag=0 and p.lan_co_id&gt;0
+group by p.lan_co_id;
+</code></pre><p>$sql = “select bph.contract_id,bph.status,bph.type,bph.trade_time,bph.start_date,bph.amount,bph.settlement,bph.id as bill_payable_head_id,bph.refund_user_is_advance”;<br>$sql .= “,s.name as sub_name,s.address”;<br>$sql .= “,h.room_detail,h.room_name”;<br>$sql .= “,sum(bd.deduct_amount) as deduct_amount”;<br>$sql .= “,sum(bph_tui.amount) as tui_amount”;<br>$sql .= “ from bill_payable_head bph”;</p>
+<p>$sql .= “ left join bill_payable_head_deduct_detail as bd ON bd.head_id=bph.id”;<br>$sql .= “ left join bill_payable_head as bph_tui ON bph_tui.id=bd.deduct_head_id AND bph_tui.type = 5”;<br>$sql .= “ left join contract as c ON c.id = bph.contract_id”;<br>$sql .= “ left join house as h ON h.id = c.house_id”;<br>$sql .= “ left join subdistrict as s ON s.id = h.subdistrict_id”;</p>
+<p>$sql .= “ where bph.land_company_id = $co_id and bph.settlement_status &lt;&gt; 15”;<br>$sql .= “ and (bph.type = 3 or bph.type = 17 or (bph.type = 18 and bph.refund_user_is_advance=1) or bph.type = 19) and bph.amount &lt; 0 and bph.flag = 0 “;<br>$sql .= “ group by bph.id”;<br>$sql .= “ order by c.modify_time desc”;</p>
+<p>CREATE EXTERNAL TABLE result.company_about_msg<br>(<br>)<br>PARTITIONED BY (monthday string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘\001’<br>stored as textfile<br>location ‘/user/hdfs/result/company_about_msg’;</p>
+<p>CREATE TABLE <code>company_about_msg</code> (<br>    id varchar(50) default ‘’ comment ‘机构id’,<br>    name varchar(50) default ‘’ comment ‘机构名称’,<br>    a1 varchar(50) default ‘’ comment ‘当前累计退租需求量’,<br>    b1 varchar(50) default ‘’ comment ‘本周房东完成的累计退租需求量’,<br>    c1 varchar(50) default ‘’ comment ‘本周新增退租需求量’,<br>    d1 varchar(50) default ‘’ comment ‘本周房东完成的新增退租量’,<br>    e1 varchar(50) default ‘’ comment ‘本周房东发起的退租量’,<br>    f1 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在24小时内响应数量’,<br>    g1 varchar(50) default ‘’ comment ‘本周房东完成的新增量在24小时内响应数量’,<br>    a2 varchar(50) default ‘’ comment ‘当前累计转租需求量’,<br>    b2 varchar(50) default ‘’ comment ‘本周房东完成的累计转租需求量’,<br>    c2 varchar(50) default ‘’ comment ‘本周新增转租需求量’,<br>    d2 varchar(50) default ‘’ comment ‘本周房东完成的新增转租量’,<br>    e2 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在24小时内响应数量’,<br>    f2 varchar(50) default ‘’ comment ‘本周房东完成的新增量在24小时内响应数量’,<br>    g2 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在24小时内响应数量<em>总’,<br>    h2 varchar(50) default ‘’ comment ‘本周房东完成的新增量在24小时内响应数量</em>总’,<br>    a3 varchar(50) default ‘’ comment ‘当前累计续租需求量’,<br>    b3 varchar(50) default ‘’ comment ‘本周房东完成的累计续租需求量’,<br>    c3 varchar(50) default ‘’ comment ‘本周新增续租需求量’,<br>    d3 varchar(50) default ‘’ comment ‘本周房东完成的新增续租量’,<br>    e3 varchar(50) default ‘’ comment ‘本周房东发起的续租量’,<br>    f3 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在72小时内响应数量’,<br>    g3 varchar(50) default ‘’ comment ‘本周房东完成的新增量在72小时内响应数量_总’,<br>    a4 varchar(50) default ‘’ comment ‘当前累计报修申请量’,<br>    b4 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量’,<br>    c4 varchar(50) default ‘’ comment ‘本周新增报修申请量’,<br>    d4 varchar(50) default ‘’ comment ‘本周房东完成的新增量’,<br>    e4 varchar(50) default ‘’ comment ‘本周房东完成的累计需求量在72小时内响应的数量’,<br>    f4 varchar(50) default ‘’ comment ‘本周房东完成的新增量在72小时内响应的数量’,<br>    a5 varchar(50) default ‘’ comment ‘累计租评数’,<br>    b5 varchar(50) default ‘’ comment ‘本周新增租评数’,<br>    c5 varchar(50) default ‘’ comment ‘当前累计未读租评’,<br>    d5 varchar(50) default ‘’ comment ‘当前累计未回复租评’,<br>    e5 varchar(50) default ‘’ comment ‘本周在48小时内回复的租评数量’,<br>    a6 varchar(50) default ‘’ comment ‘累计的催租反馈数’,<br>    b6 varchar(50) default ‘’ comment ‘本周新增的催租反馈数’,<br>    c6 varchar(50) default ‘’ comment ‘本周在48小时内回复催租反馈数量’,<br>    a7 varchar(50) default ‘’ comment ‘当前累计未还垫资金额’,<br>    b7 varchar(50) default ‘’ comment ‘本周房东归还的垫资金额’,<br>    c7 varchar(50) default ‘’ comment ‘垫资笔数’,<br>    d7 varchar(50) default ‘’ comment ‘本周房东在72小时内归还垫资的笔数’,<br>    e7 varchar(50) default ‘’ comment ‘本周房东在72小时内归还垫资的金额’,<br>    create_time  varchar(50) default ‘’ string COMMENT ‘时间戳’,<br>    account_date varchar(50) default ‘’ string COMMENT ‘统计日期’,<br>    KEY <code>idx_account_date</code> (<code>account_date</code>)<br>) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’机构转租退租保修垫资续租等业务数据表’;<br>select<br>account<em>date  as ‘日期’,<br>id  as ‘机构id’,<br>name  as ‘机构名称’,<br>a1  as ‘当前累计退租需求量’,<br>b1  as ‘本周房东完成的累计退租需求量’,<br>c1  as ‘本周新增退租需求量’,<br>d1  as ‘本周房东完成的新增退租量’,<br>e1  as ‘本周房东发起的退租量’,<br>f1  as ‘本周房东完成的累计需求量在24小时内响应数量’,<br>g1  as ‘本周房东完成的新增量在24小时内响应数量’,<br>a2  as ‘当前累计转租需求量’,<br>b2  as ‘本周房东完成的累计转租需求量’,<br>c2  as ‘本周新增转租需求量’,<br>d2  as ‘本周房东完成的新增转租量’,<br>e2  as ‘本周房东完成的累计需求量在24小时内响应数量’,<br>f2  as ‘本周房东完成的新增量在24小时内响应数量’,<br>g2  as ‘本周房东完成的累计需求量在24小时内响应数量</em>总’,<br>h2  as ‘本周房东完成的新增量在24小时内响应数量<em>总’,<br>a3  as ‘当前累计续租需求量’,<br>b3  as ‘本周房东完成的累计续租需求量’,<br>c3  as ‘本周新增续租需求量’,<br>d3  as ‘本周房东完成的新增续租量’,<br>e3  as ‘本周房东发起的续租量’,<br>f3  as ‘本周房东完成的累计需求量在72小时内响应数量’,<br>g3  as ‘本周房东完成的新增量在72小时内响应数量</em>总’,<br>a4  as ‘当前累计报修申请量’,<br>b4  as ‘本周房东完成的累计需求量’,<br>c4  as ‘本周新增报修申请量’,<br>d4  as ‘本周房东完成的新增量’,<br>e4  as ‘本周房东完成的累计需求量在72小时内响应的数量’,<br>f4  as ‘本周房东完成的新增量在72小时内响应的数量’,<br>a5  as ‘累计租评数’,<br>b5  as ‘本周新增租评数’,<br>c5  as ‘当前累计未读租评’,<br>d5  as ‘当前累计未回复租评’,<br>e5  as ‘本周在48小时内回复的租评数量’,<br>a6  as ‘累计的催租反馈数’,<br>b6  as ‘本周新增的催租反馈数’,<br>c6  as ‘本周在48小时内回复催租反馈数量’,<br>a7  as ‘当前累计未还垫资金额’,<br>b7  as ‘本周房东归还的垫资金额’,<br>c7  as ‘垫资笔数’,<br>d7  as ‘本周房东在72小时内归还垫资的笔数’,<br>e7  as ‘本周房东在72小时内归还垫资的金额’<br>from company_about_msg order by account_date</p>
+<p>from_unixtime(unix_timestamp(‘2019-07-08 00:00:00’)-3600<em>24</em>7,’yyyy-MM-dd’)</p>
+<p>select<br>account_date as  ‘日期’,<br>n.城市 as  ‘城市’<br>n.板块 as  ‘板块’,<br>n.bankuai_manager_name as  ‘板块经理’<br>n.站点名称 as  ‘站点名称’,<br>dd_name as  ‘据点’,<br>week_rent_house as  ‘当周成交数’,<br>account as  ‘当周成交流水’<br>from dd_data_week d left join (<br>        select<br>        city_name ‘城市<br>        bankuai_name ‘板块’,<br>        bankuai_manager_name ‘板块经理’<br>        site_name ‘站点名称’,<br>        dd_name ‘据点’<br>        from dd_data_week<br>        where account_date=’2019-07-01’<br>) n on n.据点=d.dd_name;</p>
+<p>select<br>日期 as 日期,<br>城市 as 城市,<br>板块 as 板块,<br>板块经理 as 板块经理,<br>站点名称 as 站点名称,<br>据点 as 据点,<br>当周成交数 as 当周成交数,<br>当周成交流水 as 当周成交流水<br>from<br>dd_data_week_view<br>order by 日期;</p>
+<p>日期<br>机构名称<br>机构ID<br>总房数：机构所有有效房的数量<br>空房数：节点招租中的房源数数量<br>预期月总额：所有有效房的月租金总和<br>租约总额 ：留存租约的月租金+其他费用总和<br>实收总额：线上付款租金+核销+其他费用的总金额<br>线上收款总额：线上付的租金总额，不包括其他费用</p>
+<p>SELECT<br>ac.id,<br>count(case when h.house_status != 2 then h.id else null end) as 总房数,<br>count(case when h.house_status=0 then h.id else null end) as 空房数,<br>sum(case when h.house_status != 2 then h.month_rent else 0 end) as 预期月总额,<br>sum(case when c.id is not null then c.month_rent+c.other_fee else ene) as 租约总额,<br>b.real_amount as 实收总额,<br>b.online_amount as 线上收款总额<br>from agency_company ac<br>left join house as h on h.lan_co_id=ac.id<br>left join subdistrict as s on h.subdistrict_id=s.id<br>left join dd_call dc on dc.id=s.dd_call_id<br>left join agency_company as ac on h.lan_co_id = ac.id<br>left join contract c on c.house_id = h.id and c.flag=0<br>left join (<br>select c.land_company_id,<br>sum(b.other_fee+b.total_amount) as real_amount,<br>sum(case when b.check_status=0 then b.total_amount else 0 end) as online_amount<br>from bill b<br>left join contract c on c.id=b.contract_id<br>where b.flag=0 and c.flag=0 and b.status=1 and c.land_company_id&gt;0<br>group by c.land_company_id) b on b.land_company_id=ac.id<br>where<br>h.<code>show</code> !=1<br>and h.virtual = 0<br>and h.house_source = 2<br>and ac.type=2<br>and ac.status=1<br>and ac.auth_status = 2<br>GROUP BY ac.id</p>
+<p>select<br>c.land_company_id,<br>sum(b.other_fee+b.total_amount) as 实收总额,<br>sum(case when b.check_status=0 then else end) as 线上收款总额<br>from bill b<br>left join contract c on c.id=b.contract_id<br>where b.flag=0 and c.flag=0 and b.status=1 and c.land_company_id&gt;0 and<br>group by c.land_company_id;</p>
+<p>echo “use datawarehouse;delete from company_day_data” | mysql -h rm-bp1189620q55roplq.mysql.rds.aliyuncs.com -P 3306 -ubigdata -pCflY04l1L680PM1h &gt; /home/hdfs/test/haha.txt<br>SELECT<br>da.id,<br>da.name,<br>ac.id,<br>ac.name,<br>count(case when h.house_status != 2 then h.id else null end), – 总房数,<br>count(case when h.house_status=0 then h.id else null end), – 空房数,<br>sum(case when h.house_status != 2 then h.month_rent else 0 end), – 预期月总额,<br>sum(case when c.id is not null then c.month_rent+c.other_fee else 0 end), – 租约总额,<br>b.real_amount, – 实收总额,<br>b.online_amount – 线上收款总额<br>from agency_company ac<br>left join house as h on h.lan_co_id=ac.id<br>left join subdistrict as s on h.subdistrict_id=s.id<br>left join dd_call dc on dc.id=s.dd_call_id<br>left join contract c on c.house_id = h.id and c.flag=0<br>left join dd_area da on da.id=ac.<code>city_id</code><br>left join (<br>select c.land_company_id,<br>sum(b.other_fee+b.total_amount) as real_amount,<br>sum(case when b.check_status=0 then b.total_amount else 0 end) as online_amount<br>from bill b<br>left join contract c on c.id=b.contract_id<br>where b.flag=0 and c.flag=0 and b.status=1 and c.land_company_id&gt;0<br>group by c.land_company_id) b on b.land_company_id=ac.id<br>where h.<code>hive_show</code> !=1<br>and h.virtual = 0<br>and h.house_source = 2<br>and ac.type=2<br>and ac.status=1<br>and ac.auth_status = 2<br>GROUP BY<br>da.id,<br>da.name,<br>ac.id,<br>ac.name,<br>b.real_amount,<br>b.online_amount;</p>
+<p>da.id,<br>da.name,<br>ac.id,<br>ac.name,<br>count(case when h.house_status != 2 then h.id else null end), – 总房数,<br>count(case when h.house_status=0 then h.id else null end), – 空房数,<br>sum(case when h.house_status != 2 then h.month_rent else 0 end), – 预期月总额,<br>sum(case when c.id is not null then c.month_rent+c.other_fee else 0 end), – 租约总额,<br>b.real_amount, – 实收总额,<br>b.online_amount – 线上收款总额</p>
+<p>CREATE EXTERNAL TABLE result.company_day_data (<br>    city string COMMENT ‘城市’,<br>    city_id string COMMENT ‘城市id’,<br>    co_id string COMMENT ‘机构id’,<br>    name string COMMENT ‘机构名称’,<br>    house_num string COMMENT ‘总房数’,<br>    empty_house_num string COMMENT ‘空房数’,<br>    pre_all_amount string comment ‘预期月总额’,<br>    contract_amount string comment ‘租约总额’,<br>    real_amount string comment ‘实收总额’,<br>    online_amount string comment ‘线上收款总额’,<br>    create_time string COMMENT ‘时间戳’<br>) PARTITIONED BY (monthday string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘\001’<br>stored as textfile<br>location ‘/user/hdfs/result/company_day_data’;</p>
 
         
         
@@ -175,11 +527,6 @@
     <footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/big-data/">big data</a>
-  </div>
 
 </div>
 
@@ -597,114 +944,9 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/04/09/php开发/" title="php开发" itemprop="url">php开发</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-04-08T16:48:55.000Z" itemprop="datePublished"> Published 2018-04-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>测试</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/01/04/系统词汇二/" title="系统词汇二" itemprop="url">系统词汇二</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="张建" target="_blank" itemprop="author">张建</a>
-		
-  <p class="article-time">
-    <time datetime="2018-01-04T01:47:04.000Z" itemprop="datePublished"> Published 2018-01-04</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>interviewee        n 被面试者，被访问者<br>architecture    n 建筑学 结构 结构体系<br>peer-to-peer    点对点<br>web facing service 面对网络服务<br>specific     adj 详细的 明确的 具体的<br>implement     工具 实施 实践<br>intimidating 令人恐惧的<br>tackle 处理<br>constraints     限制 强迫<br>bottlenecks     瓶颈<br>algorithm     算法<br>somewhat    有点<br>previous     先前的<br>chapter        章节<br>keep in mind     记住<br>go in     进去<br>strategies 策略 战略<br>look into     调查<br>approach 处理 方法<br>candidates 候选人<br>scale     规模<br>throughout     始终<br>chaos         混乱 混沌<br>structured     结构<br>equivalent    （of）相当于<br>equivalent     不成比例的<br>obstacle    障碍<br>significant    重要的 有意义的<br>intuition    直觉<br>clarify        澄清<br>constraints    限制<br>statistics     统计</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/英语词汇/">英语词汇</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
@@ -729,11 +971,11 @@
 			
 		
 			
-				<li><a href="/tags/英语词汇/" title="英语词汇">英语词汇<sup>3</sup></a></li>
+				<li><a href="/tags/诗词/" title="诗词">诗词<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/诗词/" title="诗词">诗词<sup>3</sup></a></li>
+				<li><a href="/tags/英语词汇/" title="英语词汇">英语词汇<sup>3</sup></a></li>
 			
 		
 			
@@ -741,23 +983,7 @@
 			
 		
 			
-				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/phantomsjs问题/" title="phantomsjs问题">phantomsjs问题<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/soar-sql优化/" title="soar-sql优化">soar-sql优化<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/music/" title="music">music<sup>1</sup></a></li>
+				<li><a href="/tags/学习计划系列/" title="学习计划系列">学习计划系列<sup>1</sup></a></li>
 			
 		
 			
@@ -765,15 +991,31 @@
 			
 		
 			
-				<li><a href="/tags/big-data/" title="big data">big data<sup>1</sup></a></li>
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/phantomsjs问题/" title="phantomsjs问题">phantomsjs问题<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python-scrapy/" title="python scrapy">python scrapy<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工作记录/" title="工作记录">工作记录<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/soar-sql优化/" title="soar-sql优化">soar-sql优化<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/个人杂谈/" title="个人杂谈">个人杂谈<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/学习计划系列/" title="学习计划系列">学习计划系列<sup>1</sup></a></li>
 			
 		
 			
@@ -793,11 +1035,11 @@
 			
 		
 			
-				<li><a href="/tags/工作记录/" title="工作记录">工作记录<sup>1</sup></a></li>
+				<li><a href="/tags/Homebrew/" title="Homebrew">Homebrew<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/python-scrapy/" title="python scrapy">python scrapy<sup>1</sup></a></li>
+				<li><a href="/tags/music/" title="music">music<sup>1</sup></a></li>
 			
 		
 		</ul>
