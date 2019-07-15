@@ -1,342 +1,716 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<!--<![endif]-->
 
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="php," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="搭建自己的PHP框架学习笔记框架运行流程 入口文件-&amp;gt;定义常量-&amp;gt;引入库函数-&amp;gt;自动加载类-&amp;gt;启动框架-&amp;gt;路由解析-&amp;gt;加载控制器类-&amp;gt;返回结果  （1） 《伊利亚特》 [古希腊]荷马（2） 《历史》 [古希腊]希罗多德（3） 《伯罗奔尼撒战争史》 [雅典]修昔底德（4） 《茶花女》 [法国]小仲马（5） 《对话录》 [古希腊]柏拉图（6） 《伦理学》 [古">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建自己的PHP框架">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/搭建自己的PHP框架/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="搭建自己的PHP框架学习笔记框架运行流程 入口文件-&amp;gt;定义常量-&amp;gt;引入库函数-&amp;gt;自动加载类-&amp;gt;启动框架-&amp;gt;路由解析-&amp;gt;加载控制器类-&amp;gt;返回结果  （1） 《伊利亚特》 [古希腊]荷马（2） 《历史》 [古希腊]希罗多德（3） 《伯罗奔尼撒战争史》 [雅典]修昔底德（4） 《茶花女》 [法国]小仲马（5） 《对话录》 [古希腊]柏拉图（6） 《伦理学》 [古">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-02T02:09:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建自己的PHP框架">
+<meta name="twitter:description" content="搭建自己的PHP框架学习笔记框架运行流程 入口文件-&amp;gt;定义常量-&amp;gt;引入库函数-&amp;gt;自动加载类-&amp;gt;启动框架-&amp;gt;路由解析-&amp;gt;加载控制器类-&amp;gt;返回结果  （1） 《伊利亚特》 [古希腊]荷马（2） 《历史》 [古希腊]希罗多德（3） 《伯罗奔尼撒战争史》 [雅典]修昔底德（4） 《茶花女》 [法国]小仲马（5） 《对话录》 [古希腊]柏拉图（6） 《伦理学》 [古">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/28/搭建自己的PHP框架/"/>
+
+
+
+
+
   <title>搭建自己的PHP框架 | Hexo</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Hexo">
-    <meta name="author" content="张建">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-    
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
-    
-
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-  
-  
   
 
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
+
+
+
+
+
+
 </head>
 
-<!--
-<body class="post-template">
--->
-<body id="index" class="lightnav animsition">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
-                    
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
-    </div>
+  
+  
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
+  
 
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
 
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-        <!-- ============================ Header & Logo bar =========================== -->
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
 
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">Hexo</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
+<nav class="site-nav">
+  
 
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
 
       
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2017-11-28T08:58:25.000Z" itemprop="datePublished">
-          2017-11-28
-      </time>
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/28/搭建自己的PHP框架/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张建">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tx.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-    | 
-    <a href='/tags/php/'>php</a>
-    
-    
-</span>
-                <h1>搭建自己的PHP框架</h1>
-            </div>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">搭建自己的PHP框架</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T16:58:25+08:00">
+                2017-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h4 id="搭建自己的PHP框架学习笔记"><a href="#搭建自己的PHP框架学习笔记" class="headerlink" title="搭建自己的PHP框架学习笔记"></a>搭建自己的PHP框架学习笔记</h4><h6 id="框架运行流程"><a href="#框架运行流程" class="headerlink" title="框架运行流程"></a>框架运行流程</h6><ul>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="搭建自己的PHP框架学习笔记"><a href="#搭建自己的PHP框架学习笔记" class="headerlink" title="搭建自己的PHP框架学习笔记"></a>搭建自己的PHP框架学习笔记</h4><h6 id="框架运行流程"><a href="#框架运行流程" class="headerlink" title="框架运行流程"></a>框架运行流程</h6><ul>
 <li>入口文件-&gt;定义常量-&gt;引入库函数-&gt;自动加载类-&gt;启动框架-&gt;路由解析-&gt;加载控制器类-&gt;返回结果</li>
 </ul>
 <p>（1） 《伊利亚特》 [古希腊]荷马<br>（2） 《历史》 [古希腊]希罗多德<br>（3） 《伯罗奔尼撒战争史》 [雅典]修昔底德<br>（4） 《茶花女》 [法国]小仲马<br>（5） 《对话录》 [古希腊]柏拉图<br>（6） 《伦理学》 [古希腊]亚里士多德<br>（7） 《埃涅阿斯记》 [古罗马]维吉尔<br>（8） 《希腊罗马英雄史》 [古希腊]普鲁塔克<br>（9） 《80位共产党人的故事》 [中国] 徐焰<br>（10） 《四世同堂》 [中国] 老舍<br>（11） 《神曲》 [意大利]但丁<br>（12） 《坎特伯雷故事集》 [英国]乔叟<br>（13） 《乌托邦》 [英国]托马斯.莫尔<br>（14） 《君王论》 [意大利]马基雅维利<br>（15） 《巨人传》 [法国]拉伯雷<br>（16） 《唐.吉柯德》 [西班牙]塞万提斯<br>（17） 《箴言集》 拉.洛希福考<br>（18） 《失乐园》 [英国]米尔顿<br>（19） 《天路历程》 [英国]约翰.班场<br>（20） 《一千零一夜》 [古代阿拉伯] 民众<br>（21） 《鲁宾逊漂流记》 [英国]丹尼尔.笛福<br>（22） 《格列佛游记》 [英国]斯威夫特<br>（23） 《汤姆.琼斯》 [英国]亨利·菲尔丁<br>（24） 《社会契约论》 [法国]卢梭<br>（25） 《国富论》 [苏格兰]亚当.斯密<br>（26） 《罗马帝国衰亡史》 [古罗马]吉朋<br>（27） 《纯粹理性批判》 [德国]康德<br>（28） 《约翰生传》 [英国]包斯威尔<br>（29） 《女权辩论》 [英国]玛丽.吴尔斯东克拉甫特<br>（30） 《情爱论》 [保加利亚]瓦西列夫<br>（31） 《人口论》 [英格兰]马尔萨斯<br>（32） 《傲慢与偏见》 [英国]简.奥斯汀<br>（33） 《艾凡赫》 [英国]瓦特.斯各特<br>（34） 《红与黑》 [法国]司汤达<br>（35） 《巴黎圣母院》 [法国]维克多.雨果<br>（36） 《高老头》 [法国]巴尔扎克<br>（37） 《法国大革命》 马迪厄<br>（38） 《死灵魂》 [俄国]果戈理<br>（39） 《三剑客》 [法国]大仲马<br>（40） 《简爱》 [英国] 夏洛蒂·勃朗特<br>（41） 《呼啸山庄》 [英国]艾米莉?勃朗特<br>（42） 《英国史》 麦克雷<br>（43） 《包法利夫人》 [法国] 福楼拜<br>（44） 《论自由》 [英国]约翰·密尔<br>（45） 《物种起源》 [英国]查尔斯.达尔文<br>（46） 《弗洛斯河上的磨砺》 [英国]乔治·艾略特<br>（47） 《父与子》 [俄国]伊凡·谢尔盖耶维奇·屠格涅夫<br>（48） 《战争与和平》 [俄国] 列夫.托尔斯泰<br>（49） 《爱丽丝漫游奇境记》 [英国]刘易斯·卡罗尔<br>（50） 《安娜.卡列尼娜》 [俄国]列夫.托尔斯泰<br>（51） 《八十天环游世界》 [法国] 儒勒.凡尔纳<br>（52） 《汤姆.索亚历险记》 [美国]马克.吐温<br>（53） 《卡拉马佐夫兄弟》 [俄国]陀思妥耶夫斯基<br>（54） 《金枝》 [英国]J．G.弗雷泽<br>（55） 《苔丝》 [英国]托马斯.哈代<br>（56） 《梦的解析》 [奥地利]弗洛伊德·西格蒙德<br>（57） 《包扎先生的历史》 [英国] 赫伯特.乔治.威尔斯<br>（58） 《儿子与情人》 [英国] D.H.劳伦斯<br>（59） 《追忆逝水年华》 马歇尔.普鲁斯特<br>（60） 《尤利西斯》 [爱尔兰]詹姆斯·乔伊斯<br>（61） 《魔山》 [德国]托马斯.曼<br>（62） 《美国的悲剧》 [美国]狄奥多.德莱塞<br>（63） 《如果麦子不死》 [法国] 安德烈.纪德<br>（64） 《灯塔》 维琴尼娅.伍尔夫<br>（65） 《喧嚣与骚动》 [美国]威廉.福克纳<br>（66） 《战争春梦》 [美国] 欧内斯特?米勒尔?海明威<br>（67） 《西线无故事》 [德国]埃里希·马里亚·雷马克<br>（68） 《美丽新世界》 [英国] 阿道司?赫骨黎<br>（69） 《愤怒的葡萄》 [美国]约翰.斯坦贝克<br>（70） 《智慧七柱》 [英国] 汤玛斯.爱德华.劳伦斯<br>（71） 《一九八四》 [印度]乔治·奥威尔<br>（72） 《岗铁基探险记》 海耶达尔<br>（73） 《大师群像》 查理.史诺<br>（74） 《亚历山大四重奏》 劳伦斯.杜瑞尔<br>（75） 《日瓦戈医生》 [苏联]鲍里斯·帕斯捷尔纳克<br>（76） 《诗经》 [中国] 多人<br>（77） 《老子》 [中国] 李耳<br>（78） 《论语》 [中国] 孔子<br>（79） 《庄子》 [中国] 庄子<br>（80） 《孟子》 [中国] 孟轲<br>（81） 《史记》 [中国] 司马迁<br>（82） 《楚辞》 [中国] 屈原<br>（83） 《文心雕龙》 [中国] 刘勰<br>（84） 《世说新语》 [中国] 刘义庆<br>（85） 《资治通鉴》 [中国] 司马光<br>（86） 《唐诗三百首》 [中国] 孙洙<br>（87） 《牡丹亭》 [中国] 汤显祖<br>（88） 《水浒传》 [中国] 施耐庵<br>（89） 《三国演义》 [中国] 罗贯中<br>（90） 《儒林外史》 [中国] 吴敬梓<br>（91） 《红楼梦》 [中国] 曹雪芹、高鹗<br>（92） 《聊斋志异》 [中国] 蒲松龄<br>（93） 《官场现形记》 [中国] 李宝嘉<br>（94） 《西游记》 [中国] 吴承恩<br>（95） 《阿Q正传》 [中国] 鲁迅<br>（96） 《子夜》 [中国] 茅盾<br>（97） 《家》 [中国] 巴金<br>（98） 《骆驼祥子》 [中国] 老舍<br>（99） 《雷雨》 [中国] 曹禺<br>（100） 《围城》 [中国] 钱锺书<br>（101） 《艾格尼斯·格雷》 [英国]安恩勃朗特<br>（102） 《呐喊》 [中国]鲁迅</p>
 
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    <a class="pull-left" href="/2018/01/02/系统词汇一/" style="float: left;">
-        ← 系统词汇一
-    </a>
-    
-    
-    <a class="pull-right" href="/2017/11/06/诗三百-2/">
-        诗三百-2 →
-    </a>
-    
-</nav>
-
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
-
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
-
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
-
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
-
-</script>
-</div>
+      
     </div>
-</section>
+    
+    
+    
 
+    
 
+    
+
+    
+
+    <footer class="post-footer">
       
-<!-- ============================ Footer =========================== -->
-
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 张建. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
         </div>
-</footer>
-
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-
-    resizeHero();
-
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
-
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
-
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
-
+      
 
       
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/06/诗三百-2/" rel="next" title="诗三百-2">
+                <i class="fa fa-chevron-left"></i> 诗三百-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/02/系统词汇一/" rel="prev" title="系统词汇一">
+                系统词汇一 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/tx.jpg"
+              alt="张建" />
+          
+            <p class="site-author-name" itemprop="name">张建</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#搭建自己的PHP框架学习笔记"><span class="nav-number">1.</span> <span class="nav-text">搭建自己的PHP框架学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#框架运行流程"><span class="nav-number">1.0.1.</span> <span class="nav-text">框架运行流程</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张建</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144568"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
