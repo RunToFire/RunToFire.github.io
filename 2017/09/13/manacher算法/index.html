@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>manacher算法 | ZJ&#39;s World</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="ZJ's World">
+    <meta name="author" content="张建">
+    <meta name="description" content="记录" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="ZJ&#39;s World" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">ZJ's World</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-09-13T09:09:31.000Z" itemprop="datePublished">
+          2017-09-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/算法/'>算法</a>
+    
+    
+</span>
+                <h1>manacher算法</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="LeetCode-Longest-Palindromic-Substring-最长回文子串"><a href="#LeetCode-Longest-Palindromic-Substring-最长回文子串" class="headerlink" title="LeetCode:Longest Palindromic Substring 最长回文子串"></a><a href="https://leetcode.com/problems/longest-palindromic-substring/description/" target="_blank" rel="external">LeetCode:Longest Palindromic Substring</a> 最长回文子串</h3><p>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.</p>
+<h5 id="求字符串的最长回文子串"><a href="#求字符串的最长回文子串" class="headerlink" title="求字符串的最长回文子串"></a>求字符串的最长回文子串</h5><ul>
+<li><p>算法1：暴力解法，枚举所有子串，对每个子串判断是否为回文，复杂度为O(n^3)</p>
+</li>
+<li><p>算法2：删除暴力解法中有很多重复的判断。很容易想到动态规划，时间复杂度O（n^2）,空间O（n^2）,动态规划方程如下：</p>
+</li>
+</ul>
+<blockquote>
+<p>   dp[i][j] 表示子串s[i…j]是否是回文<br>    初始化：dp[i][i] = true (0 &lt;= i &lt;= n-1);  dp[i][i-1] = true (1 &lt;= i &lt;= n-1); 其余的初始化为false<br>    dp[i][j] = (s[i] == s[j] &amp;&amp; dp[i+1][j-1] == true)<br>    在动态规划中保存最长回文的长度及起点即可</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        bool dp[len][len];//dp[i][j]表示s[i..j]是否是回文</div><div class="line">        memset(dp, 0, sizeof(dp));</div><div class="line">        int resLeft = 0, resRight = 0;</div><div class="line">        dp[0][0] = true;</div><div class="line">        for(int i = 1; i &lt; len; i++)</div><div class="line">        &#123;</div><div class="line">            dp[i][i] = true;</div><div class="line">            dp[i][i-1] = true;//这个初始化容易忽略，当k=2时要用到</div><div class="line">        &#125;</div><div class="line">        for(int k = 2; k &lt;= len; k++)//枚举子串长度</div><div class="line">            for(int i = 0; i &lt;= len-k; i++)//枚举子串起始位置</div><div class="line">            &#123;</div><div class="line">                if(s[i] == s[i+k-1] &amp;&amp; dp[i+1][i+k-2])</div><div class="line">                &#123;</div><div class="line">                    dp[i][i+k-1] = true;</div><div class="line">                    if(resRight-resLeft+1 &lt; k)</div><div class="line">                    &#123;</div><div class="line">                        resLeft = i;</div><div class="line">                        resRight = i+k-1;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        return s.substr(resLeft, resRight-resLeft+1);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>算法3：以某个元素为中心，分别计算偶数长度的回文最大长度和奇数长度的回文最大长度。时间复杂度O(n^2)，空间O（1）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        int start, maxLen = 0;</div><div class="line">        for(int i = 1; i &lt; len; i++)</div><div class="line">        &#123;</div><div class="line">            //寻找以i-1,i为中点偶数长度的回文</div><div class="line">            int low = i-1, high = i;</div><div class="line">            while(low &gt;= 0 &amp;&amp; high &lt; len &amp;&amp; s[low] == s[high])</div><div class="line">            &#123;</div><div class="line">                low--;</div><div class="line">                high++;</div><div class="line">            &#125;</div><div class="line">            if(high - low - 1 &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = high - low -1;</div><div class="line">                start = low + 1;</div><div class="line">            &#125;</div><div class="line">             </div><div class="line">            //寻找以i为中心的奇数长度的回文</div><div class="line">            low = i- 1; high = i + 1;</div><div class="line">            while(low &gt;= 0 &amp;&amp; high &lt; len &amp;&amp; s[low] == s[high])</div><div class="line">            &#123;</div><div class="line">                low--;</div><div class="line">                high++;</div><div class="line">            &#125;</div><div class="line">            if(high - low - 1 &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = high - low -1;</div><div class="line">                start = low + 1;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return s.substr(start, maxLen);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>算法4：Manacher算法，时间复杂度O(n), 空间复杂度O(n)</li>
+</ul>
+<blockquote>
+<p>   该算法首先对字符串进行预处理，在字符串的每个字符前后都加入一个特殊符号，比如字符串 abcd 处理成 #a#b#c#d#,为了避免处理越界，在字符串首尾加上不同的两个特殊字符(c类型的字符串尾部不用加，因为自带‘\0’)，这样预处理后最终变成$#a#b#c#d#^，经过这样处理后有个好处是原来的偶数长度和奇数长度的回文在处理后的字符串中都是奇数长度。假设处理后的字符串为s                    本文地址</p>
+<p>   对于已经预处理好的字符串我们用数组p[i]来记录以字符S[i]为中心的最长回文子串向左/右扩张的长度（包括S[i]）,以字符串“12212321”为例，p数组如下</p>
+<p>   s：   $   #  1  #  2  #  2  #  1  #  2  #  3  #  2  #  1  #  ^<br>    p：       1  2  1  2   5  2  1  4  1   2  1  6  1   2  1  2  1<br>    可以看出，P[i]-1正好是原字符串中回文串的总长度, 如果p数组已知，遍历p数组找到最大的p[i]就可以求出最长回文的长度，<br>    也可以求出回文的位置</p>
+<p>   下面给出求p[]数组的方法：<br>    设id是当前求得的最长回文子串中心的位置，mx为当前最长回文子串的右边界（回文子串不包括该右边界），即mx = id + p[id]。<br>    记j = 2*id – i ，即 j 是 i 关于 id 的对称点。</p>
+<pre><code>- 1、 当i &lt; mx 时，如下图。此时可以得出一个非常神奇的结论p[i] &gt;= min(p[2*id - i], mx - i)，下面我们来解释这个结论
+如何根据p[j]来求p[i]呢，又要分成两种情况
+-- 1.1）当mx – i &gt; p[j], 这时候以S[j]为中心的回文子串包含在以S[id]为中心的回文子串中，由于 i 和 j 对称，以S[i]为中心的回文子串必然包含在以S[id]为中心的回文子串中，所以 P[i]  至少等于 p[j], 后面的再继续匹配。如下图
+注：这里其实p[i]一定等于p[j],后面不用再匹配了。因为如果p[i]后面还可以继续匹配，根据对称性，p[j]也可以继续扩展了
+-- 1.2）当mx – i &lt;= p[j]， 以S[j]为中心的回文子串不完全包含于以S[id]为中心的回文子串中，但是基于对称性可知，下图中两个绿框所包围的部分是相同的，也就是说以S[i]为中心的回文子串，其向右至少会扩张到mx的位置，也就是说 P[i] 至少等于 mx - i，至于mx之后的部分是否对称，就只能老老实实去匹配了。
+注：如果mx – i &lt; p[j] ，这时p[i]一定等于mx - i, 因为如果p[i]在mx之后还可以继续匹配，根据对称性，mx之后匹配的点(包括mx)一定会出现在my的前面，这说明p[id]也可以继续扩展了
+- 2、当i &gt;= mx, 无法对p[i]做更多的假设，只能p[i] = 1,然后再去匹配
+算法复杂度分析：根据斜体字部分的注释，只有当mx-i = p[j]时 以及 i &gt; mx时才要扩展比较，而mx也是在不断扩展的，总体而言每个元素比较次数是n的线性关系，所以时间复杂度为O(n)
+</code></pre></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    string longestPalindrome(string s) &#123;</div><div class="line">        const int len = s.size();</div><div class="line">        if(len &lt;= 1)return s;</div><div class="line">        //Manncher算法 ，o（n）</div><div class="line">        string str = preProcess(s);</div><div class="line">        int n = str.size(), id = 0, mx = 0;</div><div class="line">        vector&lt;int&gt;p(n, 0);</div><div class="line">        for(int i = 1; i &lt; n-1; i++)</div><div class="line">        &#123;</div><div class="line">            p[i] = mx &gt; i ? min(p[2*id-i], mx-i) : 1;</div><div class="line">            //if(mx &lt;= i || (mx &gt; i &amp;&amp; p[2*id-i] == mx - i)) //根据正文斜体部分的注释，这里可要可不要</div><div class="line">            while(str[i+p[i]] == str[i-p[i]])p[i]++;</div><div class="line">            if(i + p[i] &gt; mx)</div><div class="line">            &#123;</div><div class="line">                mx = i + p[i];</div><div class="line">                id = i;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">         </div><div class="line">        //遍历p，寻找最大回文长度</div><div class="line">        int maxLen = 0, index = 0;</div><div class="line">        for(int i = 1; i &lt; n-1; i++)</div><div class="line">            if(p[i] &gt; maxLen)</div><div class="line">            &#123;</div><div class="line">                maxLen = p[i];</div><div class="line">                index = i;</div><div class="line">            &#125;</div><div class="line">        return s.substr((index - maxLen)/2, maxLen-1);</div><div class="line">    &#125;</div><div class="line">    //预处理字符串，abc预处理后变成$#a#b#c#^</div><div class="line">    string preProcess(const string &amp;s)</div><div class="line">    &#123;</div><div class="line">        int n = s.size();</div><div class="line">        string res; </div><div class="line">        res.push_back(&apos;$&apos;);//把$放到字符串头部</div><div class="line">        res.push_back(&apos;#&apos;);//以#作为原来字符串中每个字符的间隔</div><div class="line">        for(int i = 0; i &lt; n; i++)</div><div class="line">        &#123;</div><div class="line">            res.push_back(s[i]);</div><div class="line">            res.push_back(&apos;#&apos;);</div><div class="line">        &#125;</div><div class="line">        res.push_back(&apos;^&apos;);//以^作为字符串的结尾</div><div class="line">        return res;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>算法5：可以用后缀数组来解，在源字符串后面加一个特殊字符，然后把源字符串的反转串连接到源字符串后面，那么问题就变成了求这个新字符串的某两个后缀的最长公共前缀，该问题是典型的后缀数组应用，可以参考here，关于后缀数组请关注我的后续博客</li>
+</ul>
+<hr>
+<p><a href="http://www.cnblogs.com/TenosDoIt/p/3675788.html" target="_blank" rel="external">来源</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2017/10/02/2016plan/" style="float: left;">
+        ← 2016plan
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/09/11/php提升路线/">
+        php提升路线 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 张建. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
