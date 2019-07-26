@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2019/7 | ZJ&#39;s World</title>
+  <title>mariadb安装 | ZJ&#39;s World</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,108 +167,99 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/25/mariadb安装/">mariadb安装</a></h4>
-                            
-                            <p><time datetime="2019-07-25T09:36:33.000Z"><a href="/2019/07/25/mariadb安装/">2019-07-25</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/25/19年读书计划/">19年读书计划</a></h4>
-                            
-                            <p><time datetime="2019-07-25T08:16:19.000Z"><a href="/2019/07/25/19年读书计划/">2019-07-25</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/25/liunx学习笔记一/">liunx学习笔记一</a></h4>
-                            
-                            <p><time datetime="2019-07-25T08:10:11.000Z"><a href="/2019/07/25/liunx学习笔记一/">2019-07-25</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/15/Homebrew默认源更换和重置/">Homebrew默认源更换和重置</a></h4>
-                            
-                            <p><time datetime="2019-07-15T10:26:13.000Z"><a href="/2019/07/15/Homebrew默认源更换和重置/">2019-07-15</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/15/中科大源/">中科大源</a></h4>
-                            
-                            <p><time datetime="2019-07-15T10:24:35.000Z"><a href="/2019/07/15/中科大源/">2019-07-15</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-07-25T09:36:33.000Z" itemprop="datePublished">
+          2019-07-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/数据库-mariadb/'>数据库 mariadb</a>
+    
+    
+</span>
+                <h1>mariadb安装</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h5 id="mariadb安装"><a href="#mariadb安装" class="headerlink" title="mariadb安装"></a>mariadb安装</h5><blockquote>
+<p>卸载数据库： yum -y remove mari<em><br>删除数据库文件：rm -rf /var/lib/mysql/</em><br>安装: yum -y install mariadb mariadb-server<br>启动: systemctl start mariadb<br>查看状态: systemctl  status mysqld<br>系统开启自启动:systemctl enable mariadb</p>
+<p>自定义配置：mysql_secure_installation，（比如设置密码 默认密码为空）</p>
+<p>添加远程连接权限账号:  CREATE USER ‘test’@’%’ IDENTIFIED BY ‘123456’;<br>                      GRANT ALL ON <em>.</em> TO ‘test’@’%’;</p>
+</blockquote>
+<p>SELECT<br>     da.name as 城市<br>     ,CASE ac.type WHEN 2 THEN ‘二房东(分散式)’ WHEN 3 THEN ‘公寓(集中式)’ END 机构类型<br>     ,ac.id as 机构编号<br>     ,ac.name as 机构名称<br>     ,c.id as 租约编号<br>     ,u.name as 租客姓名<br>     ,u.mobile as 租客手机<br>     ,c.term 租期<br>     ,ddt.name as 导客费收取类型<br>     ,o.id as 签约人编号<br>     ,o.nickname as 签约人<br>     ,c.month_rent as 租约月租金<br>     ,CASE WHEN c.status = 2 THEN ‘未付款’ WHEN c.status=3 THEN ‘已付款’ END 账单付款状态<br>     ,CASE c.flag WHEN 0 THEN ‘正常’ WHEN 1 THEN ‘删除’ WHEN 2 THEN ‘过期’ WHEN 7 THEN ‘已关闭’ WHEN 8 THEN ‘已终止’ WHEN 9 THEN ‘已作废’ END 租约状态<br>     ,CASE WHEN c.is_monthly_pay = 1 THEN ‘付一押一’ ELSE dwr.name END as 租客缴租方式<br>     , wb.name as 板块<br>     ,from_unixtime(c.first_trade_time) as 租约首次付款时间<br>     ,date_sub(from_unixtime(c.first_trade_time,’%Y-%m-%d’),INTERVAL WEEKDAY(from_unixtime(c.first_trade<em>time,’%Y-%m-%d’)) DAY) as 租约首次付款日期</em>周<br>     ,from_unixtime(c.first_trade<em>time,’%Y-%m’) as 租约首次付款日期</em>年月<br>     , 据点<br>     , B.period_number 租客账单期数<br>     , FROM_UNIXTIME(B.start_date) 账单起始日<br>     , WeekMysql(B.start<em>date) 账单起始日</em>周<br>     , dbo.f_FROM_UNIXTIME(B.end_date) 账单结束日<br>     , dbo.f_FROM_UNIXTIME(B.trade_time) 付款日期<br>     , dbo.f_WeekMysql(B.trade<em>time) 付款日期</em>周<br>     , dbo.f_MonthMysql(B.trade<em>time) 付款日期</em>年月<br>     , dbo.f_DayMysql(B.pay_date) 账单约定付款日<br>     , 房东PC版<br>     , 提前缴租天数<br>     , 导客费<br>     , CASE WHEN B.flag = 0 THEN ‘正常’ WHEN B.flag = 1 THEN ‘删除’ END 账单是否正常<br>     , CASE WHEN B.status = ‘0’ THEN ‘未支付’ WHEN B.status = ‘1’ THEN ‘已支付’ WHEN B.status = ‘7’ THEN ‘已作废’ WHEN B.status = ‘9’ THEN ‘已关闭’ END 账单状态<br>     , B.bill_all_id 账单编号<br>     , cclhd.是否月付<br>     , cclhd.营运服务<br>     , CASE WHEN ba.is_line_pay = 1 THEN ‘是’ ELSE ‘否’ END 是否虚拟核销<br>     , cclhd.是否代管<br>     , verificationUser.Name_full 核销人<br>     , cclhd.租约类型<br>FROM bill b<br>LEFT JOIN bill_all ba on ba.id=b.bill_all_id<br>left join contract c on c.id=b.contract_id<br>LEFT JOIN dd_way_rent dwr ON c.way_rent = dwr.id<br>left join user u on u.id=c.user_id<br>left join operator o on o.user_id=c.sign_user_id<br>left join work_group wg on wg.id=o.group_id<br>left join work_group ws on ws.id=wg.fid<br>left join work_group wb on wb.id=ws.fid<br>left join dd_area as da on da.id=c.city_id<br>left join agency_compnay ac on ac.id=c.land_company_id<br>left join user u on u = ba.verification_user_id</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/07/25/19年读书计划/">
+        19年读书计划 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
